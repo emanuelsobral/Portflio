@@ -50,6 +50,10 @@ body {
 
     /*Dot Navigation Styles */
 
+.BoxDotNavigator{
+display: none;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -382,6 +386,10 @@ ul {
     body {
         font-size: 18px;
     }
+
+.BoxDotNavigator{
+display: block;
+}
 
     /*main*/
 
