@@ -17,6 +17,7 @@
 html {
     font-size: 16px;
     width: 100vh;
+    max-width: -webkit-fill-available;
 }
 
 body {
