@@ -55,6 +55,7 @@ ul {
 }
 
 .navbar {
+  z-index: 1000;
   position: fixed;
   right: 32px;
   top: 50%;
