@@ -465,7 +465,6 @@ ul {
 
     .textAbout{
         grid-area: SOBRE;
-        width: 80%;
         height: 100%;
     }
 
