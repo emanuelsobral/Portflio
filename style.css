@@ -231,6 +231,7 @@ ul {
     -webkit-backdrop-filter: blur(3.9px);
     border: 1px solid rgba(0, 0, 0, 0.35);
     border-radius: 20px;
+    border: 2px solid var(--violet);
   }
 
   .popUpDownload h1{
