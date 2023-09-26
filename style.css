@@ -225,7 +225,11 @@ ul {
     align-content: center;
     justify-content: center;
     align-items: center;
-    background: #000000;
+    background: rgba(0, 0, 0, 0.70);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.9px);
+    -webkit-backdrop-filter: blur(3.9px);
+    border: 1px solid rgba(0, 0, 0, 0.35);
     border-radius: 20px;
   }
 
@@ -520,14 +524,6 @@ ul {
     .popUpDownload{
         width: 50%;
         height: 50%;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        background: #000000;
-        border-radius: 20px;
     }
 
     /*about*/
