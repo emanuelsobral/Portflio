@@ -151,6 +151,12 @@ ul {
     align-items: baseline;
   }
 
+  .SvgIconMobile button{
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
     .SvgIconMobile a {
     text-decoration: none;
   }
@@ -209,6 +215,81 @@ ul {
       background-color: var(--violet);
     }
   }
+
+  .popUpDownload{
+    width: 90%;
+    height: 40%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    border-radius: 20px;
+  }
+
+  .popUpDownload h1{
+    color: var(--ligh-violet);
+    font-size: 2rem;
+  }
+
+  .popUpDownload p{
+    color: var(--white);
+    font-size: 1.5rem;
+  }
+
+  .popUpButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .popUpButtons button{
+    width: 40%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--ligh-violet);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .popUpButtons a{
+    text-decoration: none;
+    color: var(--white);
+  }
+
+  .popUpButtons button:hover{
+    background-color: var(--violet);
+    transition: .5s;
+  }
+
+  .popUpClose{
+    margin-top: 2rem;
+  }
+
+  .popUpClose button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--ligh-violet);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .popUpClose button:hover{
+    background-color: var(--violet);
+    transition: .5s;
+  }
+
 
   /*Sobre*/
 
@@ -408,6 +489,12 @@ ul {
     .SvgIcon{
         display: flex;
     }
+
+    .SvgIcon button{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
     
     .FrontEnd .SvgIcon a {
         text-decoration: none;
@@ -427,6 +514,19 @@ ul {
     .FrontEnd .SvgIcon svg:hover {
         filter: drop-shadow(0px 1px 10px #9400ff);
         transition: 0.5s;
+    }
+
+    .popUpDownload{
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        background: #000000;
+        border-radius: 20px;
     }
 
     /*about*/

@@ -59,6 +59,32 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
+//PopUp Download
+
+const popUpButton = document.getElementById('popUpButton');
+const closePopUp = document.getElementById('popUpClose');
+
+popUpButton.addEventListener('click', () => {
+    const popUp = document.getElementById('popUpDownload');
+    popUp.style.display = 'flex';
+
+});
+
+closePopUp.addEventListener('click', () => {
+    const popUp = document.getElementById('popUpDownload');
+    popUp.style.display = 'none';
+});
+
+function ClickWord() {
+    const curriculoWord = document.getElementById('curriculoWord');
+    curriculoWord.click();
+}
+
+function ClickPdf() {
+    const curriculoPDF = document.getElementById('curriculoPdf');
+    curriculoPDF.click();
+}
+
 //About
 
 const formacao = document.getElementById('formacaoButton');
