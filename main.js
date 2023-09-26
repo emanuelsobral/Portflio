@@ -107,7 +107,7 @@ formacao.addEventListener('click', () => {
     const experienciaContent = document.getElementById('experiencia');
     const cursosContent = document.getElementById('cursos');
 
-    formacaoContent.style.display = 'block';
+    formacaoContent.style.display = 'grid';
     experienciaContent.style.display = 'none';
     cursosContent.style.display = 'none';
 })
@@ -122,7 +122,7 @@ experiencia.addEventListener('click', () => {
     const cursosContent = document.getElementById('cursos');
 
     formacaoContent.style.display = 'none';
-    experienciaContent.style.display = 'block';
+    experienciaContent.style.display = 'grid';
     cursosContent.style.display = 'none';
 })
 
@@ -137,7 +137,7 @@ cursos.addEventListener('click', () => {
 
     formacaoContent.style.display = 'none';
     experienciaContent.style.display = 'none';
-    cursosContent.style.display = 'block';
+    cursosContent.style.display = 'grid';
 })
 
 //Techs

@@ -564,12 +564,15 @@ ul {
     .textAbout{
         grid-area: SOBRE;
         height: 100%;
+        width: 98%;
+        justify-content: center;
     }
 
     .infoAbout{
         grid-area: infoAbout;
         width: 100%;
         min-height: 30rem;
+        
         
     }
 
