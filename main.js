@@ -62,11 +62,18 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
 //PopUp Download
 
 const popUpButton = document.getElementById('popUpButton');
+const popUpButtonMobile = document.getElementById('popUpButtonMobile');
 const closePopUp = document.getElementById('popUpClose');
 
 popUpButton.addEventListener('click', () => {
     const popUp = document.getElementById('popUpDownload');
     popUp.style.display = 'flex';
+
+});
+
+popUpButtonMobile.addEventListener('click', () => {
+  const popUp = document.getElementById('popUpDownload');
+  popUp.style.display = 'flex';
 
 });
 
