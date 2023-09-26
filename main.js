@@ -142,3 +142,19 @@ elements.forEach(function(element) {
     TechsInfo.style.display = "block";
   });
 });
+
+
+
+
+
+//Teste
+
+var docWidth = document.documentElement.offsetWidth;
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
