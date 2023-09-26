@@ -16,15 +16,16 @@
 
 html {
     font-size: 16px;
-    max-width: 100dvh;
+    width: 100vw;
 }
 
 body {
     font-family: Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    max-width: 100dvh; 
+    width: 100vw;
 }
+
 /* END: reset-css */
 
 
