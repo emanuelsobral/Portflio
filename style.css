@@ -344,7 +344,7 @@ ul {
     display: block;
     position: absolute;
     color: var(--white);
-    bottom: 10px;
+    bottom: 0px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
