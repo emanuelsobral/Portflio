@@ -114,6 +114,7 @@ ul {
   justify-content: flex-end;
   align-items: flex-end;
   opacity: 0.6;
+  z-index: 1000;
 }
 
 .scrollTop:focus{
