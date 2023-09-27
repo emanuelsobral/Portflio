@@ -230,8 +230,14 @@ elements.forEach(function(element) {
 
 const viewportWidth = window.innerWidth;
 
-if (viewportWidth < 768) {
-  const html =  document.getElementById("html");
+var hasTouchScreen = false;
+
+if ("maxTouchPoints" in navigator) {
+    hasTouchScreen = navigator.maxTouchPoints > 0;
+} 
+
+if (hasTouchScreen) {
+    const html =  document.getElementById("html");
   const css =  document.getElementById("css");
   const js =  document.getElementById("js");
   const php =  document.getElementById("php");
@@ -313,14 +319,4 @@ if (viewportWidth < 768) {
     aboutTechMobile.style.display = "flex";
     mysqlInfo.style.display = "grid";
   })
-  
-
-  
-
-}
-
-window.onresize = function(){
-  setInterval(function(){
-    location.reload();
-  }, 2000);
 }
