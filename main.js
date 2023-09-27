@@ -308,3 +308,9 @@ if (viewportWidth < 768) {
   })
   
 }
+
+window.onresize = function(){
+  setInterval(function(){
+    location.reload();
+  }, 1000);
+}
