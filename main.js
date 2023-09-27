@@ -235,8 +235,8 @@ var hasTouchScreen = false;
 window.onresize = resize();
 
 function resize() {
-    viewportWidth = window.innerWidth;
-    console.log(viewportWidth)
+    window.innerWidth;
+    console.log(window.innerWidth)
 }
 
 
