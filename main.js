@@ -230,21 +230,7 @@ elements.forEach(function(element) {
 
 let viewportWidth = window.innerWidth;
 
-var hasTouchScreen = false;
-
-window.onresize = resize();
-
-function resize() {
-    window.innerWidth;
-    console.log(window.innerWidth)
-}
-
-
-if ("maxTouchPoints" in navigator) {
-    hasTouchScreen = navigator.maxTouchPoints > 0;
-} 
-
-if (hasTouchScreen || viewportWidth <= 768) {
+if (viewportWidth <= 768) {
     const html =  document.getElementById("html");
   const css =  document.getElementById("css");
   const js =  document.getElementById("js");
