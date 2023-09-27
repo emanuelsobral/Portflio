@@ -228,9 +228,17 @@ elements.forEach(function(element) {
 
 //Techs Mobile
 
-const viewportWidth = window.innerWidth;
+let viewportWidth = window.innerWidth;
 
 var hasTouchScreen = false;
+
+window.onresize = resize();
+
+function resize() {
+    viewportWidth = window.innerWidth;
+    console.log(viewportWidth)
+}
+
 
 if ("maxTouchPoints" in navigator) {
     hasTouchScreen = navigator.maxTouchPoints > 0;
