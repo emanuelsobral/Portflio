@@ -234,3 +234,91 @@ var docWidth = document.documentElement.offsetWidth;
     }
   }
 );
+
+const viewportWidth = window.innerWidth;
+
+if (viewportWidth < 768) {
+  const html =  document.getElementById("html");
+  const css =  document.getElementById("css");
+  const js =  document.getElementById("js");
+  const php =  document.getElementById("php");
+  const node =  document.getElementById("node");
+  const mysql =  document.getElementById("mysql");
+
+  const htmlInfo = document.getElementById("htmlInfoMobile");
+  const cssInfo = document.getElementById("cssInfoMobile");
+  const jsInfo = document.getElementById("jsInfoMobile");
+  const phpInfo = document.getElementById("phpInfoMobile");
+  const nodeInfo = document.getElementById("nodeInfoMobile");
+  const mysqlInfo = document.getElementById("mysqlInfoMobile");
+
+  const aboutTechMobile = document.getElementById("aboutTechMobile");
+  const closseAboutTech = document.getElementById("closeAboutTechMobileButton");
+
+  const elements = ["htmlInfoMobile", "cssInfoMobile", "jsInfoMobile", "phpInfoMobile", "nodeInfoMobile", "mysqlInfoMobile"];
+
+  closseAboutTech.addEventListener('click', () => {
+    aboutTechMobile.style.display = "none";
+  })
+
+  html.addEventListener('click', () => {
+    elements.forEach(function(element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+
+    aboutTechMobile.style.display = "flex";
+    htmlInfo.style.display = "grid";
+  })
+
+  css.addEventListener('click', () => {
+    elements.forEach(function(element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+    
+    aboutTechMobile.style.display = "flex";
+    cssInfo.style.display = "grid";
+  })
+
+  js.addEventListener('click', () => {
+    elements.forEach(function(element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+    
+    aboutTechMobile.style.display = "flex";
+    jsInfo.style.display = "grid";
+  })
+
+  php.addEventListener('click', () => {
+    elements.forEach(function(element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+    
+    aboutTechMobile.style.display = "flex";
+    phpInfo.style.display = "grid";
+  })
+
+  node.addEventListener('click', () => {
+    elements.forEach(function(element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+    
+    aboutTechMobile.style.display = "flex";
+    nodeInfo.style.display = "grid";
+  })
+
+  mysql.addEventListener('click', () => {
+    elements.forEach(function(element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+    
+    aboutTechMobile.style.display = "flex";
+    mysqlInfo.style.display = "grid";
+  })
+  
+}
