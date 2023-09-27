@@ -11,9 +11,42 @@
     }
   });
   
-  if(scroll <= 969){
-    
-  }
+  //automatic active nav
+  const sections = document.querySelectorAll('section');
+  const config = {
+    rootMargin: '0px',
+    threshold: 0.7
+  };
+
+  let observer = new IntersectionObserver(function(entries, self) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        let currentLink = document.querySelector(`.navbar a[href="#${entry.target.id}"]`);
+        document.querySelectorAll('.navbar a')
+          .forEach(e => e.classList.remove('active'));
+        currentLink.classList.add('active');
+      }
+    });
+  }, config);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  //roll down remove
+
+  window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+
+    if (scroll > 100) {
+      const rollDown = document.getElementById('rollDown')
+      rollDown.style.display = 'none';
+    }
+    if (scroll < 100) {
+      const rollDown = document.getElementById('rollDown')
+      rollDown.style.display = 'flex';
+    }
+  });
 
 //Type Effect
 
