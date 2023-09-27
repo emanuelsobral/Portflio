@@ -308,6 +308,7 @@ ul {
     justify-content: flex-end;
     align-items: center;
     animation: 1s linear 0s infinite alternate sun-rise;
+    margin-bottom: 2rem;
   }
 
   .rollDown img{
