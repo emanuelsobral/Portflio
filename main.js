@@ -41,14 +41,21 @@
     if (scroll > 150) {
       const rollDown = document.getElementById('rollDown')
       rollDown.style.display = 'none';
-      const scrollUp = document.getElementById('scrollTop')
-      scrollUp.style.display = 'flex';
     }
     if (scroll < 150) {
       const rollDown = document.getElementById('rollDown')
       rollDown.style.display = 'flex';
-      const scrollUp = document.getElementById('scrollTop')
-      scrollUp.style.display = 'none';
+    }
+
+    if (viewportWidth < 768) {
+      if (scroll > 150) {
+        const scrollUp = document.getElementById('scrollTop')
+        scrollUp.style.display = 'flex';
+      }
+      if (scroll < 150) {
+        const scrollUp = document.getElementById('scrollTop')
+        scrollUp.style.display = 'none';
+      }
     }
   });
 
@@ -307,10 +314,13 @@ if (viewportWidth < 768) {
     mysqlInfo.style.display = "grid";
   })
   
+
+  
+
 }
 
 window.onresize = function(){
   setInterval(function(){
     location.reload();
-  }, 1000);
+  }, 2000);
 }
