@@ -48,6 +48,11 @@ body {
 
 /*Dot Navigation Styles */
 
+
+.BoxDotNavigator{
+    display: none;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -95,6 +100,46 @@ ul {
 .navbar a.active::after {
   
   height: 100%;
+}
+
+/*scroll Top*/
+
+.scrollTop{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  opacity: 0.6;
+}
+
+.scrollTop:focus{
+  opacity: 1;
+}
+
+
+.scrollTop button{
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 100%;
+  background-color: var(--ligh-violet);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.scrollTop button:hover{
+  background-color: var(--violet);
+  transition: .5s;
+}
+
+.scrollTop img{
+  width: 20px;
 }
 
 /*Main*/
@@ -498,6 +543,10 @@ ul {
     body {
         font-size: 18px;
     }
+
+    .BoxDotNavigator{
+      display: block;
+  }
 
 
     /*main*/

@@ -38,15 +38,25 @@
   window.addEventListener("scroll", (event) => {
     let scroll = this.scrollY;
 
-    if (scroll > 100) {
+    if (scroll > 150) {
       const rollDown = document.getElementById('rollDown')
       rollDown.style.display = 'none';
+      const scrollUp = document.getElementById('scrollTop')
+      scrollUp.style.display = 'flex';
     }
-    if (scroll < 100) {
+    if (scroll < 150) {
       const rollDown = document.getElementById('rollDown')
       rollDown.style.display = 'flex';
+      const scrollUp = document.getElementById('scrollTop')
+      scrollUp.style.display = 'none';
     }
   });
+
+  function scrollToTop() {
+    const scrollToTop = document.getElementById('scrollToTop')
+    scrollToTop.click();
+  }
+
 
 //Type Effect
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>EmanueL</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
@@ -12,14 +12,22 @@
 
 <body>
 
+    <div class="scrollTop" id="scrollTop">
+        <button type="button" id="scrollTopButton" onclick="scrollToTop()">
+            <a href="#sec1" id="scrollToTop">
+                <img src="./img/arrow-up.png" alt="">
+            </a>
+        </button>
+    </div>
+
 
     <div class="BoxDotNavigator">
         <nav class="navbar">
             <ul>
-                <li><a href="#sec1" >Home</a></li>
-                <li><a href="#sec2" >About</a></li>
-                <li><a href="#sec3" >Techs</a></li>
-                <li><a href="#sec4" >Port</a></li>
+                <li><a href="#sec1">Home</a></li>
+                <li><a href="#sec2">About</a></li>
+                <li><a href="#sec3">Techs</a></li>
+                <li><a href="#sec4">Port</a></li>
             </ul>
         </nav>
     </div>
@@ -154,8 +162,10 @@
                 <h1>Curriculo Download</h1>
                 <p>Preferencia de arquivo</p>
                 <div class="popUpButtons">
-                    <button type="button" onclick="ClickWord()"><a id="curriculoWord" href="./src/Curriculo.docx" download="Curriculo.docx" target="_blank">Formato Word</a></button>
-                    <button type="button" onclick="ClickPdf()"><a id="curriculoPdf" href="./src/Curriculo.pdf" download="Curriculo.pdf" target="_blank">Formato PDF</a></button>
+                    <button type="button" onclick="ClickWord()"><a id="curriculoWord" href="./src/Curriculo.docx"
+                            download="Curriculo.docx" target="_blank">Formato Word</a></button>
+                    <button type="button" onclick="ClickPdf()"><a id="curriculoPdf" href="./src/Curriculo.pdf"
+                            download="Curriculo.pdf" target="_blank">Formato PDF</a></button>
                 </div>
                 <div class="popUpClose">
                     <button id="popUpClose" type="button">❮</button>
@@ -176,8 +186,12 @@
                 </div>
                 <div class="textAbout" id="about">
                     <h1>Sobre</h1>
-                    <p> Sou <span>Emanuel</span>, cursando <span>Engenharia de Software</span> na USJT e possuo experiência em <span>desenvolvimento web</span>. Atualmente, estou aprimorando minhas habilidades em back-end. Além disso, concluí um curso técnico em <span>Desenvolvimento de Sistemas</span> na ETEC Juscelino Kubitschek de Oliveira.</p>
-                    <p>Tenho uma presença ativa no GitHub, onde compartilho meus projetos e colaborações. Simultaneamente,
+                    <p> Sou <span>Emanuel</span>, cursando <span>Engenharia de Software</span> na USJT e possuo
+                        experiência em <span>desenvolvimento web</span>. Atualmente, estou aprimorando minhas
+                        habilidades em back-end. Além disso, concluí um curso técnico em <span>Desenvolvimento de
+                            Sistemas</span> na ETEC Juscelino Kubitschek de Oliveira.</p>
+                    <p>Tenho uma presença ativa no GitHub, onde compartilho meus projetos e colaborações.
+                        Simultaneamente,
                         tenho participado ativamente de uma série de <span>cursos complementares</span> para aprimorar
                         continuamente minhas habilidades e me manter atualizado com as últimas tendências e tecnologias.
                     </p>
@@ -334,7 +348,7 @@
     </section>
 
     <section class="port" id="sec4">
-        
+
     </section>
 
 </body>
