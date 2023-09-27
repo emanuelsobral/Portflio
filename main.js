@@ -236,7 +236,7 @@ if ("maxTouchPoints" in navigator) {
     hasTouchScreen = navigator.maxTouchPoints > 0;
 } 
 
-if (hasTouchScreen) {
+if (hasTouchScreen || viewportWidth <= 768) {
     const html =  document.getElementById("html");
   const css =  document.getElementById("css");
   const js =  document.getElementById("js");
