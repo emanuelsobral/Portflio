@@ -232,7 +232,8 @@ var viewportWidth = window.innerWidth;
 
 var onresize = function() {
    viewportWidth = 0
-   viewportWidth = window.innerWidth;
+   viewportWidth = window.innerWidth
+   console.log(viewportWidth)
    }
 
 window.addEventListener("resize", onresize);
