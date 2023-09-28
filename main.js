@@ -228,15 +228,11 @@ elements.forEach(function(element) {
 
 //Techs Mobile
 
+window.addEventListener("resize", function() {
+  return window.innerWidth;
+});
+
 var viewportWidth = window.innerWidth;
-
-var onresize = function(window.innerWidth) {
-   viewportWidth = window.innerWidth
-   }
-
-window.addEventListener("resize", onresize);
-
-console.log(window.innerWidth)
 
 console.log(viewportWidth)
 
