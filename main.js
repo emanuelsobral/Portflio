@@ -235,6 +235,10 @@ console.log(viewportWidth)
 
 window.addEventListener("resize", onresize);
 
+var viewportWidth = window.innerWidth;
+
+console.log(viewportWidth)
+
 if (viewportWidth <= 768) {
     const html =  document.getElementById("html");
   const css =  document.getElementById("css");
