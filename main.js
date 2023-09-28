@@ -228,7 +228,7 @@ elements.forEach(function(element) {
 
 //Techs Mobile
 
-const handleWindowResize = function useCallback(event => {
+const handleWindowResize = function useCallback(event {
     setWindowSize(window.innerWidth);
 }, []);
 
