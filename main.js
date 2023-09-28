@@ -318,6 +318,8 @@ if (viewportWidtAuto <= 768) {
     aboutTechMobile.style.display = "flex";
     mysqlInfo.style.display = "grid";
   })
+
+setInterval(1000)
 }
 });
 
