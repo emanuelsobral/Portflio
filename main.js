@@ -234,11 +234,9 @@ var onresize = function viewPortAutomatic() {
    viewPortAutomatic = window.innerWidth
    }
 
-viewPortAutomatic();
-
 window.addEventListener("resize", onresize);
 
-console.log(viewPortAutomatic)
+console.log(viewPortAutomatic())
 
 console.log(viewportWidth)
 
