@@ -228,7 +228,12 @@ elements.forEach(function(element) {
 
 //Techs Mobile
 
-let viewportWidth = window.innerWidth;
+var onresize = function() {
+    viewportWidth = window.innerWidth;
+console.log(viewportWidth)
+}
+
+window.addEventListener("resize", onresize);
 
 if (viewportWidth <= 768) {
     const html =  document.getElementById("html");
