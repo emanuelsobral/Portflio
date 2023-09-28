@@ -231,6 +231,7 @@ elements.forEach(function(element) {
 var viewportWidth = window.innerWidth;
 
 var onresize = function() {
+   viewportWidth = 0
    viewportWidth = window.innerWidth;
    }
 
