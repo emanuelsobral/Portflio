@@ -230,10 +230,8 @@ elements.forEach(function(element) {
 
 window.addEventListener("resize", function() {
   viewportWidtAuto = window.innerWidth;
-  return viewportWidtAuto
+  console.log(viewportWidtAuto)
 });
-
-console.log(viewportWidtAuto)
 
 var viewportWidth = window.innerWidth;
 
