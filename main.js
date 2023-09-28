@@ -228,16 +228,14 @@ elements.forEach(function(element) {
 
 //Techs Mobile
 
+var viewportWidth = window.innerWidth;
+
+
 window.addEventListener("resize", function() {
   viewportWidtAuto = window.innerWidth;
   console.log(viewportWidtAuto)
-});
 
-var viewportWidth = window.innerWidth;
-
-console.log(viewportWidth)
-
-if (viewportWidth <= 768) {
+if (viewportWidtAuto <= 768) {
     const html =  document.getElementById("html");
   const css =  document.getElementById("css");
   const js =  document.getElementById("js");
@@ -321,3 +319,7 @@ if (viewportWidth <= 768) {
     mysqlInfo.style.display = "grid";
   })
 }
+});
+
+
+
