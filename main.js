@@ -230,14 +230,13 @@ elements.forEach(function(element) {
 
 var viewportWidth = window.innerWidth;
 
-var onresize = function viewPortAutomatic() {
-   viewPortAutomatic = window.innerWidth
-   return viewPortAutomatic
+var onresize = function(window.innerWidth) {
+   viewportWidth = window.innerWidth
    }
 
 window.addEventListener("resize", onresize);
 
-console.log(viewPortAutomatic())
+console.log(window.innerWidth)
 
 console.log(viewportWidth)
 
