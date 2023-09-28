@@ -323,7 +323,7 @@ window.addEventListener("resize", function () {
     aboutTechMobile.style.display = "none";
   }
 
-  this.setInterval(1000)
+  setInterval(location.reload(),1000)
 });
 
 
