@@ -228,22 +228,12 @@ elements.forEach(function(element) {
 
 //Techs Mobile
 
-const handleWindowResize = function useCallback(event {
-    setWindowSize(window.innerWidth);
-}, []);
-
-useEffect(() => {
-    window.addEventListener('resize', handleWindowResize);
-    return () => {
-        window.removeEventListener('resize', handleWindowResize);
-    };
-}, [handleWindowResize]);
-
-console.log(handleWindowResize)
-
 window.addEventListener("resize", function() {
-  return window.innerWidth;
+  viewportWidtAuto = window.innerWidth;
+  return viewportWidtAuto
 });
+
+console.log(viewportWidtAuto)
 
 var viewportWidth = window.innerWidth;
 
