@@ -322,6 +322,8 @@ window.addEventListener("resize", function () {
   } else {
     aboutTechMobile.style.display = "none";
   }
+
+  this.setInterval(1000)
 });
 
 
