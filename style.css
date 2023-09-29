@@ -770,6 +770,15 @@ ul {
   color: var(--white);
 }
 
+.projectAboutTechs img{
+  width: 25%;
+}
+
+.projectImgDiv{
+  display: flex;
+  justify-content: center;
+}
+
 /* Tablet and desktop styles */
 
 @media (min-width: 768px) {
