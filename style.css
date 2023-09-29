@@ -389,12 +389,18 @@ ul {
 }
 
 .buttons {
+  -webkit-border-radius: 53px;
+border-radius: 53px;
+background: #52057b;
+-webkit-box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
+box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   display: grid;
   grid-template-columns: auto auto auto;
   height: 2rem;
   gap: 2rem;
   justify-items: center;
-  margin-top: 2rem;
+  margin: 2rem;
+  
 }
 
 .buttons button {
@@ -410,12 +416,17 @@ ul {
 }
 
 .buttons button:hover {
-  text-decoration: underline 4px solid var(--violet);
-  transition: width 0.5s ease-in-out;
+  border-radius: 20px;
+  background: #bc6ff1;
+  box-shadow: inset 22px 22px 44px #a05ecd,
+              inset -22px -22px 44px #d880ff;
+  transition: 0.5s ease-in-out;
 }
 
 .active {
-  text-decoration: underline 4px solid var(--violet);
+  background: #bc6ff1;
+  box-shadow: inset 22px 22px 44px #a05ecd,
+            inset -22px -22px 44px #d880ff;
 }
 
 .containerAbout {
