@@ -608,6 +608,24 @@ ul {
 
   /*portfolio*/
 
+  .port{
+    display: grid;
+    justify-items: center;
+    min-height: 100dvh;
+    background-color: #000000;
+    background-color: #52057B;
+    background-color: #000000;
+    background-color: #000000;
+    background: rgb(82,5,123);
+    background: linear-gradient(0deg, rgba(82,5,123,1) 0%, rgba(0,0,0,1) 100%);
+  }
+
+  .port h1{
+    color: var(--white);
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
   
 
 /* Tablet and desktop styles */
@@ -763,4 +781,7 @@ ul {
         width: 80%;
         margin-right: 10px;
     }
+
+    /*Port*/
+
 }
