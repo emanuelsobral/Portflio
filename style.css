@@ -754,6 +754,14 @@ ul {
   margin: 1rem;
 }
 
+.projectAboutButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  margin-top: 2rem;
+}
+
 
 .projectAboutBox a{
   width: 100%;
@@ -935,6 +943,11 @@ ul {
 
     .cardImg{
       border-radius: 20px 0 0 20px;
+    }
+
+    .projectAboutButtons{
+      display: flex;
+      flex-direction: column;
     }
 
 }
