@@ -273,100 +273,93 @@ function closeBox() {
 
 var viewportWidth = window.innerWidth;
 
+if (viewportWidth <= 768) {
+  const html = document.getElementById("html");
+  const css = document.getElementById("css");
+  const js = document.getElementById("js");
+  const php = document.getElementById("php");
+  const node = document.getElementById("node");
+  const mysql = document.getElementById("mysql");
 
-window.addEventListener("resize", function () {
-  viewportWidtAuto = window.innerWidth;
-  console.log(viewportWidtAuto)
+  const htmlInfo = document.getElementById("htmlInfoMobile");
+  const cssInfo = document.getElementById("cssInfoMobile");
+  const jsInfo = document.getElementById("jsInfoMobile");
+  const phpInfo = document.getElementById("phpInfoMobile");
+  const nodeInfo = document.getElementById("nodeInfoMobile");
+  const mysqlInfo = document.getElementById("mysqlInfoMobile");
 
-  if (viewportWidtAuto <= 768) {
-    const html = document.getElementById("html");
-    const css = document.getElementById("css");
-    const js = document.getElementById("js");
-    const php = document.getElementById("php");
-    const node = document.getElementById("node");
-    const mysql = document.getElementById("mysql");
+  const aboutTechMobile = document.getElementById("aboutTechMobile");
+  const closseAboutTech = document.getElementById("closeAboutTechMobileButton");
 
-    const htmlInfo = document.getElementById("htmlInfoMobile");
-    const cssInfo = document.getElementById("cssInfoMobile");
-    const jsInfo = document.getElementById("jsInfoMobile");
-    const phpInfo = document.getElementById("phpInfoMobile");
-    const nodeInfo = document.getElementById("nodeInfoMobile");
-    const mysqlInfo = document.getElementById("mysqlInfoMobile");
+  const elementsMobile = ["htmlInfoMobile", "cssInfoMobile", "jsInfoMobile", "phpInfoMobile", "nodeInfoMobile", "mysqlInfoMobile"];
 
-    const aboutTechMobile = document.getElementById("aboutTechMobile");
-    const closseAboutTech = document.getElementById("closeAboutTechMobileButton");
-
-    const elementsMobile = ["htmlInfoMobile", "cssInfoMobile", "jsInfoMobile", "phpInfoMobile", "nodeInfoMobile", "mysqlInfoMobile"];
-
-    closseAboutTech.addEventListener('click', () => {
-      aboutTechMobile.style.display = "none";
-    })
-
-    html.addEventListener('click', () => {
-      elementsMobile.forEach(function (element) {
-        var info = document.getElementById(element);
-        info.style.display = "none";
-      });
-
-      aboutTechMobile.style.display = "flex";
-      htmlInfo.style.display = "grid";
-    })
-
-    css.addEventListener('click', () => {
-      elementsMobile.forEach(function (element) {
-        var info = document.getElementById(element);
-        info.style.display = "none";
-      });
-
-      aboutTechMobile.style.display = "flex";
-      cssInfo.style.display = "grid";
-    })
-
-    js.addEventListener('click', () => {
-      elementsMobile.forEach(function (element) {
-        var info = document.getElementById(element);
-        info.style.display = "none";
-      });
-
-      aboutTechMobile.style.display = "flex";
-      jsInfo.style.display = "grid";
-    })
-
-    php.addEventListener('click', () => {
-      elementsMobile.forEach(function (element) {
-        var info = document.getElementById(element);
-        info.style.display = "none";
-      });
-
-      aboutTechMobile.style.display = "flex";
-      phpInfo.style.display = "grid";
-    })
-
-    node.addEventListener('click', () => {
-      elementsMobile.forEach(function (element) {
-        var info = document.getElementById(element);
-        info.style.display = "none";
-      });
-
-      aboutTechMobile.style.display = "flex";
-      nodeInfo.style.display = "grid";
-    })
-
-    mysql.addEventListener('click', () => {
-      elementsMobile.forEach(function (element) {
-        var info = document.getElementById(element);
-        info.style.display = "none";
-      });
-
-      aboutTechMobile.style.display = "flex";
-      mysqlInfo.style.display = "grid";
-    })
-
-  } else {
+  closseAboutTech.addEventListener('click', () => {
     aboutTechMobile.style.display = "none";
-  }
-});
+  })
 
+  html.addEventListener('click', () => {
+    elementsMobile.forEach(function (element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+
+    aboutTechMobile.style.display = "flex";
+    htmlInfo.style.display = "grid";
+  })
+
+  css.addEventListener('click', () => {
+    elementsMobile.forEach(function (element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+
+    aboutTechMobile.style.display = "flex";
+    cssInfo.style.display = "grid";
+  })
+
+  js.addEventListener('click', () => {
+    elementsMobile.forEach(function (element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+
+    aboutTechMobile.style.display = "flex";
+    jsInfo.style.display = "grid";
+  })
+
+  php.addEventListener('click', () => {
+    elementsMobile.forEach(function (element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+
+    aboutTechMobile.style.display = "flex";
+    phpInfo.style.display = "grid";
+  })
+
+  node.addEventListener('click', () => {
+    elementsMobile.forEach(function (element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+
+    aboutTechMobile.style.display = "flex";
+    nodeInfo.style.display = "grid";
+  })
+
+  mysql.addEventListener('click', () => {
+    elementsMobile.forEach(function (element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+
+    aboutTechMobile.style.display = "flex";
+    mysqlInfo.style.display = "grid";
+  })
+
+} else {
+  aboutTechMobile.style.display = "none";
+}
 
 
 
