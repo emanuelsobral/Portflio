@@ -1007,6 +1007,7 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
 
   .textAbout {
     grid-area: SOBRE;
+    min-height: 50rem;
     height: 100%;
     width: 98%;
     justify-content: center;
