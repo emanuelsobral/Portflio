@@ -1,56 +1,54 @@
-:root{
-    --black: #000000;
-    --purple: #52057B;
-    --violet: #892CDC;
-    --ligh-violet: #BC6FF1;
-    --white: #FFFFFF;
+:root {
+  --black: #000000;
+  --purple: #52057b;
+  --violet: #892cdc;
+  --ligh-violet: #bc6ff1;
+  --white: #ffffff;
 }
-
 
 /* BEGIN: reset-css*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    width: 100vw;
-    overflow-x: hidden;
+html,
+body {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 /* END: reset-css */
 
-
 /* Mobile styles */
 body {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-    /* Scrollbar styles */
+/* Scrollbar styles */
 ::-webkit-scrollbar {
-    width:10px;
-    height: 10px;
-} 
-     
-::-webkit-scrollbar-track {
-    background: var(--purple);
+  width: 10px;
+  height: 10px;
 }
-     
+
+::-webkit-scrollbar-track {
+  background: var(--purple);
+}
+
 ::-webkit-scrollbar-thumb {
-    background: var(--violet);
-    border-radius: 20px;
+  background: var(--violet);
+  border-radius: 20px;
 }
 
 /*Dot Navigation Styles */
 
-
-.BoxDotNavigator{
-    display: none;
+.BoxDotNavigator {
+  display: none;
 }
 
 ul {
@@ -73,18 +71,18 @@ ul {
   border: 1px solid var(--white);
   width: 16px;
   height: 16px;
-  
+
   margin: 20px 0;
-  
+
   text-indent: -999px;
   overflow: hidden;
-  
+
   position: relative;
 }
 
 .navbar a::after {
-  content: ''; 
-  
+  content: "";
+
   background-color: var(--ligh-violet);
 
   position: absolute;
@@ -93,18 +91,17 @@ ul {
   left: 0;
   right: 0;
   width: 100%;
-  transition: height 0.3s ease-in-out ;
+  transition: height 0.3s ease-in-out;
 }
 
 .navbar a:hover::after,
 .navbar a.active::after {
-  
   height: 100%;
 }
 
 /*scroll Top*/
 
-.scrollTop{
+.scrollTop {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
@@ -115,12 +112,11 @@ ul {
   z-index: 1000;
 }
 
-.scrollTop:focus{
+.scrollTop:focus {
   opacity: 1;
 }
 
-
-.scrollTop button{
+.scrollTop button {
   width: 50px;
   height: 50px;
   border: none;
@@ -132,363 +128,140 @@ ul {
   cursor: pointer;
 }
 
-.scrollTop button:hover{
+.scrollTop button:hover {
   background-color: var(--violet);
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.scrollTop img{
+.scrollTop img {
   width: 20px;
 }
 
 /*Main*/
 
 .main {
-    width: 100%;
-    height: 100dvh;
-    background: #000000;
-    background: radial-gradient(
-      circle,
-      #000000 0%,
-      var(--purple) 45%
-    );
-  }
-  
-  .MainText {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    height: 100%;
-  }
-  
-  .HelloMain h2 {
-    color: var(--white);
-    font-size: 1.5rem;
-  }
-  
-  .HelloMain span {
-    color: var(--violet);
-  }
-  
-  .FrontEnd {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100vh;
-  }
-
-  .SvgIcon{
-    display: none;
-  }
-
-  .SvgIconMobile{
-    display: flex;
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
-    align-items: baseline;
-  }
-
-  .SvgIconMobile button{
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-    .SvgIconMobile a {
-    text-decoration: none;
-  }
-  
-    .SvgIconMobile svg {
-    width: 3.5rem;
-  }
-  
-    .SvgIconMobile svg:hover path {
-    transition: 0.5s;
-    fill: var(--violet);
-  }
-  
-    .SvgIconMobile svg:hover {
-    filter: drop-shadow(0px 1px 10px #9400ff);
-    transition: 0.5s;
-  }
-  
-  .FrontEnd h1 {
-    font-size: 2rem;
-    color: var(--white);
-  }
-  
-  .Developer h1 {
-    font-size: 3rem;
-    color: var(--violet);
-  }
-  
-  .Developer span.cursor {
-    display: inline-block;
-    background-color: var(--violet);
-    margin-left: 0.1rem;
-    width: 4px;
-    margin-left: 0.5rem;
-    animation: blink 1s infinite;
-  }
-  
-  .Developer p span.cursor.typing {
-    animation: none;
-  }
-  
-  @keyframes blink {
-    0% {
-      background-color: var(--violet);
-    }
-    49% {
-      background-color: var(--violet);
-    }
-    50% {
-      background-color: transparent;
-    }
-    99% {
-      background-color: transparent;
-    }
-    100% {
-      background-color: var(--violet);
-    }
-  }
-
-  .popUpDownload{
-    width: 90%;
-    height: 40%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.70);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3.9px);
-    -webkit-backdrop-filter: blur(3.9px);
-    border: 1px solid rgba(0, 0, 0, 0.35);
-    border-radius: 20px;
-    border: 2px solid var(--violet);
-    z-index: 1000;
-  }
-
-  .popUpDownload h1{
-    color: var(--ligh-violet);
-    font-size: 2rem;
-  }
-
-  .popUpDownload p{
-    color: var(--white);
-    font-size: 1.5rem;
-  }
-
-  .popUpButtons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 2rem;
-  }
-
-  .popUpButtons button{
-    width: 40%;
-    height: 40px;
-    border: none;
-    border-radius: 20px;
-    background-color: var(--ligh-violet);
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .popUpButtons a{
-    text-decoration: none;
-    color: var(--white);
-  }
-
-  .popUpButtons button:hover{
-    background-color: var(--violet);
-    transition: .5s;
-  }
-
-  .popUpClose{
-    margin-top: 2rem;
-  }
-
-  .popUpClose button{
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 20px;
-    background-color: var(--ligh-violet);
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .popUpClose button:hover{
-    background-color: var(--violet);
-    transition: .5s;
-  }
-
-  .rollDown{
-    display: block;
-    position: absolute;
-    color: var(--white);
-    bottom: 0px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    animation: 1s linear 0s infinite alternate sun-rise;
-    margin-bottom: 2rem;
-  }
-
-  .rollDown img{
-    width: 50px;
-  }
-
-
-  @keyframes sun-rise {
-    from {
-      /* pushes the sun down past the viewport */
-      transform: translateY(-20px);
-    }
-    to {
-      /* returns the sun to its default position */
-      transform: translateY(0px);
-    }
-  }
-
-
-  /*Sobre*/
-
-  .about{
-    width: 100%;
-    height: 100%;
-  }
-
-  .backgroundAbout{
-    width: 100%;
-    min-height: 100vh;
-    max-height: auto;
-    background: rgb(82,5,123);
-    background: linear-gradient(180deg, rgba(82,5,123,1) 0%, rgba(0,0,0,1) 70%);
-    background-size: cover;
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-  }
-
-  .foto{
-    display: none;
-  }
-
-  .buttons{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    height: 2rem;
-    gap: 2rem;
-    justify-items: center;
-    margin-top: 2rem;
-  }
-
-  .buttons button{
-    width: 50%;
-    height: 100%;
-    border: none;
-    border-radius: 20px;
-    background-color: transparent;
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .buttons button:hover{
-    text-decoration: underline 4px solid var(--violet);
-    transition: width 0.5s ease-in-out;
-  }
-
-    .active{
-    text-decoration: underline 4px solid var(--violet);
-  }
-
-  .containerAbout{
-    width: 95%;
-    height: auto;
-    border-radius: 20px;
-  }
-  
-  .textAbout h1{
-    display: flex;
-    justify-content: center;
-    color: var(--ligh-violet);
-    font-size: 2rem;
-    padding: 20px;
-  }
-
-  .textAbout p{
-    color: var(--white);
-    font-size: 1.5rem;
-    padding: 20px;
-  }
-
-  .textAbout p span{
-    color: var(--ligh-violet);
-  }
-
-  .textAbout li{
-    color: var(--white);
-    font-size: 1.5rem;
-    padding: 20px;
-  }
-
-  .textAbout li span{
-    color: var(--ligh-violet);
-  }
-
-  #about{
-    border: 2px solid var(--ligh-violet);
-    border-radius: 20px;
-  }
-  
-
-/*Techs*/
-
-.aboutTech{
-    display: none;
+  width: 100%;
+  height: 100dvh;
+  background: #000000;
+  background: radial-gradient(circle, #000000 0%, var(--purple) 45%);
 }
 
-.aboutTechMobile{
-  position: absolute;
+.MainText {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
   height: 100%;
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
 }
 
-.containerAboutTechMobile{
+.HelloMain h2 {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.HelloMain span {
+  color: var(--violet);
+}
+
+.FrontEnd {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vh;
+}
+
+.SvgIcon {
+  display: none;
+}
+
+.SvgIconMobile {
+  display: flex;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.SvgIconMobile button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.SvgIconMobile a {
+  text-decoration: none;
+}
+
+.SvgIconMobile svg {
+  width: 3.5rem;
+}
+
+.SvgIconMobile svg:hover path {
+  transition: 0.5s;
+  fill: var(--violet);
+}
+
+.SvgIconMobile svg:hover {
+  filter: drop-shadow(0px 1px 10px #9400ff);
+  transition: 0.5s;
+}
+
+.FrontEnd h1 {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.Developer h1 {
+  font-size: 3rem;
+  color: var(--violet);
+}
+
+.Developer span.cursor {
+  display: inline-block;
+  background-color: var(--violet);
+  margin-left: 0.1rem;
+  width: 4px;
+  margin-left: 0.5rem;
+  animation: blink 1s infinite;
+}
+
+.Developer p span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0% {
+    background-color: var(--violet);
+  }
+  49% {
+    background-color: var(--violet);
+  }
+  50% {
+    background-color: transparent;
+  }
+  99% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: var(--violet);
+  }
+}
+
+.popUpDownload {
   width: 90%;
-  height: 40rem;
-  display: grid;
+  height: 40%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
-  justify-items: center;
-  background: rgba(0, 0, 0, 0.70);
+  background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.9px);
   -webkit-backdrop-filter: blur(3.9px);
@@ -498,7 +271,316 @@ ul {
   z-index: 1000;
 }
 
-.containerAboutTechMobile button{
+.popUpDownload h1 {
+  color: var(--ligh-violet);
+  font-size: 2rem;
+}
+
+.popUpDownload p {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.popUpButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.popUpButtons button {
+  width: 40%;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--ligh-violet);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popUpButtons a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.popUpButtons button:hover {
+  background-color: var(--violet);
+  transition: 0.5s;
+}
+
+.popUpClose {
+  margin-top: 2rem;
+}
+
+.popUpClose button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--ligh-violet);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popUpClose button:hover {
+  background-color: var(--violet);
+  transition: 0.5s;
+}
+
+.rollDown {
+  display: block;
+  position: absolute;
+  color: var(--white);
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  animation: 1s linear 0s infinite alternate sun-rise;
+  margin-bottom: 2rem;
+}
+
+.rollDown img {
+  width: 50px;
+}
+
+@keyframes sun-rise {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateY(-20px);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateY(0px);
+  }
+}
+
+/*Sobre*/
+
+.about {
+  width: 100%;
+  height: 100%;
+}
+
+.backgroundAbout {
+  width: 100%;
+  min-height: 100vh;
+  max-height: auto;
+  background: rgb(82, 5, 123);
+  background: linear-gradient(
+    180deg,
+    rgba(82, 5, 123, 1) 0%,
+    rgba(0, 0, 0, 1) 70%
+  );
+  background-size: cover;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.foto {
+  display: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 2rem;
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.buttons button {
+  width: 50%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  text-decoration: underline 4px solid var(--violet);
+  transition: width 0.5s ease-in-out;
+}
+
+.active {
+  text-decoration: underline 4px solid var(--violet);
+}
+
+.containerAbout {
+  width: 95%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.textAbout h1 {
+  display: flex;
+  justify-content: center;
+  color: var(--ligh-violet);
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.textAbout p {
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+.textAbout p span {
+  color: var(--ligh-violet);
+}
+
+.textAbout li {
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 20px;
+}
+
+.textAbout li span {
+  color: var(--ligh-violet);
+}
+
+#about {
+  border: 2px solid var(--ligh-violet);
+  border-radius: 20px;
+}
+
+.container {
+  width: 100%;
+  padding: 50px 0;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.container h1 {
+  display: flex;
+  color: var(--ligh-violet);
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.container p {
+  display: flex;
+  color: var(--white);
+  justify-content: flex-start;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.container span {
+  display: flex;
+  color: var(--ligh-violet);
+  justify-content: flex-start;
+  padding: 0;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8px;
+  margin-left: -1px;
+  width: 2px;
+  height: 100%;
+  background: var(--purple);
+  z-index: 1;
+}
+
+.timeline-block {
+  width: 100%;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  clear: both;
+}
+
+.timeline-block-right {
+  float: none;
+}
+
+.timeline-block-left {
+  float: none;
+  direction: ltr;
+}
+
+.marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--violet);
+  background: var(--ligh-violet);
+  margin-top: 10px;
+  z-index: 9999;
+}
+
+.timeline-content {
+  width: 95%;
+  padding: 0 15px;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  line-height: 1.5em;
+  word-spacing: 1px;
+  color: #888;
+}
+
+/*Techs*/
+
+.aboutTech {
+  display: none;
+}
+
+.aboutTechMobile {
+  position: absolute;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.containerAboutTechMobile {
+  width: 90%;
+  height: 40rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.9px);
+  -webkit-backdrop-filter: blur(3.9px);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+  border: 2px solid var(--violet);
+  z-index: 1000;
+}
+
+.containerAboutTechMobile button {
   width: 40px;
   height: 40px;
   border: none;
@@ -511,250 +593,252 @@ ul {
   margin-top: 2rem;
 }
 
-.aboutMobileTech h1{
+.aboutMobileTech h1 {
   color: var(--ligh-violet);
   font-size: 2rem;
   margin-top: 2rem;
 }
 
-.aboutMobileTech p{
+.aboutMobileTech p {
   color: var(--white);
   font-size: 1rem;
   margin-top: 2rem;
 }
 
-.aboutMobileTech{
+.aboutMobileTech {
   display: grid;
   align-items: center;
   justify-items: center;
   margin: 1rem;
-
 }
 
-.techs{
-    width: 100%;
-    min-height: 100dvh;
-    background-color: #000000;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2352057B' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%2352057B'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
-    color: var(--white);
+.techs {
+  width: 100%;
+  min-height: 100dvh;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2352057B' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%2352057B'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+  color: var(--white);
 }
 
-.containerTechs{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    justify-content: center;
-    justify-items: center;
+.containerTechs {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
 }
 
-.textTech{
-    display: grid;
-    align-content: center;
-    justify-items: center;
+.textTech {
+  display: grid;
+  align-content: center;
+  justify-items: center;
 }
 
-.textTech h1{
-    color: var(--ligh-violet);
-    font-size: 2rem;
-    margin-top: 2rem;
-}
-
-.textTech p{
-    color: var(--white);
-    font-size: 1.4rem;
-    margin-top: 2rem;
-}
-
-.gridTechs {
-    display: grid;
-    grid-template-columns: auto auto;
-    align-content: center;
-    justify-content: center;
-    gap: 2em 2em;
-    align-items: center;
-    justify-items: center;
-  }
-  
-  .gridTechs div {
-    display: grid;
-    justify-content: center;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 20px;
-    border: 2px solid var(--purple);
-    backdrop-filter: blur(4px);
-    transition: 0.5s;
-    align-content: center;
-    align-items: center;
-    justify-items: center;
-    align-content: space-evenly;
-  }
-  
-  .gridTechs div h3 {
-    font-weight: normal;
-  }
-  
-  .gridTechs div:hover {
-    transition: 1s;
-    background-color: var(--purple);
-  }
-  
-  .gridTechs:hover > :not(:hover) {
-    backdrop-filter: blur(4px);
-    transition: 0.5s;
-    opacity: 0.5;
-  }
-
-  /*portfolio*/
-
-  .port{
-    display: grid;
-    justify-items: center;
-    min-height: 100dvh;
-    background-color: #000000;
-    background-color: #52057B;
-    background-color: #000000;
-    background-color: #000000;
-    background: rgb(82,5,123);
-    background: linear-gradient(0deg, rgba(82,5,123,1) 0%, rgba(0,0,0,1) 100%);
-  }
-
-  .port h1{
-    color: var(--white);
-    font-size: 2rem;
-    margin-top: 2rem;
-  }
-
-  .port button a{
-    text-decoration: none;
-    color: var(--white);
-    width: 100%;
-    height: 100%;
-  }
-
-
-  .port button{
-    width: 15rem;
-    height: 2rem;
-    border: none;
-    border-radius: 20px;
-    background-color: var(--ligh-violet);
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 1rem;
-  }
-
-  .port button:hover{
-    background-color: var(--violet);
-    transition: .5s;
-  }
-
-  .containerPort{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .boxPort{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .cardContainer{
-    background: var(--black);
-    border-radius: 20px;
-    color: var(--white);
-    border: 2px solid var(--violet);
-    margin: 1rem;
-    width: 80%;
-  }
-
-  .cardImg{
-    background: var(--purple);
-    border-radius: 20px 20px 0 0;
-  }
-
-  .cardImg img{
-    width: 100%;
-  }
-
-  .cardText{
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    padding: 1rem;
-  }
-
-  .cardText h1{
-    color: var(--ligh-violet);
-    font-size: 2rem;
-    margin-top: 2rem;
-  }
-
-  .cardText p{
-    color: var(--white);
-    font-size: 1.4rem;
-    margin-top: 2rem;
-  }
-
-  .cardText button{
-    width: 10rem;
-    height: 2rem;
-    border: none;
-    border-radius: 20px;
-    background-color: var(--ligh-violet);
-    color: var(--white);
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 2rem;
-  }
-
-  .cardText button:hover{
-    background-color: var(--violet);
-    transition: .5s;
-  }
-
-  .projectAboutBox{
-    position: fixed;
-    background: black;
-    border: 2px solid var(--ligh-violet);
-    border-radius: 20px;
-    width: 98%;
-    height: 95%;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    top: 2.5%;
-    bottom: 0;
-}
-
-.projectAboutBox h1{
+.textTech h1 {
   color: var(--ligh-violet);
   font-size: 2rem;
   margin-top: 2rem;
 }
 
-.projectAboutBox p{
+.textTech p {
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.gridTechs {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: center;
+  justify-content: center;
+  gap: 2em 2em;
+  align-items: center;
+  justify-items: center;
+}
+
+.gridTechs div {
+  display: grid;
+  justify-content: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 20px;
+  border: 2px solid var(--purple);
+  backdrop-filter: blur(4px);
+  transition: 0.5s;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: space-evenly;
+}
+
+.gridTechs div h3 {
+  font-weight: normal;
+}
+
+.gridTechs div:hover {
+  transition: 1s;
+  background-color: var(--purple);
+}
+
+.gridTechs:hover > :not(:hover) {
+  backdrop-filter: blur(4px);
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
+/*portfolio*/
+
+.port {
+  display: grid;
+  justify-items: center;
+  min-height: 100dvh;
+  background-color: #000000;
+  background-color: #52057b;
+  background-color: #000000;
+  background-color: #000000;
+  background: rgb(82, 5, 123);
+  background: linear-gradient(
+    0deg,
+    rgba(82, 5, 123, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.port h1 {
+  color: var(--white);
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.port button a {
+  text-decoration: none;
+  color: var(--white);
+  width: 100%;
+  height: 100%;
+}
+
+.port button {
+  width: 15rem;
+  height: 2rem;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--ligh-violet);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.port button:hover {
+  background-color: var(--violet);
+  transition: 0.5s;
+}
+
+.containerPort {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.boxPort {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardContainer {
+  background: var(--black);
+  border-radius: 20px;
+  color: var(--white);
+  border: 2px solid var(--violet);
+  margin: 1rem;
+  width: 80%;
+}
+
+.cardImg {
+  background: var(--purple);
+  border-radius: 20px 20px 0 0;
+}
+
+.cardImg img {
+  width: 100%;
+}
+
+.cardText {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.cardText h1 {
+  color: var(--ligh-violet);
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.cardText p {
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.cardText button {
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--ligh-violet);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.cardText button:hover {
+  background-color: var(--violet);
+  transition: 0.5s;
+}
+
+.projectAboutBox {
+  position: fixed;
+  background: black;
+  border: 2px solid var(--ligh-violet);
+  border-radius: 20px;
+  width: 98%;
+  height: 95%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  top: 2.5%;
+  bottom: 0;
+}
+
+.projectAboutBox h1 {
+  color: var(--ligh-violet);
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.projectAboutBox p {
   color: var(--white);
   font-size: 1rem;
   margin: 1rem;
 }
 
-.projectAboutButtons{
+.projectAboutButtons {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -762,19 +846,18 @@ ul {
   margin-top: 2rem;
 }
 
-
-.projectAboutBox a{
+.projectAboutBox a {
   width: 100%;
   height: 100%;
   text-decoration: none;
   color: var(--white);
 }
 
-.projectAboutTechs img{
+.projectAboutTechs img {
   width: 25%;
 }
 
-.projectImgDiv{
+.projectImgDiv {
   display: flex;
   justify-content: center;
 }
@@ -782,188 +865,202 @@ ul {
 /* Tablet and desktop styles */
 
 @media (min-width: 768px) {
-    body {
-        font-size: 18px;
-    }
-
-    .BoxDotNavigator{
-      display: block;
+  body {
+    font-size: 18px;
   }
 
-  .scrollTop{
+  .BoxDotNavigator {
+    display: block;
+  }
+
+  .scrollTop {
     display: none;
   }
 
+  /*main*/
 
-    /*main*/
+  .FrontEnd {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
-    .FrontEnd{
-        display: flex;
-        flex-direction: row-reverse;
-    }
+  .HelloMain h2 {
+    font-size: 2rem;
+  }
 
-    .HelloMain h2 {
-        font-size: 2rem;
-      }
+  .FrontEnd h1 {
+    font-size: 3rem;
+    margin-right: 10px;
+  }
 
-    .FrontEnd h1 {
-        font-size: 3rem;
-        margin-right: 10px;
-      }
+  .Developer h1 {
+    font-size: 4rem;
+  }
 
-      .Developer h1 {
-        font-size: 4rem;
-      }
+  .SvgIconMobile {
+    display: none;
+  }
 
-    .SvgIconMobile{
-        display: none;
-    }
+  .SvgIcon {
+    display: flex;
+  }
 
-    .SvgIcon{
-        display: flex;
-    }
-    
+  .SvgIcon button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 
-    .SvgIcon button{
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-    
-    .FrontEnd .SvgIcon a {
-        text-decoration: none;
-    }
-      
-    .FrontEnd .SvgIcon svg {
-        width: 3rem;
-        height: 3rem;
-        margin-right: 5px;
-    }
-      
-    .FrontEnd .SvgIcon svg:hover path {
-        transition: 0.5s;
-        fill: #9400ff;
-    }
-      
-    .FrontEnd .SvgIcon svg:hover {
-        filter: drop-shadow(0px 1px 10px #9400ff);
-        transition: 0.5s;
-    }
+  .FrontEnd .SvgIcon a {
+    text-decoration: none;
+  }
 
-    .popUpDownload{
-        width: 50%;
-        height: 50%;
-    }
+  .FrontEnd .SvgIcon svg {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 5px;
+  }
 
-    /*about*/
+  .FrontEnd .SvgIcon svg:hover path {
+    transition: 0.5s;
+    fill: #9400ff;
+  }
 
-    .containerAbout{
-        display: grid;
+  .FrontEnd .SvgIcon svg:hover {
+    filter: drop-shadow(0px 1px 10px #9400ff);
+    transition: 0.5s;
+  }
 
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-      
-        grid-template-areas:
-          "FOTO FOTO SOBRE SOBRE SOBRE"
-          "FOTO FOTO SOBRE SOBRE SOBRE"
-          "infoAbout infoAbout infoAbout infoAbout infoAbout"
-          "infoAbout infoAbout infoAbout infoAbout infoAbout";
-      
-        gap: 0px;
-        height: 100%;
-        width: 100%;
-        align-items: center;
-    }
+  .popUpDownload {
+    width: 50%;
+    height: 50%;
+  }
 
-    .foto{
-        display: block;
-        grid-area: FOTO;
-        margin-right: 10px;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-    }
+  /*about*/
 
-    .foto img{
-        width: 90%;
-        height: 90%;
-        border-radius: 100%;
-    }
+  .container {
+    width: 80rem;
+  }
 
-    .textAbout{
-        grid-area: SOBRE;
-        height: 100%;
-        width: 98%;
-        justify-content: center;
-    }
+  .container:before{
+    left: 50%;
+  }
 
-    .infoAbout{
-        grid-area: infoAbout;
-        width: 100%;
-        min-height: 30rem;
-        
-        
-    }
+  .timeline-block{
+    width: -webkit-calc(50% + 8px);
+    width: -moz-calc(50% + 8px);
+    width: calc(50% + 8px);
+    margin-bottom: auto;
+  }
 
-    /*Techs*/
+  .timeline-block-right {
+    float: right;
+  }
+  .timeline-block-left {
+    float: left;
+    direction: rtl;
+  }
 
-    .aboutTechMobile{
-      display: none;
-    }
+  .containerAbout {
+    display: grid;
 
-    .techs{
-        display: grid;
-        grid-template-columns: 50% 50%;
-        gap: 2rem;
-    }
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
-    .gridTechs{
-        grid-template-columns: auto auto auto;
-    }
+    grid-template-areas:
+      "FOTO FOTO SOBRE SOBRE SOBRE"
+      "FOTO FOTO SOBRE SOBRE SOBRE"
+      "infoAbout infoAbout infoAbout infoAbout infoAbout"
+      "infoAbout infoAbout infoAbout infoAbout infoAbout";
 
-    .textTech{
-        display: none ;
-    }
+    gap: 0px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+  }
 
-    .aboutTech{
-        display: grid;
-        align-content: center;
-        align-items: center;
-        justify-items: center;
-        width: 80%;
-        margin-right: 10px;
-    }
+  .foto {
+    display: block;
+    grid-area: FOTO;
+    margin-right: 10px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
 
-    /*Port*/
+  .foto img {
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+  }
 
+  .textAbout {
+    grid-area: SOBRE;
+    height: 100%;
+    width: 98%;
+    justify-content: center;
+  }
 
-    .containerPort{
-        display: flex;
-        flex-wrap: wrap;
-    }
+  .infoAbout {
+    grid-area: infoAbout;
+    width: 100%;
+    min-height: 30rem;
+  }
 
-    .cardContainer{
-      width: 40rem;
-      min-height: 20rem;
-      display: flex;
-      
-    }
+  /*Techs*/
 
+  .aboutTechMobile {
+    display: none;
+  }
 
-    .cardImg{
-      border-radius: 20px 0 0 20px;
-    }
+  .techs {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2rem;
+  }
 
-    .projectAboutButtons{
-      display: flex;
-      flex-direction: row;
-    }
+  .gridTechs {
+    grid-template-columns: auto auto auto;
+  }
 
-    .projectAboutBox{
-      width: 60%;
-      height: 60%;
-      top: 25%;
-    }
+  .textTech {
+    display: none;
+  }
 
+  .aboutTech {
+    display: grid;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 80%;
+    margin-right: 10px;
+  }
+
+  /*Port*/
+
+  .containerPort {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cardContainer {
+    width: 40rem;
+    min-height: 20rem;
+    display: flex;
+  }
+
+  .cardImg {
+    border-radius: 20px 0 0 20px;
+  }
+
+  .projectAboutButtons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .projectAboutBox {
+    width: 60%;
+    height: 60%;
+    top: 25%;
+  }
 }
-
