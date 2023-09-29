@@ -731,15 +731,15 @@ ul {
     background: black;
     border: 2px solid var(--ligh-violet);
     border-radius: 20px;
-    width: 90%;
-    height: 90%;
+    width: 98%;
+    height: 100%;
     display: grid;
     align-content: center;
     justify-content: center;
     align-items: center;
     justify-items: center;
-    top: 5%;
-    bottom: 5%;
+    top: 0;
+    bottom: 0;
 }
 
 .projectAboutBox h1{
@@ -948,6 +948,12 @@ ul {
     .projectAboutButtons{
       display: flex;
       flex-direction: row;
+    }
+
+    .projectAboutBox{
+      width: 60%;
+      height: 60%;
+      top: 25%;
     }
 
 }
