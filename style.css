@@ -435,6 +435,10 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   border-radius: 20px;
 }
 
+.textAbout{
+  min-height: 50rem;
+}
+
 .textAbout h1 {
   display: flex;
   justify-content: center;
@@ -1007,7 +1011,7 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
 
   .textAbout {
     grid-area: SOBRE;
-    min-height: 60rem;
+    min-height: 50rem;
     height: 100%;
     width: 98%;
     justify-content: center;
