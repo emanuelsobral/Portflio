@@ -736,8 +736,8 @@ ul {
     justify-content: center;
     align-items: center;
     justify-items: center;
-    top: 0;
-    bottom: 0;
+    top: 5%;
+    bottom: 5%;
 }
 
 .projectAboutBox h1{

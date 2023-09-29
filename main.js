@@ -228,6 +228,46 @@ elements.forEach(function (element) {
 
 //port
 
+const emBreveBox = document.getElementById('emBreveBox');
+const jogoDaVelhaBox = document.getElementById('jogoDaVelhaBox');
+const calculadoraBox = document.getElementById('calculadoraBox');
+const cronometroBox = document.getElementById('cronometroBox');
+
+function openEmBreveBox() {
+  emBreveBox.style.display = 'grid';
+  jogoDaVelhaBox.style.display = 'none';
+  calculadoraBox.style.display = 'none';
+  cronometroBox.style.display = 'none';
+}
+
+function openJogoDaVelhaBox() {
+  emBreveBox.style.display = 'none';
+  jogoDaVelhaBox.style.display = 'grid';
+  calculadoraBox.style.display = 'none';
+  cronometroBox.style.display = 'none';
+}
+
+function openCalculadoraBox() {
+  emBreveBox.style.display = 'none';
+  jogoDaVelhaBox.style.display = 'none';
+  calculadoraBox.style.display = 'grid';
+  cronometroBox.style.display = 'none';
+}
+
+function openCronometroBox() {
+  emBreveBox.style.display = 'none';
+  jogoDaVelhaBox.style.display = 'none';
+  calculadoraBox.style.display = 'none';
+  cronometroBox.style.display = 'grid';
+}
+
+function closeBox() {
+  emBreveBox.style.display = 'none';
+  jogoDaVelhaBox.style.display = 'none';
+  calculadoraBox.style.display = 'none';
+  cronometroBox.style.display = 'none';
+}
+
 
 //Techs Mobile
 

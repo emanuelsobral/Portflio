@@ -436,7 +436,7 @@
                     <h1>Em Desenvolvimento</h1>
                     <p>Site meteorologico feito em JavaScript e API</p>
                     <div class="cardButtons">
-                        <button type="button">Ver mais</button>
+                        <button type="button" onclick="openEmBreveBox()">Ver mais</button>
 
                     </div>
                 </div>
@@ -450,7 +450,7 @@
                     <h1>Jogo da Velha</h1>
                     <p>Jogo da velha multijogador feito em Javascript</p>
                     <div class="cardButtons">
-                        <button type="button">Ver mais</button>
+                        <button type="button" onclick="openJogoDaVelhaBox()">Ver mais</button>
 
                     </div>
                 </div>
@@ -464,7 +464,7 @@
                     <h1>Calculadora</h1>
                     <p>Calculadora com todas funçoes basicas feita em JavaScript</p>
                     <div class="cardButtons">
-                        <button type="button">Ver mais</button>
+                        <button type="button" onclick="openCalculadoraBox()">Ver mais</button>
 
                     </div>
                 </div>
@@ -478,7 +478,7 @@
                     <h1>Cronometro</h1>
                     <p>Cronometro com Play, Pause e Reset feito em JavaScript</p>
                     <div class="cardButtons">
-                        <button type="button">Ver mais</button>
+                        <button type="button" onclick="openCronometroBox()">Ver mais</button>
 
                     </div>
                 </div>
@@ -488,7 +488,7 @@
         <button type="button"><a href="https://github.com/emanuelsobral?tab=repositories" target="_blank">Veja Mais Projetos</a></button>
 
         
-        <div class="projectAboutBox" style="display: none;">
+        <div class="projectAboutBox" id="emBreveBox" style="display: none;">
             <h1>Em Breve</h1>
             <p>Este projeto é uma aplicação web simples construída com JavaScript que utiliza a API de um site meteorológico para fornecer informações sobre o clima.</p>
             <div class="projectAboutTechs">
@@ -500,11 +500,11 @@
                 <button type="button">Em Breve</button>
                 <button type="button">Em Breve</button>
             </div>
-            <button>Voltar</button>
+            <button type="button" onclick="closeBox()">Voltar</button>
 
         </div>
 
-        <div class="projectAboutBox" style="display: none;">
+        <div class="projectAboutBox" id="jogoDaVelhaBox" style="display: none;">
             <h1>Jogo da Velha</h1>
             <p>Este projeto é um jogo da velha simples implementado em HTML, CSS e JavaScript. Ele foi criado como parte de um curso de JavaScript, com o objetivo de aplicar e praticar os conceitos aprendidos durante o curso. O jogo da velha é um exemplo clássico usado frequentemente em cursos de programação devido à sua simplicidade, mas também porque envolve conceitos importantes como manipulação de arrays, controle de fluxo e interação com o DOM.</p>
             <div class="projectAboutTechs">
@@ -514,14 +514,14 @@
                 <img src="" alt="">
             </div>
             <div class="projectAboutButtons">
-                <button type="button">Ver Site</button>
-                <button type="button">Ver Codigo</button>
+                <button type="button"><a href="https://emanuelsobral.github.io/jogDaVelha_JS/" target="_blank">Ver Site</a></button>
+                <button type="button"><a href="https://github.com/emanuelsobral/jogDaVelha_JS" target="_blank">Ver Codigo</a></button>
             </div>
-            <button>Voltar</button>
+            <button type="button" onclick="closeBox()">Voltar</button>
 
         </div>
 
-        <div class="projectAboutBox" style="display: none;">
+        <div class="projectAboutBox" id="calculadoraBox" style="display: none;">
             <h1>Calculadora Web</h1>
             <p>Este é um projeto assistido de uma calculadora web feita em HTML, CSS e JS. A calculadora possui todos os cálculos básicos, exibe o resultado e tem um botão que copia o resultado.
                 <br>
@@ -534,14 +534,14 @@
                 <img src="" alt="">
             </div>
             <div class="projectAboutButtons">
-                <button type="button">Ver Site</button>
-                <button type="button">Ver Codigo</button>
+                <button type="button"><a href="https://emanuelsobral.github.io/Calculadora_JS/" target="_blank">Ver Site</a></button>
+                <button type="button"><a href="https://github.com/emanuelsobral/Calculadora_JS" target="_blank">Ver Codigo</a></button>
             </div>
-            <button>Voltar</button>
+            <button type="button" onclick="closeBox()">Voltar</button>
 
         </div>
 
-        <div class="projectAboutBox" style="display: none;">
+        <div class="projectAboutBox" id="cronometroBox" style="display: none;">
             <h1>Cronômetro</h1>
             <p>Este é um projeto simples de um cronômetro feito em HTML e JavaScript. Foi desenvolvido durante uma aula de programação.
                 <br>
@@ -554,10 +554,10 @@
                 <img src="" alt="">
             </div>
             <div class="projectAboutButtons">
-                <button type="button">Ver Site</button>
-                <button type="button">Ver Codigo</button>
+                <button type="button"><a href="https://emanuelsobral.github.io/Cronomretro_JS/" target="_blank">Ver Site</a></button>
+                <button type="button"><a href="https://github.com/emanuelsobral/Cronomretro_JS" target="_blank">Ver Codigo</button>
             </div>
-            <button>Voltar</button>
+            <button type="button" onclick="closeBox()">Voltar</button>
 
         </div>
 
