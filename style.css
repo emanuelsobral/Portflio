@@ -724,6 +724,34 @@ ul {
     transition: .5s;
   }
 
+  .projectAboutBox{
+    position: fixed;
+    background: black;
+    border: 2px solid var(--ligh-violet);
+    border-radius: 20px;
+    width: 90%;
+    height: 90%;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    top: 0;
+    bottom: 0;
+}
+
+.projectAboutBox h1{
+  color: var(--ligh-violet);
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+
+.projectAboutBox p{
+  color: var(--white);
+  font-size: 1.4rem;
+  margin: 1rem;
+}
+
 
 /* Tablet and desktop styles */
 
