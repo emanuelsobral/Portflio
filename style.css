@@ -733,7 +733,7 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   gap: 4px;
 }
 
-.port .emBreve button{
+.port button{
   width: 100%;
 }
 
@@ -750,13 +750,17 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   margin: 1rem;
 }
 
-.port .emBreve button{
-  width: 100%;
-}
-
 .port button:hover {
   background-color: var(--violet);
   transition: 0.5s;
+}
+
+.port button.emBreve{
+  width: 100%;
+}
+
+.port button.emBreve:hover{
+  cursor: not-allowed;
 }
 
 .containerPort {
