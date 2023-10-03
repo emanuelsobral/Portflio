@@ -268,6 +268,34 @@ function closeBox() {
   cronometroBox.style.display = 'none';
 }
 
+function copyEmail() {
+  const email = document.getElementById('email');
+  const emailBox = document.getElementById('emailBox');
+  const statusCopy = document.getElementById('statusCopy');
+
+  navigator.clipboard.writeText(email.innerText);
+
+  emailBox.classList.remove('emailCopy');
+  emailBox.classList.add('emailCopied');
+
+  statusCopy.innerText = "Copiado!";
+  statusCopy.style.color = "#00ff00";
+
+  email.innerText = "Email Copiado com Sucesso!"
+  email.style.color = "#00ff00"
+
+  setTimeout(() => {
+    emailBox.classList.add('emailCopy');
+    emailBox.classList.remove('emailCopied');
+
+    statusCopy.innerText = "Click and Copy";
+    statusCopy.style.color = "#bc6ff1";
+
+    email.innerText = "emanuelssobral@gmail.com"
+    email.style.color = "#fff"
+  }, 1100);
+}
+
 
 //Techs Mobile
 
