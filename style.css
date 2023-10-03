@@ -1254,14 +1254,14 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   }
 
   .emailCopy{
-    width: 50%;
+    width: 60%;
   }
   .emailCopied{
-    width: 50%;
+    width: 60%;
   }
 
   .emailMailTo {
-    width: 40%;
+    width: 50%;
   }
 
 }
