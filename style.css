@@ -939,6 +939,7 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   align-content: center;
   margin: 1rem;
   cursor: pointer;
+  transition: .5s ease-in-out;
 }
 
 .emailCopied{
@@ -953,16 +954,16 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   align-content: center;
   margin: 1rem;
   cursor: pointer;
+  transition: .5s ease-in-out;
+
 }
 
 .emailCopied h1{
-  color: var(--white);
   font-size: 2rem;
   margin-top: -1rem;
 }
 
 .emailCopied p{
-  color: var(--ligh-violet);
   font-size: 1rem;
 }
 
@@ -1253,11 +1254,14 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   }
 
   .emailCopy{
-    width: 30%;
+    width: 50%;
+  }
+  .emailCopied{
+    width: 50%;
   }
 
   .emailMailTo {
-    width: 25%;
+    width: 40%;
   }
 
 }
