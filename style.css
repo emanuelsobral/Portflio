@@ -699,6 +699,17 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   opacity: 0.5;
 }
 
+.TechsInfo h1{
+  color: var(--ligh-violet);
+  font-size: 2rem;
+}
+
+.TechsInfo p{
+  color: var(--white);
+  font-size: 1.4rem;
+
+}
+
 /*portfolio*/
 
 .port {
