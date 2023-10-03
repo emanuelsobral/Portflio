@@ -1026,6 +1026,10 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   cursor: pointer;
 }
 
+.linkedin{
+  padding: 4px;
+}
+
 .contactButtons .linkedin:hover, .github:hover, .whatsapp:hover{
   background: var(--violet);
   transition: .5s ease-in-out;
