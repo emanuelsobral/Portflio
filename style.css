@@ -958,24 +958,15 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
 
 }
 
-.emailCopied h1{
-  font-size: 2rem;
-  margin-top: -1rem;
-}
-
-.emailCopied p{
-  font-size: 1rem;
-}
-
-.emailCopy h1{
+.emailCopied h1, .emailCopy h1{
   color: var(--white);
-  font-size: 2rem;
-  margin-top: -1rem;
+  font-size: 1.5rem;
+  margin-top: -.5rem;
 }
 
-.emailCopy p{
+.emailCopied p, .emailCopy p{
   color: var(--ligh-violet);
-  font-size: 1rem;
+  font-size: .8rem;
 }
 
 .emailCopy:hover{
@@ -996,14 +987,14 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
 
 .emailMailTo h1{
   color: var(--white);
-  font-size: 2rem;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .emailMailTo img{
-  width: 2rem;
+  width: 1.5rem;
 }
 
 .emailMailTo button{
@@ -1262,6 +1253,23 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
 
   .emailMailTo {
     width: 50%;
+  }
+
+  .emailCopy h1, .emailCopied h1{
+    font-size: 2rem;
+    margin-top: -1rem;
+  }
+
+  .emailCopy p, .emailCopied p{
+    font-size: 1rem;
+  }
+
+  .emailMailTo h1{
+    font-size: 2rem;
+  }
+
+  .emailMailTo img{
+    width: 2rem;
   }
 
 }
