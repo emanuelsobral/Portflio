@@ -1252,10 +1252,6 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
     flex-direction: row;
   }
 
-  .projectAboutBox {
-    width: 60%;
-  }
-
   .emailCopy{
     width: 60%;
   }
