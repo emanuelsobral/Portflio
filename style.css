@@ -1055,7 +1055,7 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
 
 /* Tablet and desktop styles */
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   body {
     font-size: 18px;
   }
