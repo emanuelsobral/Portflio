@@ -825,6 +825,8 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   color: var(--ligh-violet);
   font-size: 2rem;
   margin-top: 2rem;
+  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
 .cardText p {
