@@ -47,7 +47,7 @@ window.addEventListener("scroll", (event) => {
     rollDown.style.display = 'flex';
   }
 
-  if (viewportWidth < 768) {
+  if (viewportWidth < 1000) {
     if (scroll > 150) {
       const scrollUp = document.getElementById('scrollTop')
       scrollUp.style.display = 'flex';
