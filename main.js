@@ -301,7 +301,7 @@ function copyEmail() {
 
 var viewportWidth = window.innerWidth;
 
-if (viewportWidth <= 1000) {
+if (viewportWidth <= 768) {
   const html = document.getElementById("html");
   const css = document.getElementById("css");
   const js = document.getElementById("js");
