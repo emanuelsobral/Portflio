@@ -865,7 +865,7 @@ box-shadow: 24px 24px 80px #390355, -24px -24px 80px #6b07a1;
   justify-items: center;
   top: 2.5%;
   bottom: 0;
-  z-index: 1000;
+  z-index: 99999;
 }
 
 .projectAboutBox h1 {
