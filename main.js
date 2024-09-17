@@ -47,7 +47,7 @@ window.addEventListener("scroll", (event) => {
     rollDown.style.display = 'flex';
   }
 
-  if (viewportWidth < 1000) {
+  if (viewportWidth < 768) {
     if (scroll > 150) {
       const scrollUp = document.getElementById('scrollTop')
       scrollUp.style.display = 'flex';
@@ -301,7 +301,7 @@ function copyEmail() {
 
 var viewportWidth = window.innerWidth;
 
-if (viewportWidth <= 768) {
+if (viewportWidth <= 1000) {
   const html = document.getElementById("html");
   const css = document.getElementById("css");
   const js = document.getElementById("js");
