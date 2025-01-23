@@ -198,6 +198,7 @@ const js = document.getElementById("js");
 const php = document.getElementById("php");
 const node = document.getElementById("node");
 const mysql = document.getElementById("mysql");
+const python = document.getElementById("python");
 
 const htmlInfo = document.getElementById("htmlInfo");
 const cssInfo = document.getElementById("cssInfo");
@@ -206,8 +207,9 @@ const phpInfo = document.getElementById("phpInfo");
 const nodeInfo = document.getElementById("nodeInfo");
 const mysqlInfo = document.getElementById("mysqlInfo");
 const TechsInfo = document.getElementById("TechsInfo");
+const pythonInfo = document.getElementById("pythonInfo");
 
-const elements = ["html", "css", "js", "php", "node", "mysql"];
+const elements = ["html", "css", "js", "php", "node", "mysql", "python"];
 
 elements.forEach(function (element) {
   var el = document.getElementById(element);
@@ -308,6 +310,7 @@ if (viewportWidth <= 1000) {
   const php = document.getElementById("php");
   const node = document.getElementById("node");
   const mysql = document.getElementById("mysql");
+  const python = document.getElementById("python");
 
   const htmlInfo = document.getElementById("htmlInfoMobile");
   const cssInfo = document.getElementById("cssInfoMobile");
@@ -315,11 +318,12 @@ if (viewportWidth <= 1000) {
   const phpInfo = document.getElementById("phpInfoMobile");
   const nodeInfo = document.getElementById("nodeInfoMobile");
   const mysqlInfo = document.getElementById("mysqlInfoMobile");
+  const pythonInfo = document.getElementById("pythonInfoMobile");
 
   const aboutTechMobile = document.getElementById("aboutTechMobile");
   const closseAboutTech = document.getElementById("closeAboutTechMobileButton");
 
-  const elementsMobile = ["htmlInfoMobile", "cssInfoMobile", "jsInfoMobile", "phpInfoMobile", "nodeInfoMobile", "mysqlInfoMobile"];
+  const elementsMobile = ["htmlInfoMobile", "cssInfoMobile", "jsInfoMobile", "phpInfoMobile", "nodeInfoMobile", "mysqlInfoMobile", "pythonInfoMobile"];
 
   closseAboutTech.addEventListener('click', () => {
     aboutTechMobile.style.display = "none";
@@ -383,6 +387,16 @@ if (viewportWidth <= 1000) {
 
     aboutTechMobile.style.display = "flex";
     mysqlInfo.style.display = "grid";
+  })
+
+  python.addEventListener('click', () => {
+    elementsMobile.forEach(function (element) {
+      var info = document.getElementById(element);
+      info.style.display = "none";
+    });
+
+    aboutTechMobile.style.display = "flex";
+    pythonInfo.style.display = "grid";
   })
 
 } else {
