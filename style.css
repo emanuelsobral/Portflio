@@ -424,6 +424,11 @@ section {
     border: 1px solid transparent;
     position: relative;
     cursor: pointer;
+    z-index: 1;
+}
+
+.skill-card.tooltip-active {
+    z-index: 99; /* Um z-index alto para trazê-lo para a frente */
 }
 
 .skill-card:hover {
