@@ -4,831 +4,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfólio - Emanuel Sobral</title>
-    <meta name="description"
-        content="Bem-vindo ao portfólio de Emanuel Sobral, um programador talentoso e criativo especializado em diversas linguagens e tecnologias. Explore seus projetos inovadores, habilidades excepcionais e realizações impressionantes aqui.">
-    <meta name="keywords" content="programador, portfólio, projetos, habilidades, realizações, Emanuel Sobral, tecnologias, inovação">
-    <meta name="author" content="Emanuel Sobral">
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <title>Emanuel Sobral - Desenvolvedor Full-Stack</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-    <div class="scrollTop" id="scrollTop" style="display: none;">
-        <button type="button" id="scrollTopButton" onclick="scrollToTop()">
-            <a href="#sec1" id="scrollToTop">
-                <img src="./icons/arrow-up.png" alt="">
-            </a>
-        </button>
-    </div>
-
-
-    <div class="BoxDotNavigator">
-        <nav class="navbar">
-            <ul>
-                <li><a href="#sec1">Home</a></li>
-                <li><a href="#sec2">About</a></li>
-                <li><a href="#sec3">Techs</a></li>
-                <li><a href="#sec4">Port</a></li>
-                <li><a href="#sec5">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <section class="main" id="sec1">
-        <div class="MainText">
-            <div class="HelloMain">
-                <h2 id="text1">Hello, i'm <span id="span1">Emanuel</span> a</h2>
-            </div>
-            <div class="FrontEnd">
-                <div class="SvgIcon">
-                    <a href="https://www.linkedin.com/in/emanuel-sobral-329444198/" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                            viewBox="0,0,256,256">
-                            <g fill="#9400FF" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                                style="mix-blend-mode: normal">
-                                <g transform="scale(5.12,5.12)">
-                                    <path
-                                        d="M25,2c-12.682,0 -23,10.317 -23,23c0,12.683 10.318,23 23,23c12.682,0 23,-10.317 23,-23c0,-12.683 -10.318,-23 -23,-23zM18,35h-4v-15h4zM16,17c-1.105,0 -2,-0.895 -2,-2c0,-1.105 0.895,-2 2,-2c1.105,0 2,0.895 2,2c0,1.105 -0.895,2 -2,2zM37,35h-4v-5v-2.5c0,-1.925 -1.575,-3.5 -3.5,-3.5c-1.925,0 -3.5,1.575 -3.5,3.5v7.5h-4v-15h4v1.816c1.168,-1.122 2.752,-1.816 4.5,-1.816c3.59,0 6.5,2.91 6.5,6.5z">
-                                    </path>
-                                </g>
-                            </g>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/emanuelsobral" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                            viewBox="0,0,256,256">
-                            <g fill="#9400FF" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                                style="mix-blend-mode: normal">
-                                <g transform="scale(4,4)">
-                                    <path
-                                        d="M32,6c-14.359,0 -26,11.641 -26,26c0,12.277 8.512,22.56 19.955,25.286c-0.592,-0.141 -1.179,-0.299 -1.755,-0.479v-5.957c0,0 -0.975,0.325 -2.275,0.325c-3.637,0 -5.148,-3.245 -5.525,-4.875c-0.229,-0.993 -0.827,-1.934 -1.469,-2.509c-0.767,-0.684 -1.126,-0.686 -1.131,-0.92c-0.01,-0.491 0.658,-0.471 0.975,-0.471c1.625,0 2.857,1.729 3.429,2.623c1.417,2.207 2.938,2.577 3.721,2.577c0.975,0 1.817,-0.146 2.397,-0.426c0.268,-1.888 1.108,-3.57 2.478,-4.774c-6.097,-1.219 -10.4,-4.716 -10.4,-10.4c0,-2.928 1.175,-5.619 3.133,-7.792c-0.2,-0.567 -0.533,-1.714 -0.533,-3.583c0,-1.235 0.086,-2.751 0.65,-4.225c0,0 3.708,0.026 7.205,3.338c1.614,-0.47 3.341,-0.738 5.145,-0.738c1.804,0 3.531,0.268 5.145,0.738c3.497,-3.312 7.205,-3.338 7.205,-3.338c0.567,1.474 0.65,2.99 0.65,4.225c0,2.015 -0.268,3.19 -0.432,3.697c1.898,2.153 3.032,4.802 3.032,7.678c0,5.684 -4.303,9.181 -10.4,10.4c1.628,1.43 2.6,3.513 2.6,5.85v8.557c-0.576,0.181 -1.162,0.338 -1.755,0.479c11.443,-2.726 19.955,-13.009 19.955,-25.286c0,-14.359 -11.641,-26 -26,-26zM33.813,57.93c-0.599,0.042 -1.203,0.07 -1.813,0.07c0.61,0 1.213,-0.029 1.813,-0.07zM37.786,57.346c-1.164,0.265 -2.357,0.451 -3.575,0.554c1.218,-0.103 2.411,-0.29 3.575,-0.554zM32,58c-0.61,0 -1.214,-0.028 -1.813,-0.07c0.6,0.041 1.203,0.07 1.813,0.07zM29.788,57.9c-1.217,-0.103 -2.411,-0.289 -3.574,-0.554c1.164,0.264 2.357,0.451 3.574,0.554z">
-                                    </path>
-                                </g>
-                            </g>
-                        </svg>
-                    </a>
-                    <a href="https://wa.me/5511954515605?text=Ol%C3%A1+Emanuel%2C+eu+vi+seu+portf%C3%B3lio."
-                        target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                            viewBox="0,0,256,256">
-                            <g fill="#9400FF" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt"
-                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                                style="mix-blend-mode: normal">
-                                <g transform="scale(8,8)">
-                                    <path
-                                        d="M24.50391,7.50391c-2.25781,-2.25781 -5.25781,-3.50391 -8.45312,-3.50391c-6.58594,0 -11.94922,5.35938 -11.94922,11.94531c-0.00391,2.10547 0.54688,4.16016 1.59375,5.97266l-1.69531,6.19141l6.33594,-1.66406c1.74219,0.95313 3.71094,1.45313 5.71094,1.45703h0.00391c6.58594,0 11.94531,-5.35937 11.94922,-11.94922c0,-3.19141 -1.24219,-6.19141 -3.49609,-8.44922zM16.05078,25.88281h-0.00391c-1.78125,0 -3.53125,-0.48047 -5.05469,-1.38281l-0.36328,-0.21484l-3.76172,0.98438l1.00391,-3.66406l-0.23437,-0.375c-0.99609,-1.58203 -1.51953,-3.41016 -1.51953,-5.28516c0,-5.47266 4.45703,-9.92578 9.9375,-9.92578c2.65234,0 5.14453,1.03516 7.01953,2.91016c1.875,1.87891 2.90625,4.37109 2.90625,7.02344c0,5.47656 -4.45703,9.92969 -9.92969,9.92969zM21.49609,18.44531c-0.29687,-0.14844 -1.76562,-0.87109 -2.03906,-0.96875c-0.27344,-0.10156 -0.47266,-0.14844 -0.67187,0.14844c-0.19922,0.30078 -0.76953,0.97266 -0.94531,1.17188c-0.17187,0.19531 -0.34766,0.22266 -0.64453,0.07422c-0.30078,-0.14844 -1.26172,-0.46484 -2.40234,-1.48437c-0.88672,-0.78906 -1.48828,-1.76953 -1.66016,-2.06641c-0.17578,-0.30078 -0.01953,-0.46094 0.12891,-0.60937c0.13672,-0.13281 0.30078,-0.34766 0.44922,-0.52344c0.14844,-0.17187 0.19922,-0.29687 0.30078,-0.49609c0.09766,-0.19922 0.04688,-0.375 -0.02734,-0.52344c-0.07422,-0.14844 -0.67187,-1.62109 -0.92187,-2.21875c-0.24219,-0.58203 -0.48828,-0.5 -0.67187,-0.51172c-0.17187,-0.00781 -0.37109,-0.00781 -0.57031,-0.00781c-0.19922,0 -0.52344,0.07422 -0.79687,0.375c-0.27344,0.29688 -1.04297,1.01953 -1.04297,2.48828c0,1.46875 1.07031,2.89063 1.21875,3.08984c0.14844,0.19531 2.10547,3.21094 5.10156,4.50391c0.71094,0.30859 1.26563,0.49219 1.69922,0.62891c0.71484,0.22656 1.36719,0.19531 1.88281,0.12109c0.57422,-0.08594 1.76563,-0.72266 2.01563,-1.42187c0.24609,-0.69531 0.24609,-1.29297 0.17188,-1.41797c-0.07422,-0.125 -0.27344,-0.19922 -0.57422,-0.35156z">
-                                    </path>
-                                </g>
-                            </g>
-                        </svg>
-                    </a>
-                    <button id="popUpButtonMobile" href="./src/Curriculo.pdf" download="Curriculo.pdf" target="_blank">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                            viewBox="0 0 128 128" style="fill:#9400ff;">
-                            <path
-                                d="M32,122h64c7.2,0,13-5.8,13-13V29c0-6.1-2.4-11.9-6.7-16.3S92.1,6,86,6L32,6c-7.2,0-13,5.8-13,13v90 C19,116.2,24.8,122,32,122z M86.1,92h-44c-1.7,0-3-1.3-3-3s1.3-3,3-3h44c1.7,0,3,1.3,3,3S87.8,92,86.1,92z M98,17 c2.5,2.5,4.1,5.6,4.7,9H96c-3.9,0-7-3.1-7-7l0-6.7C92.4,12.9,95.5,14.5,98,17z M41.9,56h44c1.7,0,3,1.3,3,3s-1.3,3-3,3h-44 c-1.7,0-3-1.3-3-3S40.2,56,41.9,56z M41.9,71h44c1.7,0,3,1.3,3,3s-1.3,3-3,3h-44c-1.7,0-3-1.3-3-3S40.2,71,41.9,71z">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
-                <h1>
-                    FULL-STACK()
-                </h1>
-            </div>
-            <div class="Developer">
-                <h1><span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
-            </div>
-            <div class="SvgIconMobile">
-                <a href="https://www.linkedin.com/in/emanuel-sobral-329444198/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                        viewBox="0,0,256,256">
-                        <g fill="#9400FF" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                            style="mix-blend-mode: normal">
-                            <g transform="scale(5.12,5.12)">
-                                <path
-                                    d="M25,2c-12.682,0 -23,10.317 -23,23c0,12.683 10.318,23 23,23c12.682,0 23,-10.317 23,-23c0,-12.683 -10.318,-23 -23,-23zM18,35h-4v-15h4zM16,17c-1.105,0 -2,-0.895 -2,-2c0,-1.105 0.895,-2 2,-2c1.105,0 2,0.895 2,2c0,1.105 -0.895,2 -2,2zM37,35h-4v-5v-2.5c0,-1.925 -1.575,-3.5 -3.5,-3.5c-1.925,0 -3.5,1.575 -3.5,3.5v7.5h-4v-15h4v1.816c1.168,-1.122 2.752,-1.816 4.5,-1.816c3.59,0 6.5,2.91 6.5,6.5z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                </a>
-                <a href="https://github.com/emanuelsobral" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                        viewBox="0,0,256,256">
-                        <g fill="#9400FF" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                            style="mix-blend-mode: normal">
-                            <g transform="scale(4,4)">
-                                <path
-                                    d="M32,6c-14.359,0 -26,11.641 -26,26c0,12.277 8.512,22.56 19.955,25.286c-0.592,-0.141 -1.179,-0.299 -1.755,-0.479v-5.957c0,0 -0.975,0.325 -2.275,0.325c-3.637,0 -5.148,-3.245 -5.525,-4.875c-0.229,-0.993 -0.827,-1.934 -1.469,-2.509c-0.767,-0.684 -1.126,-0.686 -1.131,-0.92c-0.01,-0.491 0.658,-0.471 0.975,-0.471c1.625,0 2.857,1.729 3.429,2.623c1.417,2.207 2.938,2.577 3.721,2.577c0.975,0 1.817,-0.146 2.397,-0.426c0.268,-1.888 1.108,-3.57 2.478,-4.774c-6.097,-1.219 -10.4,-4.716 -10.4,-10.4c0,-2.928 1.175,-5.619 3.133,-7.792c-0.2,-0.567 -0.533,-1.714 -0.533,-3.583c0,-1.235 0.086,-2.751 0.65,-4.225c0,0 3.708,0.026 7.205,3.338c1.614,-0.47 3.341,-0.738 5.145,-0.738c1.804,0 3.531,0.268 5.145,0.738c3.497,-3.312 7.205,-3.338 7.205,-3.338c0.567,1.474 0.65,2.99 0.65,4.225c0,2.015 -0.268,3.19 -0.432,3.697c1.898,2.153 3.032,4.802 3.032,7.678c0,5.684 -4.303,9.181 -10.4,10.4c1.628,1.43 2.6,3.513 2.6,5.85v8.557c-0.576,0.181 -1.162,0.338 -1.755,0.479c11.443,-2.726 19.955,-13.009 19.955,-25.286c0,-14.359 -11.641,-26 -26,-26zM33.813,57.93c-0.599,0.042 -1.203,0.07 -1.813,0.07c0.61,0 1.213,-0.029 1.813,-0.07zM37.786,57.346c-1.164,0.265 -2.357,0.451 -3.575,0.554c1.218,-0.103 2.411,-0.29 3.575,-0.554zM32,58c-0.61,0 -1.214,-0.028 -1.813,-0.07c0.6,0.041 1.203,0.07 1.813,0.07zM29.788,57.9c-1.217,-0.103 -2.411,-0.289 -3.574,-0.554c1.164,0.264 2.357,0.451 3.574,0.554z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                </a>
-                <a href="https://wa.me/5511954515605?text=Ol%C3%A1+Emanuel%2C+eu+vi+seu+portf%C3%B3lio."
-                    target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                        viewBox="0,0,256,256">
-                        <g fill="#9400FF" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt"
-                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                            style="mix-blend-mode: normal">
-                            <g transform="scale(8,8)">
-                                <path
-                                    d="M24.50391,7.50391c-2.25781,-2.25781 -5.25781,-3.50391 -8.45312,-3.50391c-6.58594,0 -11.94922,5.35938 -11.94922,11.94531c-0.00391,2.10547 0.54688,4.16016 1.59375,5.97266l-1.69531,6.19141l6.33594,-1.66406c1.74219,0.95313 3.71094,1.45313 5.71094,1.45703h0.00391c6.58594,0 11.94531,-5.35937 11.94922,-11.94922c0,-3.19141 -1.24219,-6.19141 -3.49609,-8.44922zM16.05078,25.88281h-0.00391c-1.78125,0 -3.53125,-0.48047 -5.05469,-1.38281l-0.36328,-0.21484l-3.76172,0.98438l1.00391,-3.66406l-0.23437,-0.375c-0.99609,-1.58203 -1.51953,-3.41016 -1.51953,-5.28516c0,-5.47266 4.45703,-9.92578 9.9375,-9.92578c2.65234,0 5.14453,1.03516 7.01953,2.91016c1.875,1.87891 2.90625,4.37109 2.90625,7.02344c0,5.47656 -4.45703,9.92969 -9.92969,9.92969zM21.49609,18.44531c-0.29687,-0.14844 -1.76562,-0.87109 -2.03906,-0.96875c-0.27344,-0.10156 -0.47266,-0.14844 -0.67187,0.14844c-0.19922,0.30078 -0.76953,0.97266 -0.94531,1.17188c-0.17187,0.19531 -0.34766,0.22266 -0.64453,0.07422c-0.30078,-0.14844 -1.26172,-0.46484 -2.40234,-1.48437c-0.88672,-0.78906 -1.48828,-1.76953 -1.66016,-2.06641c-0.17578,-0.30078 -0.01953,-0.46094 0.12891,-0.60937c0.13672,-0.13281 0.30078,-0.34766 0.44922,-0.52344c0.14844,-0.17187 0.19922,-0.29687 0.30078,-0.49609c0.09766,-0.19922 0.04688,-0.375 -0.02734,-0.52344c-0.07422,-0.14844 -0.67187,-1.62109 -0.92187,-2.21875c-0.24219,-0.58203 -0.48828,-0.5 -0.67187,-0.51172c-0.17187,-0.00781 -0.37109,-0.00781 -0.57031,-0.00781c-0.19922,0 -0.52344,0.07422 -0.79687,0.375c-0.27344,0.29688 -1.04297,1.01953 -1.04297,2.48828c0,1.46875 1.07031,2.89063 1.21875,3.08984c0.14844,0.19531 2.10547,3.21094 5.10156,4.50391c0.71094,0.30859 1.26563,0.49219 1.69922,0.62891c0.71484,0.22656 1.36719,0.19531 1.88281,0.12109c0.57422,-0.08594 1.76563,-0.72266 2.01563,-1.42187c0.24609,-0.69531 0.24609,-1.29297 0.17188,-1.41797c-0.07422,-0.125 -0.27344,-0.19922 -0.57422,-0.35156z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                </a>
-                <button id="popUpButton" href="./src/Curriculo.pdf" download="Curriculo.pdf" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                        viewBox="0 0 128 128" style="fill:#9400ff;">
-                        <path
-                            d="M32,122h64c7.2,0,13-5.8,13-13V29c0-6.1-2.4-11.9-6.7-16.3S92.1,6,86,6L32,6c-7.2,0-13,5.8-13,13v90 C19,116.2,24.8,122,32,122z M86.1,92h-44c-1.7,0-3-1.3-3-3s1.3-3,3-3h44c1.7,0,3,1.3,3,3S87.8,92,86.1,92z M98,17 c2.5,2.5,4.1,5.6,4.7,9H96c-3.9,0-7-3.1-7-7l0-6.7C92.4,12.9,95.5,14.5,98,17z M41.9,56h44c1.7,0,3,1.3,3,3s-1.3,3-3,3h-44 c-1.7,0-3-1.3-3-3S40.2,56,41.9,56z M41.9,71h44c1.7,0,3,1.3,3,3s-1.3,3-3,3h-44c-1.7,0-3-1.3-3-3S40.2,71,41.9,71z">
-                        </path>
-                    </svg>
-                </button>
-            </div>
-
-            <div id="popUpDownload" class="popUpDownload" style="display: none;">
-                <h1>Curriculo Download</h1>
-                <p>Preferencia de arquivo</p>
-                <div class="popUpButtons">
-                    <button type="button" onclick="ClickWord()"><a id="curriculoWord" href="./src/Curriculo.docx"
-                            download="Curriculo.docx" target="_blank">Formato Word</a></button>
-                    <button type="button" onclick="ClickPdf()"><a id="curriculoPdf" href="./src/Curriculo.pdf"
-                            download="Curriculo.pdf" target="_blank">Formato PDF</a></button>
-                </div>
-                <div class="popUpClose">
-                    <button id="popUpClose" type="button">❮</button>
-                </div>
-            </div>
-            <div class="rollDown" id="rollDown" style="display: flex;">
-                <img src="./icons/down-arrow.png" alt="">
-            </div>
+    <header id="main-header">
+        <div class="container">
+            <a href="#" class="logo">E/S</a>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#historico">Histórico</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
 
-
-    <section class="about" id="sec2">
-        <div class="backgroundAbout">
-            <div class="containerAbout">
-                <div class="foto">
-                    <img src="./img/avatar.png" alt="">
+    <main>
+        <section id="hero">
+            <div id="particles-js"></div>
+            <div class="hero-content">
+                <h1 class="fade-in">Emanuel Sobral</h1>
+                <p class="fade-in">Desenvolvedor Full-Stack & Engenheiro de Software</p>
+                <div class="typewriter-container fade-in">
+                    <span id="typewriter"></span><span class="cursor"></span>
                 </div>
-                <div class="textAbout" id="about">
-                    <h1>Sobre</h1>
-                    <p> Sou <span>Emanuel</span>, cursando <span>Engenharia de Software</span> na USJT e possuo
-                        experiência em <span>desenvolvimento web</span>. Atualmente, estou aprimorando minhas
-                        habilidades em back-end. Além disso, concluí um curso técnico em <span>Desenvolvimento de
-                            Sistemas</span> na ETEC Juscelino Kubitschek de Oliveira.</p>
-                    <p>Tenho uma presença ativa no GitHub, onde compartilho meus projetos e colaborações.
-                        Simultaneamente,
-                        tenho participado ativamente de uma série de <span>cursos complementares</span> para aprimorar
-                        continuamente minhas habilidades e me manter atualizado com as últimas tendências e tecnologias.
-                    </p>
-                    <p>Tenho conhecimento <span>intermediário em inglês</span> e estou ansioso
-                        para contribuir como desenvolvedor em uma empresa inovadora e aprender novas tecnologias.</p>
-                </div>
-                <div class="infoAbout">
-                    <div class="buttons">
-                        <button type="button" id="formacaoButton" class="active">Formação</button>
-                        <button type="button" id="experienciaButton">Experiencia</button>
-                        <button type="button" id="cursosButton"> Cursos</button>
-                    </div>
-                    <div class="textAbout" id="formacao" style="display: grid;">
-                        <h1>Formação</h1>
-                        <div class="container">
+                <a href="#projetos" class="cta-button fade-in">Meus Projetos</a>
+            </div>
+        </section>
 
-                            <div class="timeline-block timeline-block-right">
-                                <div class="marker"></div>
-                                <div class="timeline-content">
-                                    <h1>Engenharia de Software</h1>
-                                    <p>(2023 a Dezembro de 2026) - <span>Cursando</span></p>
-                                    <p><span>Bacharelado</span> - São Judas Tadeu Polo Paulista - Paulista</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-block timeline-block-left">
-                                <div class="marker"></div>
-                                <div class="timeline-content">
-                                    <h1>Desenvolvimento de Sistemas</h1>
-                                    <p>(Julho de 2021) - <span>Concluído</span></p>
-                                    <p><span>Nível técnico</span> -Diadema – ETEC Juscelino Kubitschek de Oliveira</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-block timeline-block-right">
-                                <div class="marker"></div>
-                                <div class="timeline-content">
-                                    <h1>Administração de Empresas</h1>
-                                    <p>(Julho de 2020) - <span>Concluído</span></p>
-                                    <p><span>Nível técnico</span> - ETEC Juscelino Kubitschek de Oliveira – Diadema</p>
-                                </div>
-                            </div>
+        <section id="sobre" class="scroll-reveal">
+            <div class="container">
+                <h2>Sobre Mim</h2>
+                <div class="sobre-content">
+                    <img src="./img/avatar.jpg" alt="Foto de Emanuel Sobral" class="profile-pic">
+                    <div class="sobre-texto">
+                        <p>
+                            Sou um estudante de Engenharia de Software apaixonado por criar soluções inovadoras e
+                            eficientes. Com uma base sólida em desenvolvimento web (HTML, CSS, JavaScript) e experiência
+                            crescente em tecnologias de back-end como Node.js e Python, busco constantemente novos
+                            desafios. Atualmente na TIM, aplico meus conhecimentos em testes funcionais, garantindo a
+                            qualidade e a performance de sistemas críticos. Meu objetivo é colaborar com equipes
+                            dinâmicas em uma empresa de tecnologia, onde possa não só aplicar minhas habilidades, mas
+                            também aprender e crescer profissionalmente.
+                        </p>
+                        <div class="sobre-botao-container">
+                            <a href="./src/Curriculo.pdf" download="Curriculo.pdf" class="btn-primary">
+                                <i class="fas fa-download"></i> Baixar Currículo PDF
+                            </a>
+                            <a href="./src/Curriculo.docx" download="Curriculo.docx" class="btn-primary">
+                                <i class="fas fa-download"></i> Baixar Currículo WORD
+                            </a>
                         </div>
-
                     </div>
-                    <div class="textAbout" id="experiencia" style="display: none;">
-                        <h1>Experiências</h1>
-                        <div class="container">
+                </div>
+            </div>
+        </section>
 
-                            <div class="timeline-block timeline-block-left">
-                                <div class="marker"></div>
-                                <div class="timeline-content">
-                                    <h1>ITAU</h1>
-                                    <p>(Dezembro/2025) - <span>Atual</span></p>
-                                    <p><span>Estágio</span> - Data Engineering</p>
-                                </div>
-                            </div>
+        <section id="historico" class="scroll-reveal">
+            <div class="container">
+                <h2>Histórico Profissional</h2>
 
-                            <div class="timeline-block timeline-block-right">
-                                <div class="marker"></div>
-                                <div class="timeline-content">
-                                    <h1>Tim</h1>
-                                    <p>(Abril/2024) a (Dezembro/24) </p>
-                                    <p><span>Estágio</span> - Functional Quality Assurance</p>
-                                </div>
-                            </div>
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="formacao">Formação</button>
+                    <button class="tab-btn" data-tab="experiencias">Experiências</button>
+                </div>
 
-                            <div class="timeline-block timeline-block-left">
-                                <div class="marker"></div>
+                <div class="tabs-content">
+                    <div id="experiencias-panel" class="tab-panel">
+                        <div class="timeline-container">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
                                 <div class="timeline-content">
-                                    <h1>Tim</h1>
-                                    <p>(Dezembro/2023 a Abril/2024)</p>
-                                    <p><span>Estágio</span> - IT Application Architecture & QA</p>
+                                    <h3>ITAU</h3>
+                                    <span class="timeline-date">(Dezembro/2025) - Atual</span>
+                                    <p>Estágio - Data Engineering</p>
                                 </div>
                             </div>
-                            
-                            <div class="timeline-block timeline-block-right">
-                                <div class="marker"></div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
                                 <div class="timeline-content">
-                                    <h1>Tim</h1>
-                                    <p>(Junho/2021 a Setembro/2022)</p>
-                                    <p><span>Jovem aprendiz</span> - Administrativo/Suporte</p>
+                                    <h3>Tim</h3>
+                                    <span class="timeline-date">(Abril/2024) a (Dezembro/24)</span>
+                                    <p>Estágio - Functional Quality Assurance</p>
                                 </div>
                             </div>
-
-                            <div class="timeline-block timeline-block-left">
-                                <div class="marker"></div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
                                 <div class="timeline-content">
-                                    <h1>Relemar despachante</h1>
-                                    <p>(Julho/2019 a Maio/2020)</p>
-                                    <p><span>Estágio</span> - Administrativo/Back office</p>
+                                    <h3>Tim</h3>
+                                    <span class="timeline-date">(Dezembro/2023 a Abril/2024)</span>
+                                    <p>Estágio - IT Application Architecture & QA</p>
                                 </div>
                             </div>
-                            <div class="timeline-block timeline-block-right">
-                                <div class="marker"></div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
                                 <div class="timeline-content">
-                                    <h1>Prepara Cursos</h1>
-                                    <p>(Junho/2017 a Fevereiro/2018)</p>
-                                    <p><span>Estágio</span> - Monitor</p>
+                                    <h3>Tim</h3>
+                                    <span class="timeline-date">(Junho/2021 a Setembro/2022)</span>
+                                    <p>Jovem aprendiz - Administrativo/Suporte</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>Relemar despachante</h3>
+                                    <span class="timeline-date">(Julho/2019 a Maio/2020)</span>
+                                    <p>Estágio - Administrativo/Back office</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3>Prepara Cursos</h3>
+                                    <span class="timeline-date">(Junho/2017 a Fevereiro/2018)</span>
+                                    <p>Estágio - Monitor</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="textAbout" id="cursos" style="display: none;">
-                        <h1>Cursos</h1>
-                        <div class="container">
 
-                            <div class="timeline-block timeline-block-right">
-                                <div class="marker"></div>
+                    <div id="formacao-panel" class="tab-panel active">
+                        <div class="timeline-container">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
                                 <div class="timeline-content">
-                                    <h1>JavaScript FullStack</h1>
-                                    <p>(2023) - <span>Cursando</span></p>
-                                    <p>OneBitCode</p>
+                                    <h3>Engenharia de Software</h3>
+                                    <span class="timeline-date">(2023 a Dezembro de 2026) - Cursando</span>
+                                    <p>Bacharelado - São Judas Tadeu Polo Paulista - Paulista</p>
                                 </div>
                             </div>
-
-                            <div class="timeline-block timeline-block-left">
-                                <div class="marker"></div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
                                 <div class="timeline-content">
-                                    <h1>Master Power BI - De A à Z</h1>
-                                    <p>(2024) - <span>Concluído</span></p>
-                                    <p>Udemy</p>
+                                    <h3>Desenvolvimento de Sistemas</h3>
+                                    <span class="timeline-date">(Julho de 2021) - Concluído</span>
+                                    <p>Nível técnico -Diadema – ETEC Juscelino Kubitschek de Oliveira</p>
                                 </div>
                             </div>
-
-                            <div class="timeline-block timeline-block-right">
-                                <div class="marker"></div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
                                 <div class="timeline-content">
-                                    <h1>Power BI sintetize grandes volumes de dados com rapidez</h1>
-                                    <p>(2024) - <span>Concluído</span></p>
-                                    <p>UNISUL</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-block timeline-block-left">
-                                <div class="marker"></div>
-                                <div class="timeline-content">
-                                    <h1>Análise de dados e programação em python</h1>
-                                    <p>(2023) - <span>Concluído</span></p>
-                                    <p>UNISUL</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-block timeline-block-right">
-                                <div class="marker"></div>
-                                <div class="timeline-content">
-                                    <h1>Orientação a objetos com Java</h1>
-                                    <p>(2023) - <span>Concluído</span></p>
-                                    <p>UNISUL</p>
-                                </div>
-                            </div>
-
-                            <div class="timeline-block timeline-block-left">
-                                <div class="marker"></div>
-                                <div class="timeline-content">
-                                    <h1>Curso NodeJS</h1>
-                                    <p>(Março de 2023) - <span>Concluído</span></p>
-                                    <p>Udemy</p>
-                                </div>
-                            </div>
-                            <div class="timeline-block timeline-block-right">
-                                <div class="marker"></div>
-                                <div class="timeline-content">
-                                    <h1>Trilha Conectar</h1>
-                                    <p>(Maio de 2022) - <span>Concluído</span></p>
-                                    <p>Rocket Seat</p>
-                                </div>
-                            </div>
-                            <div class="timeline-block timeline-block-left">
-                                <div class="marker"></div>
-                                <div class="timeline-content">
-                                    <h1>Web Design Express</h1>
-                                    <p>(Setembro de 2020) - <span>Concluído</span></p>
-                                    <p>Danki.Code</p>
+                                    <h3>Administração de Empresas</h3>
+                                    <span class="timeline-date">(Julho de 2020) - Concluído</span>
+                                    <p>Nível técnico - ETEC Juscelino Kubitschek de Oliveira – Diadema</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        </div>
-    </section>
-
-    <section class="techs" id="sec3">
-        <div class="containerTechs">
-            <div class="textTech">
-                <h1>Tecnologias</h1>
-                <p>Estas são algumas das tecnologias que eu uso:</p>
-            </div>
-            <div class="gridTechs">
-
-                <div class="HTML" id="html">
-
-                    <img src="./icons/html.svg" alt="">
-
-                    <h3>HTML</h3>
-
-                </div>
-
-                <div class="CSS" id="css">
-
-                    <img src="./icons/css.svg" alt="">
-
-                    <h3>CSS</h3>
-
-                </div>
-
-                <div class="JS" id="js">
-
-                    <img src="./icons/js.svg" alt="">
-
-                    <h3>JavaScript</h3>
-
-                </div>
-                <div class="PHP" id="php">
-
-                    <img src="./icons/php.svg" alt="">
-
-                    <h3>PHP</h3>
-
-                </div>
-                <div class="NODE" id="node">
-
-                    <img src="./icons/nodejs.svg" alt="">
-
-                    <h3>Node.JS</h3>
-
-                </div>
-                <div class="MySQL" id="mysql">
-
-                    <img src="./icons/mysql.svg" alt="">
-
-                    <h3>MySQL</h3>
-
-                </div>
-
-                <div class="Python" id="python">
-
-                    <img src="./icons/python.svg" alt="">
-
-                    <h3>Python</h3>
-
+        <section id="habilidades" class="scroll-reveal">
+            <div class="container">
+                <h2>Minhas Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-card hint-animation" data-skill="html5">
+                        <div class="click-hint-tooltip">Clique aqui!</div>
+                        <i class="fab fa-html5"></i><br></br><span>HTML5</span>
+                    </div>
+                    <div class="skill-card" data-skill="css3"><i class="fab fa-css3-alt"></i><br></br><span>CSS3</span>
+                    </div>
+                    <div class="skill-card" data-skill="javascript"><i
+                            class="fab fa-js-square"></i><br></br><span>JavaScript</span></div>
+                    <div class="skill-card" data-skill="nodejs"><i
+                            class="fab fa-node-js"></i><br></br><span>Node.js</span></div>
+                    <div class="skill-card" data-skill="python"><i
+                            class="fab fa-python"></i><br></br><span>Python</span></div>
+                    <div class="skill-card" data-skill="mysql"><i
+                            class="fas fa-database"></i><br></br><span>MySQL</span></div>
+                    <div class="skill-card" data-skill="git"><i class="fab fa-git-alt"></i><br></br><span>Git</span>
+                    </div>
+                    <div class="skill-card" data-skill="java"><i class="fab fa-java"></i><br></br><span>Java</span>
+                    </div>
                 </div>
 
             </div>
+        </section>
 
-            <div class="aboutTechMobile" id="aboutTechMobile" style="display: none;">
-                <div class="containerAboutTechMobile">
-                    <div class="aboutMobileTech" id="htmlInfoMobile" style="display: none;">
-                        <h1>HTML</h1>
-                        <p>Significa HyperText Markup Language (Linguagem de Marcação de Hipertexto), é a linguagem
-                            padrão para criar páginas e aplicações web. É uma linguagem de marcação, o que significa que
-                            ela usa
-                            tags para definir elementos dentro de um documento. Essas tags são usadas para formatar e
-                            organizar
-                            o conteúdo da página.
-                        </p>
+        <section id="projetos" class="scroll-reveal">
+            <div class="container">
+                <h2>Projetos</h2>
+                <div class="swiper project-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <img src="https://placehold.co/600x400/4B0082/FFFFFF?text=Jogo+da+Velha"
+                                    alt="Imagem do Projeto Jogo da Velha">
+                                <div class="project-info">
+                                    <h3>Jogo da Velha</h3>
+                                    <p>Jogo da velha multijogador local, ideal para testar lógica e manipulação de DOM.
+                                    </p>
+                                    <div class="tech-tags">
+                                        <span>JavaScript</span><span>HTML5</span><span>CSS3</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://emanuelsobral.github.io/jogDaVelha_JS_IA/" target="_blank"
+                                            class="btn-primary">Ver ao Vivo</a>
+                                        <a href="https://github.com/emanuelsobral/jogDaVelha_JS_IA" target="_blank"
+                                            class="btn-secondary">Código Fonte</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <img src="https://placehold.co/600x400/4B0082/FFFFFF?text=Calculadora"
+                                    alt="Imagem do Projeto Calculadora">
+                                <div class="project-info">
+                                    <h3>Calculadora Web</h3>
+                                    <p>Uma calculadora funcional com as operações básicas e um design limpo.</p>
+                                    <div class="tech-tags">
+                                        <span>JavaScript</span><span>HTML5</span><span>CSS3</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://emanuelsobral.github.io/Calculadora_JS/" target="_blank"
+                                            class="btn-primary">Ver ao Vivo</a>
+                                        <a href="https://github.com/emanuelsobral/Calculadora_JS" target="_blank"
+                                            class="btn-secondary">Código Fonte</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <img src="https://placehold.co/600x400/4B0082/FFFFFF?text=Cronômetro"
+                                    alt="Imagem do Projeto Cronômetro">
+                                <div class="project-info">
+                                    <h3>Cronômetro Online</h3>
+                                    <p>Cronômetro preciso com funções de iniciar, parar e resetar, construído em
+                                        JavaScript puro.</p>
+                                    <div class="tech-tags">
+                                        <span>JavaScript</span><span>HTML5</span><span>CSS3</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://emanuelsobral.github.io/Cronomretro_JS/" target="_blank"
+                                            class="btn-primary">Ver ao Vivo</a>
+                                        <a href="https://github.com/emanuelsobral/Cronomretro_JS" target="_blank"
+                                            class="btn-secondary">Código Fonte</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="aboutMobileTech" id="cssInfoMobile" style="display: none;">
-                        <h1>CSS</h1>
-                        <p>Significa Cascading Style Sheets (Folhas de Estilo em Cascata), é uma linguagem de estilo
-                            usada para descrever a aparência e formatação de um documento escrito em HTML. CSS é usada
-                            para
-                            controlar o layout de várias páginas web de uma só vez, permitindo que você altere a
-                            aparência de
-                            todo o site mudando apenas um arquivo.
-                        </p>
-                    </div>
-                    <div class="aboutMobileTech" id="jsInfoMobile" style="display: none;">
-                        <h1>JavaScript</h1>
-                        <p>É uma linguagem de programação que permite implementar funcionalidades mais complexas em
-                            páginas web. Enquanto HTML e CSS são linguagens que dão estrutura e estilo à página web,
-                            respectivamente, JavaScript dá à página web elementos interativos que os usuários podem se
-                            engajar.
-                            Esses elementos interativos podem incluir slideshows de imagens, formulários de envio com
-                            mensagens
-                            de validação, conteúdo que muda e atualiza em tempo real, efeitos animados e gráficos
-                            interativos.
-                        </p>
-                    </div>
-                    <div class="aboutMobileTech" id="phpInfoMobile" style="display: none;">
-                        <h1>PHP</h1>
-                        <p>Significa: Hypertext Preprocessor (Pré-processador de Hipertexto PHP), é uma linguagem
-                            de programação de código aberto amplamente usada para desenvolvimento web. É executada no
-                            servidor,
-                            o que significa que a execução (leitura) do código PHP é feita no servidor onde a página é
-                            hospedada. PHP pode gerar conteúdo dinâmico na página, como texto, HTML, CSS e JavaScript, e
-                            pode
-                            interagir com vários sistemas de banco de dados.
-                        </p>
-                    </div>
-                    <div class="aboutMobileTech" id="nodeInfoMobile" style="display: none;">
-                        <h1>Node.JS</h1>
-                        <p>É uma plataforma construída sobre o motor JavaScript do Chrome para facilmente construir
-                            aplicações de rede rápidas e escaláveis. Node.js usa um modelo de I/O direcionada a evento
-                            não
-                            bloqueante, que o torna leve e eficiente, ideal para aplicações em tempo real com troca
-                            intensa de
-                            dados através de dispositivos distribuídos. Ele permite que o JavaScript seja executado no
-                            lado do
-                            servidor, tendo assim acesso a coisas como sistema de arquivos, servidores HTTP e bancos de
-                            dados,
-                            coisas que o navegador normalmente não permite por questões de segurança.
-                        </p>
-                    </div>
-                    <div class="aboutMobileTech" id="mysqlInfoMobile" style="display: none;">
-                        <h1>MySQL</h1>
-                        <p>É um sistema de gerenciamento de banco de dados relacional (RDBMS) de código aberto baseado
-                            em
-                            SQL (Structured Query Language). SQL é a linguagem mais popular para adicionar, acessar e
-                            gerenciar
-                            conteúdo em um banco de dados. É conhecido por sua rapidez e confiabilidade. Ele é comumente
-                            usado
-                            em aplicações web para armazenar dados e é uma componente das pilhas de desenvolvimento web
-                            amplamente utilizadas, como LAMP (Linux, Apache, MySQL, PHP/Python/Perl) e MERN (MongoDB,
-                            Express.js, React.js, Node.js).
-                        </p>
-                    </div>
-                    <div class="aboutMobileTech" id="pythonInfoMobile" style="display: none;">
-                        <h1>Python</h1>
-                        <p>Python é uma das linguagens de programação mais populares do mundo. Criada por Guido van Rossum e lançada em 1991,
-                            sua sintaxe clara e intuitiva facilita a leitura e escrita de código, promovendo eficiência e produtividade </br>
-                            Além disso, Python possui uma vasta biblioteca padrão e um ecossistema robusto de pacotes e frameworks, 
-                            como Django e Flask para desenvolvimento web, NumPy e Pandas para análise de dados, e TensorFlow e PyTorch 
-                            para inteligência artificial e machine learning.
-                        </p>
-                    </div>
-                    <button type="button" id="closeAboutTechMobileButton">❮</button>
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
-        </div>
-        <div class="aboutTech">
-            <div class="TechsInfo" id="TechsInfo" style="display: block;">
-                <h1>Conhecimentos Que Possuo</h1>
-                <p>*Passe o mouse em cima do card para exibir informações:*</p>
-            </div>
-            <div class="TechsInfo" id="htmlInfo" style="display: none;">
-                <h1>HTML</h1>
-                <p>significa HyperText Markup Language (Linguagem de Marcação de Hipertexto), é a linguagem
-                    padrão para criar páginas e aplicações web. É uma linguagem de marcação, o que significa que ela usa
-                    tags para definir elementos dentro de um documento. Essas tags são usadas para formatar e organizar
-                    o conteúdo da página.</p>
-            </div>
-            <div class="TechsInfo" id="cssInfo" style="display: none;">
-                <h1>CSS</h1>
-                <p>significa Cascading Style Sheets (Folhas de Estilo em Cascata), é uma linguagem de estilo
-                    usada para descrever a aparência e formatação de um documento escrito em HTML. CSS é usada para
-                    controlar o layout de várias páginas web de uma só vez, permitindo que você altere a aparência de
-                    todo o site mudando apenas um arquivo.</p>
-            </div>
-            <div class="TechsInfo" id="jsInfo" style="display: none;">
-                <h1>JavaScript</h1>
-                <p>É uma linguagem de programação que permite implementar funcionalidades mais complexas em
-                    páginas web. Enquanto HTML e CSS são linguagens que dão estrutura e estilo à página web,
-                    respectivamente, JavaScript dá à página web elementos interativos que os usuários podem se engajar.
-                    Esses elementos interativos podem incluir slideshows de imagens, formulários de envio com mensagens
-                    de validação, conteúdo que muda e atualiza em tempo real, efeitos animados e gráficos interativos.
+        </section>
+
+        <section id="contato" class="scroll-reveal">
+            <div class="container">
+                <h2>Vamos Conversar?</h2>
+                <p>Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato!
                 </p>
-            </div>
-            <div class="TechsInfo" id="phpInfo" style="display: none;">
-                <h1>PHP</h1>
-                <p>Que significa Hypertext Preprocessor (Pré-processador de Hipertexto PHP), é uma linguagem
-                    de programação de código aberto amplamente usada para desenvolvimento web. É executada no servidor,
-                    o que significa que a execução (leitura) do código PHP é feita no servidor onde a página é
-                    hospedada. PHP pode gerar conteúdo dinâmico na página, como texto, HTML, CSS e JavaScript, e pode
-                    interagir com vários sistemas de banco de dados.</p>
-            </div>
-            <div class="TechsInfo" id="nodeInfo" style="display: none;">
-                <h1>Node.JS</h1>
-                <p>É uma plataforma construída sobre o motor JavaScript do Chrome para facilmente construir
-                    aplicações de rede rápidas e escaláveis. Node.js usa um modelo de I/O direcionada a evento não
-                    bloqueante, que o torna leve e eficiente, ideal para aplicações em tempo real com troca intensa de
-                    dados através de dispositivos distribuídos. Ele permite que o JavaScript seja executado no lado do
-                    servidor, tendo assim acesso a coisas como sistema de arquivos, servidores HTTP e bancos de dados,
-                    coisas que o navegador normalmente não permite por questões de segurança.</p>
-            </div>
-            <div class="TechsInfo" id="mysqlInfo" style="display: none;">
-                <h1>MySQL</h1>
-                <p>É um sistema de gerenciamento de banco de dados relacional (RDBMS) de código aberto baseado em
-                    SQL (Structured Query Language). SQL é a linguagem mais popular para adicionar, acessar e gerenciar
-                    conteúdo em um banco de dados. É conhecido por sua rapidez e confiabilidade. Ele é comumente usado
-                    em aplicações web para armazenar dados e é uma componente das pilhas de desenvolvimento web
-                    amplamente utilizadas, como LAMP (Linux, Apache, MySQL, PHP/Python/Perl) e MERN (MongoDB,
-                    Express.js, React.js, Node.js).</p>
-            </div>
-            <div class="TechsInfo" id="pythonInfo" style="display: none;">
-                <h1>Python</h1>
-                <p>adicione mais um pouco
-                    Python é uma das linguagens de programação mais populares do mundo. Criada por Guido van Rossum e lançada em 1991,
-                    sua sintaxe clara e intuitiva facilita a leitura e escrita de código, promovendo eficiência e produtividade
-                    Além disso, Python possui uma vasta biblioteca padrão e um ecossistema robusto de pacotes e frameworks, 
-                    como Django e Flask para desenvolvimento web, NumPy e Pandas para análise de dados, e TensorFlow e PyTorch 
-                    para inteligência artificial e machine learning.
-                </p>
-            </div>
-        </div>
-        </div>
-    </section>
+                <div class="contact-links">
+                    <a href="mailto:emanuelssobral@gmail.com" class="contact-button"><i class="fas fa-envelope"></i>
+                        Enviar E-mail</a>
 
-    <section class="port" id="sec4">
-
-        <h1>Projetos</h1>
-
-        <div class="containerPort">
-            <div class="cardContainer">
-                <div class="cardImg">
-                    <img src="./img/EmBreve.png" alt="">
-                </div>
-                <div class="cardText">
-                    <h1>Em Desenvolvimento</h1>
-                    <p>Site meteorologico feito em JavaScript e API</p>
-                    <div class="cardButtons">
-                        <button type="button" onclick="openEmBreveBox()">Ver mais</button>
-
+                    <div class="copy-button-wrapper">
+                        <button id="copy-email-btn" class="contact-button"><i class="fas fa-copy"></i> Copiar
+                            E-mail</button>
+                        <span id="copy-feedback" class="copy-feedback-tooltip">E-mail copiado!</span>
                     </div>
+
+                    <a href="https://www.linkedin.com/in/emanuel-sobral-329444198/" target="_blank"
+                        class="contact-button"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://github.com/emanuelsobral" target="_blank" class="contact-button"><i
+                            class="fab fa-github"></i> GitHub</a>
                 </div>
             </div>
+        </section>
+    </main>
 
-            <div class="cardContainer">
-                <div class="cardImg">
-                    <img src="./img/JogoDaVelha.png" alt="">
-                </div>
-                <div class="cardText">
-                    <h1>Jogo da Velha</h1>
-                    <p>Jogo da velha multijogador local feito em Javascript</p>
-                    <div class="cardButtons">
-                        <button type="button" onclick="openJogoDaVelhaBox()">Ver mais</button>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardContainer">
-                <div class="cardImg">
-                    <img src="./img/Calculadora.png" alt="">
-                </div>
-                <div class="cardText">
-                    <h1>Calculadora</h1>
-                    <p>Calculadora com todas funçoes basicas feita em JavaScript</p>
-                    <div class="cardButtons">
-                        <button type="button" onclick="openCalculadoraBox()">Ver mais</button>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="cardContainer">
-                <div class="cardImg">
-                    <img src="./img/Cronometro.png" alt="">
-                </div>
-                <div class="cardText">
-                    <h1>Cronometro</h1>
-                    <p>Cronometro com Play, Pause e Reset feito em JavaScript</p>
-                    <div class="cardButtons">
-                        <button type="button" onclick="openCronometroBox()">Ver mais</button>
-
-                    </div>
-                </div>
-            </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Emanuel Sobral. Criado com paixão e código.</p>
         </div>
+    </footer>
 
-        <div class="projectAboutBox" id="emBreveBox" style="display: none;">
-            <h1>Em Breve</h1>
-            <p>Este projeto é uma aplicação web simples construída com JavaScript que utiliza a API de um site
-                meteorológico para fornecer informações sobre o clima.</p>
-            <div class="projectAboutTechs">
-                <h1>Tecnologias Usadas</h1>
-                <div class="projectImgDiv">
-                    <img src="./icons/html.svg" alt="html logo">
-                    <img src="./icons/css.svg" alt="css logo">
-                    <img src="./icons/js.svg" alt="JavaScript Logo">
-                </div>
-            </div>
-            <div class="projectAboutButtons">
-                <button type="button" class="emBreve">Em Breve</button>
-            </div>
-            <button type="button" onclick="closeBox()">Voltar</button>
-
-        </div>
-
-        <div class="projectAboutBox" id="jogoDaVelhaBox" style="display: none;">
-            <h1>Jogo da Velha</h1>
-            <p>Este projeto é um jogo da velha simples implementado em HTML, CSS e JavaScript. Ele foi criado como parte
-                de um curso de JavaScript, com o objetivo de aplicar e praticar os conceitos aprendidos durante o curso.
-                O jogo da velha é um exemplo clássico usado frequentemente em cursos de programação devido à sua
-                simplicidade, mas também porque envolve conceitos importantes como manipulação de arrays, controle de
-                fluxo e interação com o DOM.</p>
-            <div class="projectAboutTechs">
-                <h1>Tecnologias Usadas</h1>
-                <div class="projectImgDiv">
-                    <img src="./icons/html.svg" alt="html logo">
-                    <img src="./icons/css.svg" alt="css logo">
-                    <img src="./icons/js.svg" alt="JavaScript Logo">
-                </div>
-            </div>
-            <div class="projectAboutButtons">
-                <button type="button"><a href="https://emanuelsobral.github.io/jogDaVelha_JS_IA/" target="_blank">Ver
-                        Site <img src="./icons/internet.png" alt="internet imagem"></a></button>
-                <button type="button"><a href="https://github.com/emanuelsobral/jogDaVelha_JS_IA" target="_blank">Ver
-                        Codigo<img src="./icons/coding.png" alt="codigo imagem"></a></button>
-            </div>
-            <button type="button" onclick="closeBox()">Voltar</button>
-
-        </div>
-
-        <div class="projectAboutBox" id="calculadoraBox" style="display: none;">
-            <h1>Calculadora Web</h1>
-            <p>Este é um projeto assistido de uma calculadora web feita em HTML, CSS e JS. A calculadora possui todos os
-                cálculos básicos, exibe o resultado e tem um botão que copia o resultado.
-                <br>
-                A calculadora possui dois temas: claro e escuro. Você pode escolher o tema que mais te agrada clicando
-                no botão "trocar tema" no canto superior direito da calculadora. O tema escolhido será salvo no local
-                storage do seu navegador, para que você possa manter a sua preferência na próxima vez que usar a
-                calculadora.
-            </p>
-            <div class="projectAboutTechs">
-                <h1>Tecnologias Usadas</h1>
-                <div class="projectImgDiv">
-                    <img src="./icons/html.svg" alt="html logo">
-                    <img src="./icons/css.svg" alt="css logo">
-                    <img src="./icons/js.svg" alt="JavaScript Logo">
-                </div>
-            </div>
-            <div class="projectAboutButtons">
-                <button type="button"><a href="https://emanuelsobral.github.io/Calculadora_JS/" target="_blank">Ver
-                        Site<img src="./icons/internet.png" alt="internet imagem"></a></button>
-                <button type="button"><a href="https://github.com/emanuelsobral/Calculadora_JS" target="_blank">Ver
-                        Codigo<img src="./icons/coding.png" alt="codigo imagem"></a></button>
-            </div>
-            <button type="button" onclick="closeBox()">Voltar</button>
-
-        </div>
-
-        <div class="projectAboutBox" id="cronometroBox" style="display: none;">
-            <h1>Cronômetro</h1>
-            <p>Este é um projeto simples de um cronômetro feito em HTML e JavaScript. Foi desenvolvido durante uma aula
-                de programação.
-                <br>
-                O cronometro possui botoes de play, pause e reset.
-            </p>
-            <div class="projectAboutTechs">
-                <h1>Tecnologias Usadas</h1>
-                <div class="projectImgDiv">
-                    <img src="./icons/html.svg" alt="html logo">
-                    <img src="./icons/css.svg" alt="css logo">
-                    <img src="./icons/js.svg" alt="JavaScript Logo">
-                </div>
-            </div>
-            <div class="projectAboutButtons">
-                <button type="button"><a href="https://emanuelsobral.github.io/Cronomretro_JS/" target="_blank">Ver
-                        Site<img src="./icons/internet.png" alt="internet imagem"></a></button>
-                <button type="button"><a href="https://github.com/emanuelsobral/Cronomretro_JS" target="_blank">Ver
-                        Codigo<img src="./icons/coding.png" alt="codigo imagem"></a></button>
-            </div>
-            <button type="button" onclick="closeBox()">Voltar</button>
-
-        </div>
-
-
-
-        <button type="button"><a href="https://github.com/emanuelsobral?tab=repositories" target="_blank">Veja Mais
-                Projetos <img src="./icons/github.png" alt="github logo imagem"></a></button>
-    </section>
-
-    <section class="contact" id="sec5">
-        <div class="contactBox">
-            <div class="titleContact"><h1>Contatos</h1></div>
-            <div class="emailCopy" id="emailBox" onclick="copyEmail()">
-                <p id="statusCopy">Click to Copy</p>
-                <h1 id="email">emanuelssobral@gmail.com</h1>
-            </div>
-            <div class="emailMailTo">
-                <button><a href="mailto:emanuelssobral@gmail.com?subject=Vi%20Seu%20Portfolio"><h1>Eviar pelo aplicativo<img src="./icons/mail-send.png" alt=""></h1></a></button>
-            </div>
-            <div class="contactButtons">
-                <div class="linkedin"><a href="https://www.linkedin.com/in/emanuel-sobral-329444198/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                        viewBox="0,0,256,256">
-                        <g fill="#FFF" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                            style="mix-blend-mode: normal">
-                            <g transform="scale(5.12,5.12)">
-                                <path
-                                    d="M25,2c-12.682,0 -23,10.317 -23,23c0,12.683 10.318,23 23,23c12.682,0 23,-10.317 23,-23c0,-12.683 -10.318,-23 -23,-23zM18,35h-4v-15h4zM16,17c-1.105,0 -2,-0.895 -2,-2c0,-1.105 0.895,-2 2,-2c1.105,0 2,0.895 2,2c0,1.105 -0.895,2 -2,2zM37,35h-4v-5v-2.5c0,-1.925 -1.575,-3.5 -3.5,-3.5c-1.925,0 -3.5,1.575 -3.5,3.5v7.5h-4v-15h4v1.816c1.168,-1.122 2.752,-1.816 4.5,-1.816c3.59,0 6.5,2.91 6.5,6.5z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                </a></div>
-                <div class="github"><a href="https://github.com/emanuelsobral" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                        viewBox="0,0,256,256">
-                        <g fill="#FFF" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
-                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                            style="mix-blend-mode: normal">
-                            <g transform="scale(4,4)">
-                                <path
-                                    d="M32,6c-14.359,0 -26,11.641 -26,26c0,12.277 8.512,22.56 19.955,25.286c-0.592,-0.141 -1.179,-0.299 -1.755,-0.479v-5.957c0,0 -0.975,0.325 -2.275,0.325c-3.637,0 -5.148,-3.245 -5.525,-4.875c-0.229,-0.993 -0.827,-1.934 -1.469,-2.509c-0.767,-0.684 -1.126,-0.686 -1.131,-0.92c-0.01,-0.491 0.658,-0.471 0.975,-0.471c1.625,0 2.857,1.729 3.429,2.623c1.417,2.207 2.938,2.577 3.721,2.577c0.975,0 1.817,-0.146 2.397,-0.426c0.268,-1.888 1.108,-3.57 2.478,-4.774c-6.097,-1.219 -10.4,-4.716 -10.4,-10.4c0,-2.928 1.175,-5.619 3.133,-7.792c-0.2,-0.567 -0.533,-1.714 -0.533,-3.583c0,-1.235 0.086,-2.751 0.65,-4.225c0,0 3.708,0.026 7.205,3.338c1.614,-0.47 3.341,-0.738 5.145,-0.738c1.804,0 3.531,0.268 5.145,0.738c3.497,-3.312 7.205,-3.338 7.205,-3.338c0.567,1.474 0.65,2.99 0.65,4.225c0,2.015 -0.268,3.19 -0.432,3.697c1.898,2.153 3.032,4.802 3.032,7.678c0,5.684 -4.303,9.181 -10.4,10.4c1.628,1.43 2.6,3.513 2.6,5.85v8.557c-0.576,0.181 -1.162,0.338 -1.755,0.479c11.443,-2.726 19.955,-13.009 19.955,-25.286c0,-14.359 -11.641,-26 -26,-26zM33.813,57.93c-0.599,0.042 -1.203,0.07 -1.813,0.07c0.61,0 1.213,-0.029 1.813,-0.07zM37.786,57.346c-1.164,0.265 -2.357,0.451 -3.575,0.554c1.218,-0.103 2.411,-0.29 3.575,-0.554zM32,58c-0.61,0 -1.214,-0.028 -1.813,-0.07c0.6,0.041 1.203,0.07 1.813,0.07zM29.788,57.9c-1.217,-0.103 -2.411,-0.289 -3.574,-0.554c1.164,0.264 2.357,0.451 3.574,0.554z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                </a></div>
-                <div class="whatsapp"><a href="https://wa.me/5511954515605?text=Ol%C3%A1+Emanuel%2C+eu+vi+seu+portf%C3%B3lio."
-                    target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                        viewBox="0,0,256,256">
-                        <g fill="#FFF" fill-rule="evenodd" stroke="none" stroke-width="1" stroke-linecap="butt"
-                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
-                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
-                            style="mix-blend-mode: normal">
-                            <g transform="scale(8,8)">
-                                <path
-                                    d="M24.50391,7.50391c-2.25781,-2.25781 -5.25781,-3.50391 -8.45312,-3.50391c-6.58594,0 -11.94922,5.35938 -11.94922,11.94531c-0.00391,2.10547 0.54688,4.16016 1.59375,5.97266l-1.69531,6.19141l6.33594,-1.66406c1.74219,0.95313 3.71094,1.45313 5.71094,1.45703h0.00391c6.58594,0 11.94531,-5.35937 11.94922,-11.94922c0,-3.19141 -1.24219,-6.19141 -3.49609,-8.44922zM16.05078,25.88281h-0.00391c-1.78125,0 -3.53125,-0.48047 -5.05469,-1.38281l-0.36328,-0.21484l-3.76172,0.98438l1.00391,-3.66406l-0.23437,-0.375c-0.99609,-1.58203 -1.51953,-3.41016 -1.51953,-5.28516c0,-5.47266 4.45703,-9.92578 9.9375,-9.92578c2.65234,0 5.14453,1.03516 7.01953,2.91016c1.875,1.87891 2.90625,4.37109 2.90625,7.02344c0,5.47656 -4.45703,9.92969 -9.92969,9.92969zM21.49609,18.44531c-0.29687,-0.14844 -1.76562,-0.87109 -2.03906,-0.96875c-0.27344,-0.10156 -0.47266,-0.14844 -0.67187,0.14844c-0.19922,0.30078 -0.76953,0.97266 -0.94531,1.17188c-0.17187,0.19531 -0.34766,0.22266 -0.64453,0.07422c-0.30078,-0.14844 -1.26172,-0.46484 -2.40234,-1.48437c-0.88672,-0.78906 -1.48828,-1.76953 -1.66016,-2.06641c-0.17578,-0.30078 -0.01953,-0.46094 0.12891,-0.60937c0.13672,-0.13281 0.30078,-0.34766 0.44922,-0.52344c0.14844,-0.17187 0.19922,-0.29687 0.30078,-0.49609c0.09766,-0.19922 0.04688,-0.375 -0.02734,-0.52344c-0.07422,-0.14844 -0.67187,-1.62109 -0.92187,-2.21875c-0.24219,-0.58203 -0.48828,-0.5 -0.67187,-0.51172c-0.17187,-0.00781 -0.37109,-0.00781 -0.57031,-0.00781c-0.19922,0 -0.52344,0.07422 -0.79687,0.375c-0.27344,0.29688 -1.04297,1.01953 -1.04297,2.48828c0,1.46875 1.07031,2.89063 1.21875,3.08984c0.14844,0.19531 2.10547,3.21094 5.10156,4.50391c0.71094,0.30859 1.26563,0.49219 1.69922,0.62891c0.71484,0.22656 1.36719,0.19531 1.88281,0.12109c0.57422,-0.08594 1.76563,-0.72266 2.01563,-1.42187c0.24609,-0.69531 0.24609,-1.29297 0.17188,-1.41797c-0.07422,-0.125 -0.27344,-0.19922 -0.57422,-0.35156z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                </a></div>
-            </div>
-        </div>
-    </section>
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
 </body>
+
+</html>
