@@ -514,6 +514,7 @@ section {
     pointer-events: none;
     animation: fadeInTooltip 0.3s ease forwards;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 99;
 }
 
 /* --- ANIMAÇÃO DO PONTEIRO --- */
