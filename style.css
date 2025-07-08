@@ -426,10 +426,6 @@ section {
     cursor: pointer;
 }
 
-.skill-card.tooltip-active {
-    z-index: 99; /* Um z-index alto para trazê-lo para a frente */
-}
-
 .skill-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary-color);
@@ -509,7 +505,6 @@ section {
     width: max-content;
     max-width: 220px;
     text-align: center;
-    z-index: 10;
     pointer-events: none;
     animation: fadeInTooltip 0.3s ease forwards;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
