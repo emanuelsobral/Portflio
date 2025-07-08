@@ -424,7 +424,6 @@ section {
     border: 1px solid transparent;
     position: relative;
     cursor: pointer;
-    z-index: 1;
 }
 
 .skill-card.tooltip-active {
@@ -514,7 +513,7 @@ section {
     pointer-events: none;
     animation: fadeInTooltip 0.3s ease forwards;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 99;
+    z-index: 1000;
 }
 
 /* --- ANIMAÇÃO DO PONTEIRO --- */
@@ -728,7 +727,7 @@ a.contact-button:hover, button.contact-button:hover {
     font-size: 0.9rem;
     white-space: nowrap;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 10;
+    z-index: 99;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
