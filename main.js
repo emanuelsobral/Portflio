@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(el);
     });
 
-    // --- LÓGICA PARA TOOLTIP E DICA DAS HABILIDADES ---
+    // --- LÓGICA PARA TOOLTIP E DICA DAS HABILIDADES (VERSÃO FINAL) ---
     const skillDescriptions = {
         'html5': 'Linguagem de marcação para criar a estrutura de páginas web.',
         'css3': 'Usado para estilizar e dar vida às páginas web, controlando cores, fontes e layouts.',
@@ -95,22 +95,26 @@ document.addEventListener('DOMContentLoaded', () => {
         'git': 'Sistema de controle de versão essencial para rastrear mudanças no código e colaborar em equipe.',
         'java': 'Linguagem de programação robusta e orientada a objetos, amplamente usada em sistemas corporativos.'
     };
-    
+
     const allSkillCards = document.querySelectorAll('.skill-card');
     const cardWithHint = document.querySelector('.skill-card.hint-animation');
     let hintAnimationStopped = false;
+    let activeTooltip = null; // Variável para manter referência da tooltip ativa
 
-    // Lógica para mostrar o tooltip e parar a animação
+    // Função para remover a tooltip que está no <body>
     const removeActiveTooltip = () => {
-        const existingTooltip = document.querySelector('.skill-tooltip-popup');
-        if (existingTooltip) {
-            existingTooltip.remove();
+        if (activeTooltip) {
+            activeTooltip.remove();
+            activeTooltip = null;
         }
     };
 
     allSkillCards.forEach(card => {
         card.addEventListener('click', (e) => {
-            // Para a animação e o tooltip de dica no primeiro clique
+            // Impede que o clique no card feche a tooltip imediatamente
+            e.stopPropagation();
+
+            // Lógica para parar a animação de dica no primeiro clique (mantida)
             if (!hintAnimationStopped && cardWithHint) {
                 cardWithHint.classList.remove('hint-animation');
                 const hintTooltip = cardWithHint.querySelector('.click-hint-tooltip');
@@ -120,36 +124,50 @@ document.addEventListener('DOMContentLoaded', () => {
                 hintAnimationStopped = true;
             }
 
-            e.stopPropagation();
-
-            // Lógica para criar e remover o tooltip de descrição
             const skill = e.currentTarget.dataset.skill;
             const description = skillDescriptions?.[skill];
-            const indicator = document.createElement('div');
-            indicator.className = 'click-indicator';
-            e.currentTarget.appendChild(indicator);
-            setTimeout(() => { indicator.remove(); }, 300);
             
-            const existingTooltipOnCard = e.currentTarget.querySelector('.skill-tooltip-popup');
-            if (existingTooltipOnCard) {
-                existingTooltipOnCard.remove();
-                return;
+            // Se o card clicado for o mesmo que gerou a tooltip ativa, apenas a fechamos
+            if (activeTooltip && activeTooltip.dataset.ownerSkill === skill) {
+                removeActiveTooltip();
+                return; // E paramos a execução
             }
             
+            // Remove qualquer tooltip antiga antes de criar uma nova
             removeActiveTooltip();
-            
+
             if (description) {
+                // 1. Criar a tooltip
                 const tooltip = document.createElement('div');
                 tooltip.className = 'skill-tooltip-popup';
                 tooltip.textContent = description;
-                e.currentTarget.appendChild(tooltip);
+                // Guardamos uma referência para saber a qual skill ela pertence
+                tooltip.dataset.ownerSkill = skill;
+
+                // 2. Anexar diretamente ao <body>
+                document.body.appendChild(tooltip);
+                activeTooltip = tooltip; // Atualiza a referência da tooltip ativa
+
+                // 3. Calcular a posição
+                const cardRect = e.currentTarget.getBoundingClientRect();
+                
+                // Posicionar a tooltip abaixo do card, centralizada horizontalmente
+                // Adicionamos window.scrollY porque getBoundingClientRect é relativo à janela de visualização
+                const top = cardRect.bottom + window.scrollY + 8; // 8px de espaço
+                const left = cardRect.left + (cardRect.width / 2);
+
+                // 4. Aplicar o estilo de posicionamento via JS
+                tooltip.style.top = `${top}px`;
+                tooltip.style.left = `${left}px`;
             }
         });
     });
 
+    // Listener global para fechar a tooltip se o usuário clicar em qualquer outro lugar
     document.addEventListener('click', () => {
         removeActiveTooltip();
     });
+
 
     // --- INICIALIZAÇÃO DO CARROSSEL DE PROJETOS ---
     const swiper = new Swiper('.project-swiper', {

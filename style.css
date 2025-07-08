@@ -424,12 +424,6 @@ section {
     border: 1px solid transparent;
     position: relative;
     cursor: pointer;
-    transform: translateZ(0);
-    z-index: 1; 
-}
-
-.skill-card.tooltip-active {
-    z-index: 99;
 }
 
 .skill-card:hover {
@@ -481,9 +475,9 @@ section {
     font-size: 0.9rem;
     font-weight: 600;
     white-space: nowrap;
+    z-index: 10;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     pointer-events: none;
-    z-index: 99;
 }
 
 .click-hint-tooltip::after {
@@ -499,10 +493,8 @@ section {
 
 
 .skill-tooltip-popup {
+    /* Posição e top/left são definidos pelo JS agora */
     position: absolute;
-    top: 110%;
-    left: 50%;
-    margin-top: 5px;
     background-color: var(--secondary-color);
     color: var(--white);
     padding: 10px 15px;
@@ -511,36 +503,11 @@ section {
     width: max-content;
     max-width: 220px;
     text-align: center;
-    pointer-events: none;
+    /* Z-index muito alto para garantir que fique na frente de tudo */
+    z-index: 9999;
     animation: fadeInTooltip 0.3s ease forwards;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 1000;
-}
-
-/* --- ANIMAÇÃO DO PONTEIRO --- */
-.click-indicator {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    background-color: var(--primary-color);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    opacity: 0.8;
     pointer-events: none;
-    animation: pulse 0.3s ease-out forwards;
-}
-
-@keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(2);
-        opacity: 0;
-    }
 }
 
 /* --- PROJETOS SECTION (CAROUSEL) --- */
@@ -728,7 +695,7 @@ a.contact-button:hover, button.contact-button:hover {
     font-size: 0.9rem;
     white-space: nowrap;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 99;
+    z-index: 10;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
