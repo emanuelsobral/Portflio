@@ -267,15 +267,23 @@ section {
 }
 
 .sobre-botao-container a {
-    display: inline-block;
-    margin-right: 20px;
-    background-color: var(--primary-color);
+background-color: var(--card-background);
     color: var(--white);
-    padding: 12px 25px;
+    padding: 15px 30px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.sobre-botao-container a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+    color: var(--white);
 }
 
 /* --- TABS FOR HISTORY SECTION --- */
