@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Posicionar a tooltip abaixo do card, centralizada horizontalmente
                 // Adicionamos window.scrollY porque getBoundingClientRect é relativo à janela de visualização
-                const top = cardRect.bottom + window.scrollY + 8; // 8px de espaço
+                const top = cardRect.bottom + window.scrollY + 20; // 8px de espaço
                 const left = cardRect.left + (cardRect.width / 2);
 
                 // 4. Aplicar o estilo de posicionamento via JS
