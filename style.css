@@ -113,6 +113,30 @@ section {
     align-items: center;
 }
 
+#main-header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+#main-header nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Estilos do Menu Hambúrguer */
+#mobile-menu-toggle {
+    display: none; /* Escondido por padrão em telas grandes */
+    font-size: 1.8rem;
+    color: var(--white);
+    cursor: pointer;
+    z-index: 1001; /* Garante que fique acima do conteúdo */
+}
+
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -739,11 +763,48 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hero-content h1 { font-size: 3rem; }
+.hero-content h1 { font-size: 3rem; }
     .hero-content p { font-size: 1.2rem; }
     .typewriter-container { font-size: 1.2rem; height: 2rem;}
     .sobre-content { flex-direction: column; text-align: center; }
-    #main-header nav { display: none; /* Simplificação para mobile, ideal seria um menu hamburguer */ }
+    
+    /* --- Lógica do Menu Mobile --- */
+    #mobile-menu-toggle {
+        display: block; /* Mostra o ícone do hambúrguer */
+    }
+
+    #main-nav {
+        position: fixed;
+        top: 0;
+        left: 100%; /* Começa fora da tela, à direita */
+        width: 100%;
+        height: 100vh;
+        background-color: var(--header-background);
+        backdrop-filter: blur(15px);
+        transition: left 0.5s ease-in-out;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #main-nav.active {
+        left: 0; /* Move o menu para dentro da tela */
+    }
+    
+    #main-header nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    #main-header nav a {
+        font-size: 1.8rem;
+    }
+    
+    #main-header nav a:hover::after {
+        width: 0; /* Remove o efeito de sublinhado no mobile */
+    }
 
     .tabs-nav {
         display: flex;
@@ -799,5 +860,10 @@ footer {
         min-width: 100%;
         width: 100%;
         text-align: center;
+    }
+
+    .sobre-botao-container{
+        flex-direction: column;
+        align-items: center;
     }
 }

@@ -100,6 +100,41 @@ document.addEventListener("DOMContentLoaded", () => {
     revealObserver.observe(el);
   });
 
+      // --- LÓGICA DO MENU HAMBÚRGUER ---
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    const navLinks = mainNav.querySelectorAll('a');
+
+    if (menuToggle && mainNav) {
+        // Abre e fecha o menu ao clicar no ícone
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            
+            // Troca o ícone de hambúrguer para 'X' e vice-versa
+            const icon = menuToggle.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Fecha o menu ao clicar em um link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    }
+
+
   // --- LÓGICA PARA TOOLTIP E DICA DAS HABILIDADES (VERSÃO FINAL) ---
   const skillDescriptions = {
     html5: "Linguagem de marcação para criar a estrutura de páginas web.",
