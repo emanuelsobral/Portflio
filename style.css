@@ -144,23 +144,18 @@ section {
     text-decoration: none;
 }
 
-#main-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
 
-#main-header nav a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 5px;
-    transition: color 0.3s ease;
-}
 
 #main-header nav a:hover {
     color: var(--white);
+}
+
+#main-header nav a.active-link {
+    color: var(--white);
+}
+
+#main-header nav a.active-link::after {
+    width: 100%;
 }
 
 #main-header nav a::after {
@@ -236,6 +231,25 @@ section {
     box-shadow: 0 6px 20px rgba(157, 78, 221, 0.6);
 }
 
+.cta-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    box-shadow: none;
+}
+
+.cta-secondary:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 6px 20px rgba(157, 78, 221, 0.6);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation-delay: 0.7s;
+}
+
 /* --- TYPEWRITER --- */
 .typewriter-container {
     height: 2.5rem; 
@@ -284,6 +298,11 @@ section {
     font-size: 1.1rem;
     line-height: 1.8;
     max-width: 700px;
+}
+
+.sobre-texto strong {
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 .sobre-botao-container {
@@ -446,9 +465,11 @@ background-color: var(--card-background);
 /* --- HABILIDADES SECTION --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     gap: 25px;
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .skill-card {
@@ -845,7 +866,7 @@ footer {
         text-align: center;
     }
 
-    contact-links {
+    .contact-links {
         flex-direction: column;
         align-items: center;
     }
@@ -865,5 +886,53 @@ footer {
     .sobre-botao-container{
         flex-direction: column;
         align-items: center;
+    }
+    section {
+        padding: 60px 0;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 35px;
+    }
+
+    .timeline-container {
+        padding-left: 10px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-links a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .typewriter-container {
+        font-size: 1rem;
+        height: 1.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }

@@ -286,4 +286,35 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
   }
+
+  // --- ANO DINÂMICO NO FOOTER ---
+  const footerYear = document.getElementById('footer-year');
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
+
+  // --- SCROLLSPY PARA NAVEGAÇÃO ATIVA ---
+  const sections = document.querySelectorAll('section[id]');
+  const navLinksAll = document.querySelectorAll('#main-header nav a');
+
+  const scrollSpyObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinksAll.forEach((link) => {
+            link.classList.remove('active-link');
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active-link');
+            }
+          });
+        }
+      });
+    },
+    { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' }
+  );
+
+  sections.forEach((section) => {
+    scrollSpyObserver.observe(section);
+  });
 });
