@@ -1,6 +1,10 @@
 import { getStore } from "@netlify/blobs";
-import api from "../../lib/api.cjs";
+import { createRequire } from "node:module";
 import initial from "../../content.json" with { type: "json" };
+
+// Keep CommonJS dependencies traceable when Netlify packages this ESM function.
+const require = createRequire(import.meta.url);
+const api = require("../../lib/api.cjs");
 
 export default async (request, context) => {
   const blobs = getStore({ name: "portfolio-admin", consistency: "strong" });

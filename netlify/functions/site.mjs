@@ -1,8 +1,12 @@
 import { getStore } from "@netlify/blobs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import page from "../../lib/page.cjs";
+import { createRequire } from "node:module";
 import initial from "../../content.json" with { type: "json" };
+
+// Keep CommonJS dependencies traceable when Netlify packages this ESM function.
+const require = createRequire(import.meta.url);
+const page = require("../../lib/page.cjs");
 
 export default async () => {
   try {

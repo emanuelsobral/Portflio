@@ -52,4 +52,10 @@ npm run build
 
 O build publica apenas os arquivos permitidos, sem `.admin`, testes, dependências, credenciais ou código interno do servidor. As funções são empacotadas separadamente pela Netlify.
 
+### Erro de Dependência no Deploy
+
+Se a função `site` apresentar `Cannot find module 'linkedom'`, publique as versões atuais de `netlify/functions/site.mjs` e `netlify/functions/api.mjs`, junto com o restante do projeto. As funções usam `createRequire(import.meta.url)` para que o empacotador consiga rastrear os módulos CommonJS compartilhados e suas dependências (`linkedom` e `zod`). Mantenha essas bibliotecas em `dependencies` no `package.json` e publique também o `package-lock.json`.
+
+Faça um novo deploy pela Netlify usando a opção de limpar o cache e executar o build novamente. Atualizar apenas a pasta `public` não corrige o pacote das Functions. Não é necessário recriar o administrador nem apagar os dados do Netlify Blobs.
+
 Referências: [Netlify Blobs](https://docs.netlify.com/build/data-and-storage/netlify-blobs/) e [Netlify Functions](https://docs.netlify.com/build/functions/api/).
