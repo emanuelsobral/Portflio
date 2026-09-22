@@ -1,0 +1,447 @@
+{
+  "version": 1,
+  "site": {
+    "title": "Emanuel Sobral - Desenvolvedor Full-Stack",
+    "description": "Portfólio de Emanuel Sobral — Desenvolvedor Full-Stack e Engenheiro de Software. Especializado em JavaScript, Python, Node.js e análise de dados. Atualmente Data Analyst no Itaú.",
+    "keywords": "Emanuel Sobral, Desenvolvedor Full-Stack, Engenheiro de Software, Data Analyst, Portfólio, JavaScript, Python, Node.js",
+    "url": "https://www.emanuelssobral.com",
+    "logo": "E/S",
+    "favicon": "./icon/Icon.png",
+    "footer": "Emanuel Sobral. Criado com paixão e código."
+  },
+  "navigation": [
+    {
+      "id": "hero",
+      "label": "Início"
+    },
+    {
+      "id": "sobre",
+      "label": "Sobre"
+    },
+    {
+      "id": "historico",
+      "label": "Histórico"
+    },
+    {
+      "id": "habilidades",
+      "label": "Habilidades"
+    },
+    {
+      "id": "projetos",
+      "label": "Projetos"
+    },
+    {
+      "id": "contato",
+      "label": "Contato"
+    }
+  ],
+  "hero": {
+    "name": "Emanuel",
+    "highlight": "Sobral",
+    "role": "Desenvolvedor Full-Stack & Engenheiro de Software",
+    "words": [
+      "Estudante",
+      "Front-End",
+      "Back-End",
+      "Dados"
+    ],
+    "primaryLabel": "Meus Projetos",
+    "primaryUrl": "#projetos",
+    "secondaryLabel": "Fale Comigo",
+    "secondaryUrl": "#contato"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "body": "Sou um estudante de **Engenharia de Software** apaixonado por criar soluções inovadoras e eficientes. Com uma base sólida em desenvolvimento web (**HTML, CSS, JavaScript**) e experiência crescente em tecnologias de back-end como **Node.js** e **Python**, busco constantemente novos desafios. Atualmente no **Itaú**, atuo como **Data Analyst**, trabalhando com análise de dados e ferramentas como **Athena** e **SQL**. Meu objetivo é colaborar com equipes dinâmicas em uma empresa de tecnologia, onde possa não só aplicar minhas habilidades, mas também aprender e crescer profissionalmente.",
+    "image": "./img/avatar.jpg",
+    "imageAlt": "Foto de Emanuel Sobral",
+    "downloads": [
+      {
+        "label": "Baixar Currículo PDF",
+        "url": "./src/Curriculo.pdf"
+      },
+      {
+        "label": "Baixar Currículo WORD",
+        "url": "./src/Curriculo.docx"
+      }
+    ]
+  },
+  "history": {
+    "title": "Histórico Profissional",
+    "experienceLabel": "Experiências",
+    "educationLabel": "Formação"
+  },
+  "experiences": [
+    {
+      "id": "company-0",
+      "company": "Itaú",
+      "area": "Análise de dados",
+      "icon": "fas fa-building",
+      "color": "#f5b582",
+      "current": true,
+      "roles": [
+        {
+          "title": "Data Analyst JR",
+          "period": "Ago/2025 - Atual",
+          "current": true,
+          "tags": [
+            "Athena",
+            "SQL",
+            "Análise de dados"
+          ]
+        },
+        {
+          "title": "Estágio - Data Analyst",
+          "period": "Dez/2024 - Ago/2025",
+          "current": false,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "company-1",
+      "company": "TIM",
+      "area": "Qualidade, arquitetura & suporte",
+      "icon": "fas fa-signal",
+      "color": "#91bff0",
+      "current": false,
+      "roles": [
+        {
+          "title": "Estágio - Functional Quality Assurance",
+          "period": "Abr/2024 - Dez/2024",
+          "current": false,
+          "tags": []
+        },
+        {
+          "title": "Estágio - IT Application Architecture & QA",
+          "period": "Dez/2023 - Abr/2024",
+          "current": false,
+          "tags": []
+        },
+        {
+          "title": "Jovem Aprendiz - Administrativo/Suporte",
+          "period": "Jun/2021 - Set/2022",
+          "current": false,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "company-2",
+      "company": "Relemar Despachante",
+      "area": "Administrativo",
+      "icon": "far fa-folder-open",
+      "color": "#aa68ed",
+      "current": false,
+      "roles": [
+        {
+          "title": "Estágio - Administrativo/Back Office",
+          "period": "Jul/2019 - Mai/2020",
+          "current": false,
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "company-3",
+      "company": "Prepara Cursos",
+      "area": "Educação",
+      "icon": "fas fa-book-open",
+      "color": "#aa68ed",
+      "current": false,
+      "roles": [
+        {
+          "title": "Estágio - Monitor",
+          "period": "Jun/2017 - Fev/2018",
+          "current": false,
+          "tags": []
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "degree-0",
+      "title": "Engenharia de Software",
+      "type": "Bacharelado",
+      "institution": "São Judas Tadeu Polo Paulista",
+      "period": "2023 - Dez/2026",
+      "status": "Cursando",
+      "current": true,
+      "icon": "fas fa-laptop-code"
+    },
+    {
+      "id": "degree-1",
+      "title": "Desenvolvimento de Sistemas",
+      "type": "Técnico",
+      "institution": "ETEC Juscelino Kubitschek de Oliveira, Diadema",
+      "period": "Jul/2021",
+      "status": "Concluído",
+      "current": false,
+      "icon": "fas fa-code"
+    },
+    {
+      "id": "degree-2",
+      "title": "Administração de Empresas",
+      "type": "Técnico",
+      "institution": "ETEC Juscelino Kubitschek de Oliveira, Diadema",
+      "period": "Jul/2020",
+      "status": "Concluído",
+      "current": false,
+      "icon": "fas fa-chart-pie"
+    }
+  ],
+  "skillsTitle": "Minhas Habilidades",
+  "categories": [
+    {
+      "id": "frontend",
+      "label": "Front-End",
+      "icon": "fas fa-desktop"
+    },
+    {
+      "id": "backend",
+      "label": "Back-End",
+      "icon": "fas fa-server"
+    },
+    {
+      "id": "data",
+      "label": "Dados",
+      "icon": "fas fa-database"
+    },
+    {
+      "id": "tools",
+      "label": "Ferramentas",
+      "icon": "fas fa-code-branch"
+    }
+  ],
+  "skills": [
+    {
+      "id": "html5",
+      "name": "HTML5",
+      "categories": [
+        "frontend"
+      ],
+      "icon": "fab fa-html5",
+      "color": "#f69d77",
+      "description": "HTML5: estrutura semântica e acessível para a web.",
+      "tags": [
+        "Semântica",
+        "Acessibilidade",
+        "Estrutura"
+      ]
+    },
+    {
+      "id": "css3",
+      "name": "CSS3",
+      "categories": [
+        "frontend"
+      ],
+      "icon": "fab fa-css3-alt",
+      "color": "#7fbcf5",
+      "description": "CSS3: interfaces responsivas, composição visual e animações.",
+      "tags": [
+        "Responsividade",
+        "Layouts",
+        "Animações"
+      ]
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "categories": [
+        "frontend",
+        "backend"
+      ],
+      "icon": "fab fa-js-square",
+      "color": "#efdb75",
+      "description": "JavaScript: interatividade, lógica e experiências na web.",
+      "tags": [
+        "DOM",
+        "Interatividade",
+        "Lógica"
+      ]
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "categories": [
+        "backend"
+      ],
+      "icon": "fab fa-node-js",
+      "color": "#9ed990",
+      "description": "Node.js: aplicações no servidor e desenvolvimento de APIs.",
+      "tags": [
+        "APIs",
+        "Servidor",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "categories": [
+        "backend",
+        "data"
+      ],
+      "icon": "fab fa-python",
+      "color": "#8cc8ec",
+      "description": "Python: análise de dados, automação e desenvolvimento back-end.",
+      "tags": [
+        "Automação",
+        "Análise de dados",
+        "Back-End"
+      ]
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "categories": [
+        "data"
+      ],
+      "icon": "fas fa-database",
+      "color": "#71dfdf",
+      "description": "MySQL: armazenamento, modelagem e consultas de dados relacionais.",
+      "tags": [
+        "SQL",
+        "Modelagem",
+        "Consultas"
+      ]
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "categories": [
+        "tools"
+      ],
+      "icon": "fab fa-git-alt",
+      "color": "#ef99a8",
+      "description": "Git: controle de versão e colaboração em projetos de software.",
+      "tags": [
+        "Versionamento",
+        "Branches",
+        "Colaboração"
+      ]
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "categories": [
+        "backend"
+      ],
+      "icon": "fab fa-java",
+      "color": "#eca678",
+      "description": "Java: programação orientada a objetos e aplicações corporativas.",
+      "tags": [
+        "Orientação a objetos",
+        "Aplicações",
+        "Back-End"
+      ]
+    },
+    {
+      "id": "athena",
+      "name": "Athena",
+      "categories": [
+        "data"
+      ],
+      "icon": "fas fa-database",
+      "color": "#aa68ed",
+      "description": "Athena: consultas SQL para análise de dados armazenados no Amazon S3.",
+      "tags": [
+        "AWS",
+        "SQL",
+        "Amazon S3"
+      ]
+    }
+  ],
+  "projectsTitle": "Projetos",
+  "projects": [
+    {
+      "id": "project-0",
+      "title": "CronoAnalise",
+      "description": "Um site para CronoAnalise com identidade visual do Itau",
+      "image": "./img/cronoanalise.png",
+      "imageAlt": "Imagem do Projeto CronoAnalise",
+      "tags": [
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ],
+      "liveUrl": "https://cronoanaliseweb.netlify.app/",
+      "codeUrl": "https://github.com/emanuelsobral/CronoAnaliseWEB"
+    },
+    {
+      "id": "project-1",
+      "title": "Jogo da Velha",
+      "description": "Jogo da velha multijogador local, ideal para testar lógica e manipulação de DOM.",
+      "image": "./img/Jogo Da Velha.png",
+      "imageAlt": "Imagem do Projeto Jogo da Velha",
+      "tags": [
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ],
+      "liveUrl": "https://emanuelsobral.github.io/jogDaVelha_JS_IA/",
+      "codeUrl": "https://github.com/emanuelsobral/jogDaVelha_JS_IA"
+    },
+    {
+      "id": "project-2",
+      "title": "Calculadora Web",
+      "description": "Uma calculadora funcional com as operações básicas e um design limpo.",
+      "image": "./img/Calculadora.png",
+      "imageAlt": "Imagem do Projeto Calculadora",
+      "tags": [
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ],
+      "liveUrl": "https://emanuelsobral.github.io/Calculadora_JS/",
+      "codeUrl": "https://github.com/emanuelsobral/Calculadora_JS"
+    },
+    {
+      "id": "project-3",
+      "title": "Cronômetro Online",
+      "description": "Cronômetro preciso com funções de iniciar, parar e resetar, construído em JavaScript puro.",
+      "image": "./img/Cronometro.jpg",
+      "imageAlt": "Imagem do Projeto Cronômetro Online",
+      "tags": [
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ],
+      "liveUrl": "https://emanuelsobral.github.io/Cronomretro_JS/",
+      "codeUrl": "https://github.com/emanuelsobral/Cronomretro_JS"
+    }
+  ],
+  "contact": {
+    "title": "Vamos Conversar?",
+    "body": "Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para entrar em contato!",
+    "email": "emanuelssobral@gmail.com",
+    "emailLabel": "Enviar E-mail",
+    "copyLabel": "Copiar E-mail",
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/emanuel-sobral-329444198/",
+        "icon": "fab fa-linkedin"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/emanuelsobral",
+        "icon": "fab fa-github"
+      }
+    ]
+  },
+  "theme": {
+    "primary": "#aa68ed",
+    "secondary": "#5a189a",
+    "background": "#100c1c",
+    "card": "#1b142b",
+    "text": "#c5bad8",
+    "heading": "#faf7ff",
+    "cyan": "#71dfdf",
+    "highlight": "#d3b4f4",
+    "scene": true,
+    "motion": true,
+    "speed": 1
+  }
+}

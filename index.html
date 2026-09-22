@@ -12,15 +12,9 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.emanuelssobral.com">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="src/swiper/swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="style.css">
 
@@ -28,9 +22,11 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#sobre">Pular para o conteúdo</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <header id="main-header">
         <div class="container">
-            <a href="#" class="logo">E/S</a>
+            <a href="#hero" class="logo" aria-label="Emanuel Sobral, início">E<span>/</span>S</a>
             <nav id="main-nav">
                 <ul>
                     <li><a href="#hero">Início</a></li>
@@ -41,31 +37,32 @@
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
-            <div id="mobile-menu-toggle" role="button" aria-label="Abrir menu de navegação" tabindex="0">
+            <button id="mobile-menu-toggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="main-nav">
                 <i class="fas fa-bars"></i>
-            </div>
+            </button>
         </div>
     </header>
 
     <main>
         <section id="hero">
-            <div id="particles-js"></div>
-            <div class="hero-content">
-                <h1 class="fade-in">Emanuel Sobral</h1>
-                <p class="fade-in">Desenvolvedor Full-Stack & Engenheiro de Software</p>
-                <div class="typewriter-container fade-in">
-                    <span id="typewriter"></span><span class="cursor"></span>
-                </div>
+            <div id="hero-scene" aria-hidden="true"></div>
+            <div class="hero-content container">
+                <div class="hero-emblem" aria-hidden="true"></div>
+                <h1 class="fade-in">Emanuel <span>Sobral</span></h1>
+                <p class="hero-role fade-in">Desenvolvedor Full-Stack & Engenheiro de Software</p>
+                <div class="typewriter-container fade-in"><span class="sr-only">Estudante, Front-End, Back-End e Dados</span><span id="typewriter" aria-hidden="true">Estudante</span><span class="cursor" aria-hidden="true"></span></div>
                 <div class="hero-buttons fade-in">
-                    <a href="#projetos" class="cta-button">Meus Projetos</a>
-                    <a href="#contato" class="cta-button cta-secondary">Fale Comigo</a>
+                    <a href="#projetos" class="cta-button"><i class="fas fa-code" aria-hidden="true"></i> Meus Projetos</a>
+                    <a href="#contato" class="cta-button cta-secondary"><i class="far fa-comment" aria-hidden="true"></i> Fale Comigo</a>
                 </div>
             </div>
+            <div class="hero-bottom container"><a href="#sobre" class="scroll-cue" aria-label="Ir para Sobre Mim"><i class="fas fa-arrow-down" aria-hidden="true"></i></a><button id="motion-toggle" class="icon-button" title="Pausar animações" aria-label="Pausar animações" aria-pressed="false"><i class="fas fa-pause" aria-hidden="true"></i></button></div>
         </section>
+
 
         <section id="sobre" class="scroll-reveal">
             <div class="container">
-                <h2>Sobre Mim</h2>
+                <div class="section-heading"><h2>Sobre Mim</h2></div>
                 <div class="sobre-content">
                     <img src="./img/avatar.jpg" alt="Foto de Emanuel Sobral" class="profile-pic" loading="lazy">
                     <div class="sobre-texto">
@@ -93,101 +90,70 @@
 
         <section id="historico" class="scroll-reveal">
             <div class="container">
-                <h2>Histórico Profissional</h2>
-
+                <div class="section-heading"><h2>Histórico Profissional</h2></div>
                 <div class="tabs-nav">
-                    <button class="tab-btn active" data-tab="formacao">Formação</button>
-                    <button class="tab-btn" data-tab="experiencias">Experiências</button>
+                    <button class="tab-btn active" data-tab="experiencias"><i class="fas fa-briefcase" aria-hidden="true"></i> Experiências</button>
+                    <button class="tab-btn" data-tab="formacao"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Formação</button>
                 </div>
-
                 <div class="tabs-content">
-                    <div id="experiencias-panel" class="tab-panel">
-                        <div class="timeline-container">
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                    <div id="experiencias-panel" class="tab-panel active">
+                        <div class="timeline-container career-timeline">
+                            <article class="timeline-item current-position">
+                                <div class="timeline-dot" aria-hidden="true"></div>
                                 <div class="timeline-content">
-                                    <h3>Itaú</h3>
-                                    <span class="timeline-date">Ago/2025 - Atual</span>
-                                    <p>Data Analyst JR</p>
+                                    <header class="company-heading"><span class="company-mark company-itau" aria-hidden="true">i</span><div><h3>Itaú</h3><span class="company-area">Análise de dados</span></div><span class="career-status"><span aria-hidden="true"></span> Atual</span></header>
+                                    <div class="role-entry current-role"><span class="timeline-date">Ago/2025 - Atual</span><h4>Data Analyst JR</h4><div class="career-tags"><span>Athena</span><span>SQL</span><span>Análise de dados</span></div></div>
+                                    <div class="role-entry"><span class="timeline-date">Dez/2024 - Ago/2025</span><h4>Estágio - Data Analyst</h4></div>
                                 </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                            </article>
+                            <article class="timeline-item">
+                                <div class="timeline-dot" aria-hidden="true"></div>
                                 <div class="timeline-content">
-                                    <h3>Itaú</h3>
-                                    <span class="timeline-date">Dez/2024 - Ago/2025</span>
-                                    <p>Estágio - Data Analyst</p>
+                                    <header class="company-heading"><span class="company-mark company-tim" aria-hidden="true"><i class="fas fa-signal"></i></span><div><h3>TIM</h3><span class="company-area">Qualidade, arquitetura & suporte</span></div></header>
+                                    <div class="role-entry"><span class="timeline-date">Abr/2024 - Dez/2024</span><h4>Estágio - Functional Quality Assurance</h4></div>
+                                    <div class="role-entry"><span class="timeline-date">Dez/2023 - Abr/2024</span><h4>Estágio - IT Application Architecture & QA</h4></div>
+                                    <div class="role-entry"><span class="timeline-date">Jun/2021 - Set/2022</span><h4>Jovem Aprendiz - Administrativo/Suporte</h4></div>
                                 </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                            </article>
+                            <article class="timeline-item">
+                                <div class="timeline-dot" aria-hidden="true"></div>
                                 <div class="timeline-content">
-                                    <h3>TIM</h3>
-                                    <span class="timeline-date">Abr/2024 - Dez/2024</span>
-                                    <p>Estágio - Functional Quality Assurance</p>
+                                    <header class="company-heading"><span class="company-mark" aria-hidden="true"><i class="far fa-folder-open"></i></span><div><h3>Relemar Despachante</h3><span class="company-area">Administrativo</span></div></header>
+                                    <div class="role-entry"><span class="timeline-date">Jul/2019 - Mai/2020</span><h4>Estágio - Administrativo/Back Office</h4></div>
                                 </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                            </article>
+                            <article class="timeline-item">
+                                <div class="timeline-dot" aria-hidden="true"></div>
                                 <div class="timeline-content">
-                                    <h3>TIM</h3>
-                                    <span class="timeline-date">Dez/2023 - Abr/2024</span>
-                                    <p>Estágio - IT Application Architecture & QA</p>
+                                    <header class="company-heading"><span class="company-mark company-courses" aria-hidden="true"><i class="fas fa-book-open"></i></span><div><h3>Prepara Cursos</h3><span class="company-area">Educação</span></div></header>
+                                    <div class="role-entry"><span class="timeline-date">Jun/2017 - Fev/2018</span><h4>Estágio - Monitor</h4></div>
                                 </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h3>TIM</h3>
-                                    <span class="timeline-date">Jun/2021 - Set/2022</span>
-                                    <p>Jovem Aprendiz - Administrativo/Suporte</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h3>Relemar Despachante</h3>
-                                    <span class="timeline-date">Jul/2019 - Mai/2020</span>
-                                    <p>Estágio - Administrativo/Back Office</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
-                                <div class="timeline-content">
-                                    <h3>Prepara Cursos</h3>
-                                    <span class="timeline-date">Jun/2017 - Fev/2018</span>
-                                    <p>Estágio - Monitor</p>
-                                </div>
-                            </div>
+                            </article>
                         </div>
                     </div>
-
-                    <div id="formacao-panel" class="tab-panel active">
-                        <div class="timeline-container">
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                    <div id="formacao-panel" class="tab-panel">
+                        <div class="timeline-container career-timeline">
+                            <article class="timeline-item current-position">
+                                <div class="timeline-dot" aria-hidden="true"></div>
                                 <div class="timeline-content">
-                                    <h3>Engenharia de Software</h3>
-                                    <span class="timeline-date">2023 - Dez/2026 (Cursando)</span>
-                                    <p>Bacharelado - São Judas Tadeu Polo Paulista</p>
+                                    <header class="company-heading"><span class="company-mark" aria-hidden="true"><i class="fas fa-laptop-code"></i></span><div><span class="degree-type">Bacharelado</span><h3>Engenharia de Software</h3></div></header>
+                                    <div class="degree-info"><p>São Judas Tadeu Polo Paulista</p><span class="timeline-date">2023 - Dez/2026</span><span class="degree-status">Cursando</span></div>
                                 </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                            </article>
+                            <article class="timeline-item">
+                                <div class="timeline-dot" aria-hidden="true"></div>
                                 <div class="timeline-content">
-                                    <h3>Desenvolvimento de Sistemas</h3>
-                                    <span class="timeline-date">Jul/2021 - Concluído</span>
-                                    <p>Nível Técnico — ETEC Juscelino Kubitschek de Oliveira, Diadema</p>
+                                    <header class="company-heading"><span class="company-mark company-tim" aria-hidden="true"><i class="fas fa-code"></i></span><div><span class="degree-type">Técnico</span><h3>Desenvolvimento de Sistemas</h3></div></header>
+                                    <div class="degree-info"><p>ETEC Juscelino Kubitschek de Oliveira, Diadema</p><span class="timeline-date">Jul/2021</span><span class="degree-status completed"><i class="fas fa-check" aria-hidden="true"></i> Concluído</span></div>
                                 </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-dot"></div>
+                            </article>
+                            <article class="timeline-item">
+                                <div class="timeline-dot" aria-hidden="true"></div>
                                 <div class="timeline-content">
-                                    <h3>Administração de Empresas</h3>
-                                    <span class="timeline-date">Jul/2020 - Concluído</span>
-                                    <p>Nível Técnico — ETEC Juscelino Kubitschek de Oliveira, Diadema</p>
+                                    <header class="company-heading"><span class="company-mark company-courses" aria-hidden="true"><i class="fas fa-chart-pie"></i></span><div><span class="degree-type">Técnico</span><h3>Administração de Empresas</h3></div></header>
+                                    <div class="degree-info"><p>ETEC Juscelino Kubitschek de Oliveira, Diadema</p><span class="timeline-date">Jul/2020</span><span class="degree-status completed"><i class="fas fa-check" aria-hidden="true"></i> Concluído</span></div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -196,37 +162,36 @@
 
         <section id="habilidades" class="scroll-reveal">
             <div class="container">
-                <h2>Minhas Habilidades</h2>
-                <div class="skills-grid">
-                    <div class="skill-card hint-animation" data-skill="html5">
-                        <div class="click-hint-tooltip">Clique aqui!</div>
-                        <i class="fab fa-html5"></i><br></br><span>HTML5</span>
-                    </div>
-                    <div class="skill-card" data-skill="css3"><i class="fab fa-css3-alt"></i><br></br><span>CSS3</span>
-                    </div>
-                    <div class="skill-card" data-skill="javascript"><i
-                            class="fab fa-js-square"></i><br></br><span>JavaScript</span></div>
-                    <div class="skill-card" data-skill="nodejs"><i
-                            class="fab fa-node-js"></i><br></br><span>Node.js</span></div>
-                    <div class="skill-card" data-skill="python"><i
-                            class="fab fa-python"></i><br></br><span>Python</span></div>
-                    <div class="skill-card" data-skill="mysql"><i
-                            class="fas fa-database"></i><br></br><span>MySQL</span></div>
-                    <div class="skill-card" data-skill="git"><i class="fab fa-git-alt"></i><br></br><span>Git</span>
-                    </div>
-                    <div class="skill-card" data-skill="java"><i class="fab fa-java"></i><br></br><span>Java</span>
-                    </div>
-                    <div class="skill-card" data-skill="athena"><i
-                            class="fas fa-database"></i><br></br><span>Athena</span>
-                    </div>
+                <div class="section-heading"><h2>Minhas Habilidades</h2></div>
+                <div class="skill-filters" role="group" aria-label="Filtrar habilidades por área">
+                    <button class="skill-filter active" data-filter="all" aria-pressed="true">Todas <span>9</span></button>
+                    <button class="skill-filter" data-filter="frontend" aria-pressed="false"><i class="fas fa-desktop" aria-hidden="true"></i> Front-End</button>
+                    <button class="skill-filter" data-filter="backend" aria-pressed="false"><i class="fas fa-server" aria-hidden="true"></i> Back-End</button>
+                    <button class="skill-filter" data-filter="data" aria-pressed="false"><i class="fas fa-database" aria-hidden="true"></i> Dados</button>
+                    <button class="skill-filter" data-filter="tools" aria-pressed="false"><i class="fas fa-code-branch" aria-hidden="true"></i> Ferramentas</button>
                 </div>
-
+                <div class="skills-grid">
+                    <button class="skill-card" data-skill="html5" data-category="frontend" aria-pressed="false"><i class="fab fa-html5" aria-hidden="true"></i><span class="skill-label">HTML5<small>Front-End</small></span><i class="fas fa-arrow-up-right-from-square skill-open" aria-hidden="true"></i></button>
+                    <button class="skill-card" data-skill="css3" data-category="frontend" aria-pressed="false"><i class="fab fa-css3-alt" aria-hidden="true"></i><span class="skill-label">CSS3<small>Front-End</small></span><i class="fas fa-arrow-up-right-from-square skill-open" aria-hidden="true"></i></button>
+                    <button class="skill-card" data-skill="javascript" data-category="frontend backend" aria-pressed="true"><i class="fab fa-js-square" aria-hidden="true"></i><span class="skill-label">JavaScript<small>Front-End / Back-End</small></span><i class="fas fa-check skill-open" aria-hidden="true"></i></button>
+                    <button class="skill-card" data-skill="nodejs" data-category="backend" aria-pressed="false"><i class="fab fa-node-js" aria-hidden="true"></i><span class="skill-label">Node.js<small>Back-End</small></span><i class="fas fa-arrow-up-right-from-square skill-open" aria-hidden="true"></i></button>
+                    <button class="skill-card" data-skill="python" data-category="backend data" aria-pressed="false"><i class="fab fa-python" aria-hidden="true"></i><span class="skill-label">Python<small>Back-End / Dados</small></span><i class="fas fa-arrow-up-right-from-square skill-open" aria-hidden="true"></i></button>
+                    <button class="skill-card" data-skill="mysql" data-category="data" aria-pressed="false"><i class="fas fa-database" aria-hidden="true"></i><span class="skill-label">MySQL<small>Dados</small></span><i class="fas fa-arrow-up-right-from-square skill-open" aria-hidden="true"></i></button>
+                    <button class="skill-card" data-skill="git" data-category="tools" aria-pressed="false"><i class="fab fa-git-alt" aria-hidden="true"></i><span class="skill-label">Git<small>Ferramentas</small></span><i class="fas fa-arrow-up-right-from-square skill-open" aria-hidden="true"></i></button>
+                    <button class="skill-card" data-skill="java" data-category="backend" aria-pressed="false"><i class="fab fa-java" aria-hidden="true"></i><span class="skill-label">Java<small>Back-End</small></span><i class="fas fa-arrow-up-right-from-square skill-open" aria-hidden="true"></i></button>
+                    <button class="skill-card" data-skill="athena" data-category="data" aria-pressed="false"><i class="fas fa-database" aria-hidden="true"></i><span class="skill-label">Athena<small>Dados / AWS</small></span><i class="fas fa-arrow-up-right-from-square skill-open" aria-hidden="true"></i></button>
+                </div>
+                <div class="skill-detail" id="skill-detail">
+                    <div class="skill-detail-title"><i class="fab fa-js-square" id="skill-detail-icon" aria-hidden="true"></i><div><span class="skill-detail-category">Front-End / Back-End</span><h3 id="skill-detail-name">JavaScript</h3></div></div>
+                    <p id="skill-description" class="skill-description" role="status">JavaScript: interatividade, lógica e experiências na web.</p>
+                    <div id="skill-detail-tags" class="skill-detail-tags"><span>DOM</span><span>Interatividade</span><span>Lógica</span></div>
+                </div>
             </div>
         </section>
 
         <section id="projetos" class="scroll-reveal">
             <div class="container">
-                <h2>Projetos</h2>
+                <div class="section-heading"><h2>Projetos</h2></div>
                 <div class="swiper project-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -305,10 +270,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </section>
@@ -325,7 +286,7 @@
                     <div class="copy-button-wrapper">
                         <button id="copy-email-btn" class="contact-button"><i class="fas fa-copy"></i> Copiar
                             E-mail</button>
-                        <span id="copy-feedback" class="copy-feedback-tooltip">E-mail copiado!</span>
+                        <span id="copy-feedback" class="copy-feedback-tooltip" role="status">E-mail copiado!</span>
                     </div>
 
                     <a href="https://www.linkedin.com/in/emanuel-sobral-329444198/" target="_blank"
@@ -343,9 +304,12 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
+    <script src="content-renderer.js" defer></script>
+    <script src="content-loader.js" defer></script>
+    <script src="src/three.min.js" defer></script>
+    <script src="src/swiper/swiper-bundle.min.js" defer></script>
+    <script src="scene.js" defer></script>
+    <script src="main.js" defer></script>
 </body>
 
 </html>

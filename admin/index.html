@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>ADM | Portfólio</title>
+  <link rel="icon" href="/icon/Icon.png"><link rel="stylesheet" href="/src/fontawesome/css/all.min.css"><link rel="stylesheet" href="/admin/admin.css">
+  <script src="/admin/admin.js" defer></script>
+</head>
+<body>
+  <section class="auth-shell" id="auth">
+    <form id="auth-form" class="auth-form">
+      <a href="/" class="brand">E<span>/</span>S <small>ADM</small></a>
+      <div class="auth-symbol"><i class="fas fa-lock" aria-hidden="true"></i></div>
+      <h1 id="auth-title">Entrar no painel</h1>
+      <p id="auth-subtitle">Seu portfólio, do seu jeito.</p>
+      <div id="auth-message" class="message" role="alert" hidden></div>
+      <label>E-mail<input name="email" type="email" autocomplete="username" required maxlength="254"></label>
+      <label>Senha<div class="password-field"><input name="password" type="password" autocomplete="current-password" required maxlength="200"><button type="button" id="show-password" class="icon-btn" title="Mostrar senha" aria-label="Mostrar senha"><i class="far fa-eye" aria-hidden="true"></i></button></div></label>
+      <label id="confirm-label" hidden>Confirmar senha<input name="confirm" type="password" autocomplete="new-password" maxlength="200"></label>
+      <label id="setup-label" hidden>Chave de ativação<input name="setupToken" type="password" autocomplete="off"></label>
+      <button class="primary" id="auth-submit" type="submit">Entrar <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+      <a class="back-link" href="/"><i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar ao portfólio</a>
+    </form>
+  </section>
+  <div id="app" class="app" hidden>
+    <aside class="sidebar">
+      <a href="/" class="brand">E<span>/</span>S <small>ADM</small></a>
+      <div class="profile"><img src="/img/avatar.jpg" alt="" id="admin-avatar"><div><strong id="admin-name">Portfólio</strong><span id="environment">Administrador</span></div></div>
+      <nav id="editor-nav" aria-label="Seções do painel"></nav>
+      <div class="sidebar-bottom"><a href="/" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i> Abrir portfólio</a><button id="logout"><i class="fas fa-arrow-right-from-bracket" aria-hidden="true"></i> Sair</button></div>
+    </aside>
+    <main class="workspace">
+      <header class="toolbar"><div><span class="workspace-label">PORTFÓLIO / CONTEÚDO</span><h1 id="page-title">Geral</h1></div><div class="toolbar-actions"><span id="save-state" role="status">Tudo salvo</span><button id="preview" class="secondary" title="Pré-visualizar rascunho"><i class="far fa-eye" aria-hidden="true"></i><span>Prévia</span></button><button id="save" class="primary" disabled><i class="fas fa-check" aria-hidden="true"></i><span>Salvar e publicar</span></button></div></header>
+      <div id="app-message" class="message" role="alert" hidden></div>
+      <form id="editor-form" novalidate></form>
+      <div id="backup-view" hidden>
+        <section class="editor-section"><h2>Conteúdo</h2><div class="backup-actions"><button id="export-json" class="secondary"><i class="fas fa-download" aria-hidden="true"></i> Exportar JSON</button><label class="secondary file-button"><i class="fas fa-upload" aria-hidden="true"></i> Importar JSON<input id="import-json" type="file" accept=".json,application/json" hidden></label><button id="discard" class="secondary"><i class="fas fa-rotate-left" aria-hidden="true"></i> Descartar alterações</button></div></section>
+        <section class="editor-section"><h2>Versões anteriores</h2><div id="backup-list"></div></section>
+        <section class="editor-section"><h2>Alterar senha</h2><form id="password-form" class="password-form"><label>Senha atual<input type="password" name="oldPassword" autocomplete="current-password" required></label><label>Nova senha<input type="password" name="password" autocomplete="new-password" minlength="12" maxlength="200" required></label><button class="secondary" type="submit"><i class="fas fa-key" aria-hidden="true"></i> Atualizar senha</button></form></section>
+      </div>
+    </main>
+  </div>
+  <dialog id="preview-dialog"><header><h2>Prévia do rascunho</h2><div><button class="icon-btn" id="preview-desktop" title="Desktop" aria-label="Desktop"><i class="fas fa-desktop" aria-hidden="true"></i></button><button class="icon-btn" id="preview-mobile" title="Celular" aria-label="Celular"><i class="fas fa-mobile-screen" aria-hidden="true"></i></button><button class="icon-btn" id="preview-close" title="Fechar prévia" aria-label="Fechar prévia"><i class="fas fa-xmark" aria-hidden="true"></i></button></div></header><iframe title="Prévia do portfólio" id="preview-frame"></iframe></dialog>
+  <dialog id="confirm-dialog"><h2 id="confirm-title">Confirmar</h2><p id="confirm-message"></p><div class="dialog-actions"><button class="secondary" id="confirm-no">Cancelar</button><button class="danger" id="confirm-yes">Confirmar</button></div></dialog>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>

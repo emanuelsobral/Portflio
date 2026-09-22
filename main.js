@@ -1,320 +1,367 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Configuração do Particles.js para o fundo da seção hero
-  particlesJS("particles-js", {
-    particles: {
-      number: { value: 80, density: { enable: true, value_area: 800 } },
-      color: { value: "#9d4edd" },
-      shape: { type: "circle", stroke: { width: 0, color: "#000000" } },
-      opacity: { value: 0.5, random: false },
-      size: { value: 3, random: true },
-      line_linked: {
-        enable: true,
-        distance: 150,
-        color: "#5a189a",
-        opacity: 0.4,
-        width: 1,
-      },
-      move: {
-        enable: true,
-        speed: 4,
-        direction: "none",
-        random: false,
-        straight: false,
-        out_mode: "out",
-        bounce: false,
-      },
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: { enable: true, mode: "grab" },
-        onclick: { enable: true, mode: "push" },
-        resize: true,
-      },
-      modes: {
-        grab: { distance: 140, line_linked: { opacity: 1 } },
-        push: { particles_nb: 4 },
-      },
-    },
-    retina_detect: true,
-  });
-
-  // --- TYPEWRITER EFFECT ---
-  const typewriterElement = document.getElementById("typewriter");
-  if (typewriterElement) {
-    const words = ["Estudante", "Front-End", "Back-End", "Dados"];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const typingDelay = 150;
-    const erasingDelay = 100;
-    const newWordDelay = 1500;
-
-    function type() {
-      if (!typewriterElement) return;
-      const currentWord = words[wordIndex];
-      if (!isDeleting) {
-        typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-      } else {
-        typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
-      }
-      if (!isDeleting && charIndex === currentWord.length) {
-        isDeleting = true;
-        setTimeout(type, newWordDelay);
-      } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(type, 500);
-      } else {
-        setTimeout(type, isDeleting ? erasingDelay : typingDelay);
-      }
+document.addEventListener("DOMContentLoaded", async () => {
+  await window.portfolioReady;
+  const content = window.PORTFOLIO_CONTENT;
+  const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  const typewriter = document.querySelector("#typewriter");
+  const words = content?.hero.words || [
+    "Estudante",
+    "Front-End",
+    "Back-End",
+    "Dados",
+  ];
+  let wordIndex = 0;
+  let character = words[0].length;
+  let deleting = true;
+  let typingTimer;
+  let motionPaused = reducedMotion.matches || content?.theme.motion === false;
+  function type() {
+    if (motionPaused || document.hidden) return;
+    character += deleting ? -1 : 1;
+    typewriter.textContent = words[wordIndex].slice(0, character);
+    let delay = deleting ? 65 : 110;
+    if (character === 0) {
+      deleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      delay = 300;
+    } else if (character === words[wordIndex].length) {
+      deleting = true;
+      delay = 1600;
     }
-    setTimeout(type, 1200);
+    typingTimer = setTimeout(type, delay);
   }
-
-  // Adiciona fundo ao header ao rolar a página
-  const header = document.getElementById("main-header");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
+  function syncTyping() {
+    clearTimeout(typingTimer);
+    if (!motionPaused && !document.hidden) typingTimer = setTimeout(type, 1400);
+  }
+  document.addEventListener("visibilitychange", syncTyping);
+  const header = document.querySelector("#main-header");
+  const progress = document.querySelector(".scroll-progress");
+  const menu = document.querySelector("#main-nav");
+  const toggle = document.querySelector("#mobile-menu-toggle");
+  const links = [...menu.querySelectorAll("a")];
+  const sections = [...document.querySelectorAll("section[id]")];
+  function closeMenu() {
+    setMenu(false);
+  }
+  function setMenu(open) {
+    menu.classList.toggle("active", open);
+    document.body.classList.toggle("menu-open", open);
+    toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute(
+      "aria-label",
+      open ? "Fechar menu de navegação" : "Abrir menu de navegação",
+    );
+    toggle.querySelector("i").className = open ? "fas fa-xmark" : "fas fa-bars";
+  }
+  toggle.addEventListener("click", () =>
+    setMenu(!menu.classList.contains("active")),
+  );
+  links.forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && menu.classList.contains("active")) {
+      closeMenu();
+      toggle.focus();
+    }
+    if (event.key === "Tab" && menu.classList.contains("active")) {
+      if (event.shiftKey && document.activeElement === links[0]) {
+        event.preventDefault();
+        toggle.focus();
+      } else if (!event.shiftKey && document.activeElement === toggle) {
+        event.preventDefault();
+        links[0].focus();
+      }
     }
   });
-
-  // Animação de revelação de elementos ao rolar a página
-  const revealElements = document.querySelectorAll(".scroll-reveal");
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
+  matchMedia("(min-width: 761px)").addEventListener("change", closeMenu);
+  let pendingScroll = false;
+  function updateScroll() {
+    header.classList.toggle("scrolled", scrollY > 50);
+    const extent = document.documentElement.scrollHeight - innerHeight;
+    progress.style.transform = `scaleX(${extent > 0 ? scrollY / extent : 0})`;
+    const current =
+      sections
+        .filter((section) => section.getBoundingClientRect().top <= 160)
+        .at(-1) || sections[0];
+    links.forEach((link) => {
+      const active = link.hash === "#" + current.id;
+      link.classList.toggle("active-link", active);
+      if (active) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+    pendingScroll = false;
+  }
+  addEventListener(
+    "scroll",
+    () => {
+      if (!pendingScroll) {
+        pendingScroll = true;
+        requestAnimationFrame(updateScroll);
+      }
+    },
+    { passive: true },
+  );
+  updateScroll();
+  document.body.classList.add("motion-ready");
+  const observer = new IntersectionObserver(
+    (entries) =>
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
         }
-      });
-    },
-    { threshold: 0.1 }
+      }),
+    { threshold: 0, rootMargin: "0px 0px -35px 0px" },
   );
-  revealElements.forEach((el) => {
-    revealObserver.observe(el);
-  });
+  document
+    .querySelectorAll(".scroll-reveal")
+    .forEach((element) => observer.observe(element));
 
-      // --- LÓGICA DO MENU HAMBÚRGUER ---
-    const menuToggle = document.getElementById('mobile-menu-toggle');
-    const mainNav = document.getElementById('main-nav');
-    const navLinks = mainNav.querySelectorAll('a');
-
-    if (menuToggle && mainNav) {
-        // Abre e fecha o menu ao clicar no ícone
-        menuToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            
-            // Troca o ícone de hambúrguer para 'X' e vice-versa
-            const icon = menuToggle.querySelector('i');
-            if (mainNav.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-
-        // Fecha o menu ao clicar em um link
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (mainNav.classList.contains('active')) {
-                    mainNav.classList.remove('active');
-                    const icon = menuToggle.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
-        });
-    }
-
-
-  // --- LÓGICA PARA TOOLTIP E DICA DAS HABILIDADES (VERSÃO FINAL) ---
-  const skillDescriptions = {
-    html5: "Linguagem de marcação para criar a estrutura de páginas web.",
-    css3: "Usado para estilizar e dar vida às páginas web, controlando cores, fontes e layouts.",
-    javascript:
-      "Linguagem de programação que torna as páginas web interativas e dinâmicas.",
-    nodejs:
-      "Permite executar JavaScript no servidor, criando aplicações back-end rápidas e escaláveis.",
-    python:
-      "Linguagem versátil usada para desenvolvimento web, análise de dados e automação.",
-    mysql:
-      "Sistema de gerenciamento de banco de dados para armazenar e consultar dados de forma estruturada.",
-    git: "Sistema de controle de versão essencial para rastrear mudanças no código e colaborar em equipe.",
-    java: "Linguagem de programação robusta e orientada a objetos, amplamente usada em sistemas corporativos.",
-    athena:
-      "Serviço de consulta interativa da AWS que facilita a análise de dados em larga escala armazenados no Amazon S3 usando SQL padrão.",
-  };
-
-  const allSkillCards = document.querySelectorAll(".skill-card");
-  const cardWithHint = document.querySelector(".skill-card.hint-animation");
-  let hintAnimationStopped = false;
-  let activeTooltip = null; // Variável para manter referência da tooltip ativa
-
-  // Função para remover a tooltip que está no <body>
-  const removeActiveTooltip = () => {
-    if (activeTooltip) {
-      activeTooltip.remove();
-      activeTooltip = null;
-    }
-  };
-
-  allSkillCards.forEach((card) => {
-    card.addEventListener("click", (e) => {
-      // Impede que o clique no card feche a tooltip imediatamente
-      e.stopPropagation();
-
-      // Lógica para parar a animação de dica no primeiro clique (mantida)
-      if (!hintAnimationStopped && cardWithHint) {
-        cardWithHint.classList.remove("hint-animation");
-        const hintTooltip = cardWithHint.querySelector(".click-hint-tooltip");
-        if (hintTooltip) {
-          hintTooltip.remove();
-        }
-        hintAnimationStopped = true;
-      }
-
-      const skill = e.currentTarget.dataset.skill;
-      const description = skillDescriptions?.[skill];
-
-      // Se o card clicado for o mesmo que gerou a tooltip ativa, apenas a fechamos
-      if (activeTooltip && activeTooltip.dataset.ownerSkill === skill) {
-        removeActiveTooltip();
-        return; // E paramos a execução
-      }
-
-      // Remove qualquer tooltip antiga antes de criar uma nova
-      removeActiveTooltip();
-
-      if (description) {
-        // 1. Criar a tooltip
-        const tooltip = document.createElement("div");
-        tooltip.className = "skill-tooltip-popup";
-        tooltip.textContent = description;
-        // Guardamos uma referência para saber a qual skill ela pertence
-        tooltip.dataset.ownerSkill = skill;
-
-        // 2. Anexar diretamente ao <body>
-        document.body.appendChild(tooltip);
-        activeTooltip = tooltip; // Atualiza a referência da tooltip ativa
-
-        // 3. Calcular a posição
-        const cardRect = e.currentTarget.getBoundingClientRect();
-
-        // Posicionar a tooltip abaixo do card, centralizada horizontalmente
-        // Adicionamos window.scrollY porque getBoundingClientRect é relativo à janela de visualização
-        const top = cardRect.bottom + window.scrollY + 20; // 8px de espaço
-        const left = cardRect.left + cardRect.width / 2;
-
-        // 4. Aplicar o estilo de posicionamento via JS
-        tooltip.style.top = `${top}px`;
-        tooltip.style.left = `${left}px`;
-      }
-    });
-  });
-
-  // Listener global para fechar a tooltip se o usuário clicar em qualquer outro lugar
-  document.addEventListener("click", () => {
-    removeActiveTooltip();
-  });
-
-  // --- INICIALIZAÇÃO DO CARROSSEL DE PROJETOS ---
-  const swiper = new Swiper(".project-swiper", {
-    loop: true,
-    grabCursor: true,
-    spaceBetween: 30,
-    pagination: { el: ".swiper-pagination", clickable: true },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      640: { slidesPerView: 1, spaceBetween: 20 },
-      768: { slidesPerView: 2, spaceBetween: 30 },
-      1024: { slidesPerView: 3, spaceBetween: 30 },
-    },
-  });
-
-  // --- LÓGICA DAS ABAS (HISTÓRICO) ---
-  const tabBtns = document.querySelectorAll(".tab-btn");
-  const tabPanels = document.querySelectorAll(".tab-panel");
-
-  tabBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const targetTab = btn.dataset.tab;
-
-      tabBtns.forEach((b) => b.classList.remove("active"));
-      tabPanels.forEach((p) => p.classList.remove("active"));
-
-      btn.classList.add("active");
-      document.getElementById(targetTab + "-panel").classList.add("active");
-    });
-  });
-
-  // --- LÓGICA PARA COPIAR E-MAIL ---
-  const copyBtn = document.getElementById("copy-email-btn");
-  const copyFeedback = document.getElementById("copy-feedback");
-
-  if (copyBtn && copyFeedback) {
-    const emailToCopy = "emanuelssobral@gmail.com";
-
-    copyBtn.addEventListener("click", () => {
-      navigator.clipboard
-        .writeText(emailToCopy)
-        .then(() => {
-          copyFeedback.textContent = "E-mail copiado!";
-          copyFeedback.classList.add("visible");
-
-          setTimeout(() => {
-            copyFeedback.classList.remove("visible");
-          }, 2000);
-        })
-        .catch((err) => {
-          console.error("Falha ao copiar o e-mail: ", err);
-          copyFeedback.textContent = "Falha ao copiar!";
-          copyFeedback.classList.add("visible");
-          setTimeout(() => {
-            copyFeedback.classList.remove("visible");
-          }, 2000);
-        });
+  const tabs = [...document.querySelectorAll(".tab-btn")];
+  document.querySelector(".tabs-nav").setAttribute("role", "tablist");
+  document
+    .querySelector(".tabs-nav")
+    .setAttribute("aria-label", "Histórico profissional");
+  function selectTab(tab) {
+    tabs.forEach((button) => {
+      const active = button === tab;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-selected", String(active));
+      button.tabIndex = active ? 0 : -1;
+      document
+        .getElementById(button.dataset.tab + "-panel")
+        .classList.toggle("active", active);
     });
   }
-
-  // --- ANO DINÂMICO NO FOOTER ---
-  const footerYear = document.getElementById('footer-year');
-  if (footerYear) {
-    footerYear.textContent = new Date().getFullYear();
-  }
-
-  // --- SCROLLSPY PARA NAVEGAÇÃO ATIVA ---
-  const sections = document.querySelectorAll('section[id]');
-  const navLinksAll = document.querySelectorAll('#main-header nav a');
-
-  const scrollSpyObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navLinksAll.forEach((link) => {
-            link.classList.remove('active-link');
-            if (link.getAttribute('href') === `#${id}`) {
-              link.classList.add('active-link');
-            }
-          });
-        }
-      });
-    },
-    { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' }
-  );
-
-  sections.forEach((section) => {
-    scrollSpyObserver.observe(section);
+  tabs.forEach((tab, index) => {
+    tab.id = tab.dataset.tab + "-tab";
+    tab.setAttribute("role", "tab");
+    tab.setAttribute("aria-controls", tab.dataset.tab + "-panel");
+    const panel = document.getElementById(tab.dataset.tab + "-panel");
+    panel.setAttribute("role", "tabpanel");
+    panel.setAttribute("aria-labelledby", tab.id);
+    tab.addEventListener("click", () => selectTab(tab));
+    tab.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key))
+        return;
+      event.preventDefault();
+      const next =
+        event.key === "Home"
+          ? tabs[0]
+          : event.key === "End"
+            ? tabs.at(-1)
+            : tabs[
+                (index + (event.key === "ArrowRight" ? 1 : tabs.length - 1)) %
+                  tabs.length
+              ];
+      selectTab(next);
+      next.focus();
+    });
   });
+  selectTab(tabs.find((tab) => tab.classList.contains("active")));
+
+  const descriptions = content
+    ? Object.fromEntries(
+        content.skills.map((skill) => [skill.id, skill.description]),
+      )
+    : {
+        html5: "HTML5: estrutura semântica e acessível para a web.",
+        css3: "CSS3: interfaces responsivas, composição visual e animações.",
+        javascript: "JavaScript: interatividade, lógica e experiências na web.",
+        nodejs: "Node.js: aplicações no servidor e desenvolvimento de APIs.",
+        python:
+          "Python: análise de dados, automação e desenvolvimento back-end.",
+        mysql:
+          "MySQL: armazenamento, modelagem e consultas de dados relacionais.",
+        git: "Git: controle de versão e colaboração em projetos de software.",
+        java: "Java: programação orientada a objetos e aplicações corporativas.",
+        athena:
+          "Athena: consultas SQL para análise de dados armazenados no Amazon S3.",
+      };
+  const description = document.querySelector("#skill-description");
+  const detail = document.querySelector("#skill-detail");
+  const skills = [...document.querySelectorAll(".skill-card")];
+  const filters = [...document.querySelectorAll(".skill-filter")];
+  const skillsGrid = document.querySelector(".skills-grid");
+  const mobileSkills = window.matchMedia("(max-width: 760px)");
+  function positionSkillDetail() {
+    const visible = skills.filter((card) => !card.hidden);
+    const index = visible.findIndex(
+      (card) => card.getAttribute("aria-pressed") === "true",
+    );
+    if (mobileSkills.matches && index !== -1) {
+      // Keep the full-width description immediately after the selected grid row.
+      const rowEnd = Math.min(index - (index % 2) + 1, visible.length - 1);
+      visible[rowEnd].after(detail);
+    } else {
+      skillsGrid.after(detail);
+    }
+  }
+  mobileSkills.addEventListener("change", positionSkillDetail);
+  const skillTags = content
+    ? Object.fromEntries(content.skills.map((skill) => [skill.id, skill.tags]))
+    : {
+        html5: ["Semântica", "Acessibilidade", "Estrutura"],
+        css3: ["Responsividade", "Layouts", "Animações"],
+        javascript: ["DOM", "Interatividade", "Lógica"],
+        nodejs: ["APIs", "Servidor", "JavaScript"],
+        python: ["Automação", "Análise de dados", "Back-End"],
+        mysql: ["SQL", "Modelagem", "Consultas"],
+        git: ["Versionamento", "Branches", "Colaboração"],
+        java: ["Orientação a objetos", "Aplicações", "Back-End"],
+        athena: ["AWS", "SQL", "Amazon S3"],
+      };
+  function selectSkill(card, animate = true) {
+    detail.hidden = !card;
+    if (!card) return;
+    skills.forEach((skill) => {
+      const selected = skill === card;
+      skill.setAttribute("aria-pressed", String(selected));
+      skill.querySelector(".skill-open").className = selected
+        ? "fas fa-check skill-open"
+        : "fas fa-chevron-right skill-open";
+    });
+    const name = card.querySelector(".skill-label").childNodes[0].textContent;
+    document.querySelector("#skill-detail-name").textContent = name;
+    document.querySelector(".skill-detail-category").textContent =
+      card.querySelector("small").textContent;
+    document.querySelector("#skill-detail-icon").className =
+      card.querySelector("i").className;
+    description.textContent = descriptions[card.dataset.skill];
+    detail.style.setProperty(
+      "--detail-color",
+      getComputedStyle(card).getPropertyValue("--skill-color"),
+    );
+    const tags = skillTags[card.dataset.skill].map((text) => {
+      const tag = document.createElement("span");
+      tag.textContent = text;
+      return tag;
+    });
+    document.querySelector("#skill-detail-tags").replaceChildren(...tags);
+    positionSkillDetail();
+    if (animate && !motionPaused) {
+      detail.getAnimations().forEach((animation) => animation.cancel());
+      detail.animate(
+        [
+          { opacity: 0.4, transform: "translateY(6px)" },
+          { opacity: 1, transform: "translateY(0)" },
+        ],
+        { duration: 260, easing: "ease-out" },
+      );
+    }
+  }
+  skills.forEach((card) => {
+    card.setAttribute("aria-controls", detail.id);
+    card.addEventListener("click", () => {
+      selectSkill(card);
+      if (mobileSkills.matches) {
+        detail.scrollIntoView({
+          block: "nearest",
+          behavior: motionPaused ? "instant" : "smooth",
+        });
+      }
+    });
+  });
+  filters.forEach((filter) => {
+    filter.addEventListener("click", () => {
+      filters.forEach((button) => {
+        const active = filter === button;
+        button.setAttribute("aria-pressed", String(active));
+        button.classList.toggle("active", active);
+      });
+      skills.forEach((card) => {
+        card.hidden =
+          filter.dataset.filter !== "all" &&
+          !card.dataset.category.split(" ").includes(filter.dataset.filter);
+      });
+      const selected = skills.find(
+        (card) => card.getAttribute("aria-pressed") === "true",
+      );
+      if (!selected || selected.hidden)
+        selectSkill(skills.find((card) => !card.hidden));
+      positionSkillDetail();
+    });
+  });
+  selectSkill(
+    skills.find((card) => card.getAttribute("aria-pressed") === "true"),
+    false,
+  );
+  document
+    .querySelectorAll('a[target="_blank"]')
+    .forEach((link) => (link.rel = "noopener noreferrer"));
+  const feedback = document.querySelector("#copy-feedback");
+  let feedbackTimer;
+  document
+    .querySelector("#copy-email-btn")
+    .addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(
+          content?.contact.email || "emanuelssobral@gmail.com",
+        );
+        feedback.textContent = "E-mail copiado!";
+      } catch {
+        feedback.textContent =
+          "E-mail: " + (content?.contact.email || "emanuelssobral@gmail.com");
+      }
+      feedback.classList.add("visible");
+      clearTimeout(feedbackTimer);
+      feedbackTimer = setTimeout(
+        () => feedback.classList.remove("visible"),
+        4000,
+      );
+    });
+  document.querySelector("#footer-year").textContent = new Date().getFullYear();
+  let projectSwiper;
+  if (window.Swiper && document.querySelector(".swiper-slide")) {
+    const controls = document.createElement("div");
+    controls.className = "project-controls";
+    controls.innerHTML =
+      '<button class="project-prev" aria-label="Projeto anterior" title="Projeto anterior"><i class="fas fa-arrow-left" aria-hidden="true"></i></button><span class="project-pagination"></span><button class="project-next" aria-label="Próximo projeto" title="Próximo projeto"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>';
+    document.querySelector(".project-swiper").after(controls);
+    projectSwiper = new Swiper(".project-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      speed: reducedMotion.matches ? 0 : 550,
+      grabCursor: true,
+      navigation: { nextEl: ".project-next", prevEl: ".project-prev" },
+      pagination: { el: ".project-pagination", type: "fraction" },
+      a11y: {
+        prevSlideMessage: "Projeto anterior",
+        nextSlideMessage: "Próximo projeto",
+        slideLabelMessage: "Projeto {{index}} de {{slidesLength}}",
+      },
+      breakpoints: { 761: { slidesPerView: 2 }, 1150: { slidesPerView: 3 } },
+    });
+  }
+  const motionButton = document.querySelector("#motion-toggle");
+  let userPaused = false;
+  function updateMotion() {
+    const paused =
+      userPaused || reducedMotion.matches || content?.theme.motion === false;
+    motionPaused = paused;
+    syncTyping();
+    if (projectSwiper) projectSwiper.params.speed = paused ? 0 : 550;
+    document.body.classList.toggle("motion-paused", paused);
+    motionButton.setAttribute("aria-pressed", String(paused));
+    motionButton.setAttribute(
+      "aria-label",
+      paused ? "Retomar animações" : "Pausar animações",
+    );
+    motionButton.title = reducedMotion.matches
+      ? "Movimento reduzido nas preferências do sistema"
+      : motionButton.getAttribute("aria-label");
+    motionButton.disabled =
+      reducedMotion.matches || content?.theme.motion === false;
+    motionButton.querySelector("i").className = paused
+      ? "fas fa-play"
+      : "fas fa-pause";
+    window.dispatchEvent(
+      new CustomEvent("portfolio-motion", { detail: { paused } }),
+    );
+  }
+  motionButton.addEventListener("click", () => {
+    userPaused = !userPaused;
+    updateMotion();
+  });
+  reducedMotion.addEventListener("change", updateMotion);
+  updateMotion();
 });
